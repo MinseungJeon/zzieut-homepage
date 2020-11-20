@@ -1,8 +1,6 @@
 <template>
     <div class="CompanyInfo">
-        <div class="mainBanner">
-            <p>내가 원하는 그곳을 <span>찜</span>하다.</p>
-        </div>
+        <main-banner />
         <div class="vision">
             <h3>VISION</h3>
             <div class="contents">
@@ -38,8 +36,8 @@
             <div class="wrapper">
                 <ul>
                     <li v-for="mission in brandMission" :key="mission.id">
+                        <span v-html="`${mission.head}`"></span>
                         <p>
-                            <span v-html="`${mission.head}`"></span>
                             {{ mission.description }}
                         </p>
                     </li>
@@ -62,6 +60,22 @@
         </div>
         <div class="history">
             <h3>History</h3>
+            <div class="wrapper">
+                <ul>
+                    <li v-for="story in history" :key="story.year">
+                        <span>{{ story.year }}</span>
+                        <table>
+                            <tr
+                                v-for="list in story.historyList"
+                                :key="list.month"
+                            >
+                                <td>{{ list.month }}</td>
+                                <td>{{ list.description }}</td>
+                            </tr>
+                        </table>
+                    </li>
+                </ul>
+            </div>
         </div>
         <div class="members">
             <h3>MEMBERS</h3>
@@ -92,15 +106,19 @@
 </template>
 <script>
 import { data } from "./CompanyInfoData";
+import MainBanner from "./MainBanner";
 
 export default {
-    components: {},
+    components: {
+        "main-banner": MainBanner
+    },
     methods: {},
     data: () => ({
         companyInfos: { ...data.companyProfile },
         members: { ...data.members },
         contactInfo: { ...data.contact },
-        brandMission: { ...data.brandMission }
+        brandMission: { ...data.brandMission },
+        history: { ...data.history }
     })
 };
 </script>

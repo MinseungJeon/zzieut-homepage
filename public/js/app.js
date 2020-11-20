@@ -58732,70 +58732,64 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 var map = {
 	"./ExampleComponent": [
 		"./resources/js/components/ExampleComponent.vue",
-		9,
-		0
+		1
 	],
 	"./ExampleComponent.vue": [
 		"./resources/js/components/ExampleComponent.vue",
-		9,
-		0
+		1
 	],
 	"./Index": [
 		"./resources/js/components/Index.vue",
-		9,
-		1
+		2
 	],
 	"./Index.vue": [
 		"./resources/js/components/Index.vue",
-		9,
-		1
+		2
 	],
 	"./companyInfo/CompanyInfo": [
 		"./resources/js/components/companyInfo/CompanyInfo.vue",
-		9,
-		2
+		0
 	],
 	"./companyInfo/CompanyInfo.vue": [
 		"./resources/js/components/companyInfo/CompanyInfo.vue",
-		9,
-		2
+		0
 	],
 	"./companyInfo/CompanyInfoData": [
 		"./resources/js/components/companyInfo/CompanyInfoData.js",
-		7,
 		5
 	],
 	"./companyInfo/CompanyInfoData.js": [
 		"./resources/js/components/companyInfo/CompanyInfoData.js",
-		7,
 		5
 	],
+	"./companyInfo/MainBanner": [
+		"./resources/js/components/companyInfo/MainBanner.vue",
+		6
+	],
+	"./companyInfo/MainBanner.vue": [
+		"./resources/js/components/companyInfo/MainBanner.vue",
+		6
+	],
 	"./headers/DefaultHeader": [
-		"./resources/js/components/headers/DefaultHeader.vue",
-		9
+		"./resources/js/components/headers/DefaultHeader.vue"
 	],
 	"./headers/DefaultHeader.vue": [
-		"./resources/js/components/headers/DefaultHeader.vue",
-		9
+		"./resources/js/components/headers/DefaultHeader.vue"
 	],
 	"./main/Index": [
 		"./resources/js/components/main/Index.vue",
-		9,
 		3
 	],
 	"./main/Index.vue": [
 		"./resources/js/components/main/Index.vue",
-		9,
 		3
 	],
 	"./main/Test": [
 		"./resources/js/components/main/Test.vue",
-		9,
 		4
 	],
 	"./main/Test.vue": [
 		"./resources/js/components/main/Test.vue",
-		9,
 		4
 	]
 };
@@ -58809,8 +58803,8 @@ function webpackAsyncContext(req) {
 	}
 
 	var ids = map[req], id = ids[0];
-	return Promise.all(ids.slice(2).map(__webpack_require__.e)).then(function() {
-		return __webpack_require__.t(id, ids[1])
+	return Promise.all(ids.slice(1).map(__webpack_require__.e)).then(function() {
+		return __webpack_require__(id);
 	});
 }
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
