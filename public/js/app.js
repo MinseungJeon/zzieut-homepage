@@ -2065,10 +2065,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['title'],
+  props: ["title"],
   components: {},
   mounted: function mounted() {},
   methods: {}
@@ -41219,7 +41217,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_vm._v("\n    " + _vm._s(_vm.title) + "\n")])
+  return _c("div", [_vm._v(_vm._s(_vm.title))])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -58669,7 +58667,7 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 
 Object(vuex_router_sync__WEBPACK_IMPORTED_MODULE_1__["sync"])(_store__WEBPACK_IMPORTED_MODULE_3__["default"], _router__WEBPACK_IMPORTED_MODULE_2__["default"]);
 var app = new Vue({
-  el: '#app',
+  el: "#app",
   router: _router__WEBPACK_IMPORTED_MODULE_2__["default"],
   store: _store__WEBPACK_IMPORTED_MODULE_3__["default"],
   render: function render(h) {
@@ -58734,41 +58732,71 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 var map = {
 	"./ExampleComponent": [
 		"./resources/js/components/ExampleComponent.vue",
+		9,
 		0
 	],
 	"./ExampleComponent.vue": [
 		"./resources/js/components/ExampleComponent.vue",
+		9,
 		0
 	],
 	"./Index": [
 		"./resources/js/components/Index.vue",
+		9,
 		1
 	],
 	"./Index.vue": [
 		"./resources/js/components/Index.vue",
+		9,
 		1
 	],
+	"./companyInfo/CompanyInfo": [
+		"./resources/js/components/companyInfo/CompanyInfo.vue",
+		9,
+		2
+	],
+	"./companyInfo/CompanyInfo.vue": [
+		"./resources/js/components/companyInfo/CompanyInfo.vue",
+		9,
+		2
+	],
+	"./companyInfo/CompanyInfoData": [
+		"./resources/js/components/companyInfo/CompanyInfoData.js",
+		7,
+		5
+	],
+	"./companyInfo/CompanyInfoData.js": [
+		"./resources/js/components/companyInfo/CompanyInfoData.js",
+		7,
+		5
+	],
 	"./headers/DefaultHeader": [
-		"./resources/js/components/headers/DefaultHeader.vue"
+		"./resources/js/components/headers/DefaultHeader.vue",
+		9
 	],
 	"./headers/DefaultHeader.vue": [
-		"./resources/js/components/headers/DefaultHeader.vue"
+		"./resources/js/components/headers/DefaultHeader.vue",
+		9
 	],
 	"./main/Index": [
 		"./resources/js/components/main/Index.vue",
-		2
+		9,
+		3
 	],
 	"./main/Index.vue": [
 		"./resources/js/components/main/Index.vue",
-		2
+		9,
+		3
 	],
 	"./main/Test": [
 		"./resources/js/components/main/Test.vue",
-		3
+		9,
+		4
 	],
 	"./main/Test.vue": [
 		"./resources/js/components/main/Test.vue",
-		3
+		9,
+		4
 	]
 };
 function webpackAsyncContext(req) {
@@ -58781,8 +58809,8 @@ function webpackAsyncContext(req) {
 	}
 
 	var ids = map[req], id = ids[0];
-	return Promise.all(ids.slice(1).map(__webpack_require__.e)).then(function() {
-		return __webpack_require__(id);
+	return Promise.all(ids.slice(2).map(__webpack_require__.e)).then(function() {
+		return __webpack_require__.t(id, ids[1])
 	});
 }
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
@@ -58971,6 +58999,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils */ "./resources/js/router/utils.js");
 /* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../store */ "./resources/js/store/index.js");
 /* harmony import */ var _js_components_headers_DefaultHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/js/components/headers/DefaultHeader */ "./resources/js/components/headers/DefaultHeader.vue");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_3__);
+
 
 
 
@@ -58981,7 +59012,7 @@ function getDefaultHeader(title) {
       DefaultHeader: _js_components_headers_DefaultHeader__WEBPACK_IMPORTED_MODULE_2__["default"]
     },
     render: function render(createElement) {
-      return createElement('DefaultHeader', {
+      return createElement("DefaultHeader", {
         props: {
           title: title
         }
@@ -58991,29 +59022,42 @@ function getDefaultHeader(title) {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ([{
-  path: '/',
+  path: "/",
   components: {
-    "default": Object(_utils__WEBPACK_IMPORTED_MODULE_0__["asyncComponent"])('Index')
+    "default": Object(_utils__WEBPACK_IMPORTED_MODULE_0__["asyncComponent"])("Index")
   },
   meta: {
     needAuth: true
   },
   children: [{
-    path: '',
-    name: 'HomeMain',
+    path: "",
+    name: "HomeMain",
     components: {
-      "default": Object(_utils__WEBPACK_IMPORTED_MODULE_0__["asyncComponent"])('main/Index'),
-      header: getDefaultHeader('HomeMain')
+      "default": Object(_utils__WEBPACK_IMPORTED_MODULE_0__["asyncComponent"])("main/Index"),
+      header: getDefaultHeader("HomeMain")
     }
   }, {
     path: "test",
-    name: 'Test',
+    name: "Test",
     components: {
       "default": Object(_utils__WEBPACK_IMPORTED_MODULE_0__["asyncComponent"])("main/Test"),
-      header: getDefaultHeader('Test')
+      header: getDefaultHeader("Test")
     },
     meta: {
       action: true
+    }
+  }]
+}, {
+  path: "/companyInfo",
+  components: {
+    "default": Object(_utils__WEBPACK_IMPORTED_MODULE_0__["asyncComponent"])("Index")
+  },
+  children: [{
+    path: "",
+    name: "CompanyInfo",
+    components: {
+      "default": Object(_utils__WEBPACK_IMPORTED_MODULE_0__["asyncComponent"])("companyInfo/CompanyInfo"),
+      header: getDefaultHeader("CompanyInfo")
     }
   }]
 }]);
@@ -59382,8 +59426,8 @@ var Store = /*#__PURE__*/function (_Vuex$Store) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/sjwiq200/Desktop/test/zzieut-temp/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/sjwiq200/Desktop/test/zzieut-temp/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\koo\laravel\zzieut-homepage\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\koo\laravel\zzieut-homepage\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

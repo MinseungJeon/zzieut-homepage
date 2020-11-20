@@ -1,5 +1,157 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  outline: none;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+input {
+  outline: none;
+}
+
 /*!
  * Bootstrap v4.5.3 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
@@ -10901,5 +11053,272 @@ a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
+}
+
+.CompanyInfo {
+  padding-bottom: 300px;
+}
+
+.CompanyInfo h3 {
+  text-align: center;
+  padding: 50px 0;
+  font-size: 20px;
+  font-weight: bolder;
+  color: #e3342f;
+}
+
+.CompanyInfo .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.CompanyInfo .point {
+  color: #e3342f;
+}
+
+.CompanyInfo .mainBanner {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  background: url("https://images.unsplash.com/photo-1580508158643-4bf9f8da03c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80") no-repeat 50% 50%/cover;
+}
+
+.CompanyInfo .mainBanner p {
+  color: #f8f8f8;
+  font-size: 48px;
+  font-weight: 600;
+}
+
+.CompanyInfo .mainBanner p span {
+  color: #e3342f;
+}
+
+.CompanyInfo .vision {
+  text-align: center;
+  margin-bottom: 150px;
+}
+
+.CompanyInfo .vision .contents {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.CompanyInfo .vision .contents div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px 0;
+  width: 230px;
+  height: 230px;
+  border-radius: 100%;
+  background-color: #e3342f;
+}
+
+.CompanyInfo .vision .contents div p {
+  color: #fff;
+  font-size: 24px;
+}
+
+.CompanyInfo .vision .contents ul {
+  display: flex;
+  justify-content: space-between;
+  width: 750px;
+}
+
+.CompanyInfo .vision .contents ul li {
+  position: relative;
+  width: 300px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 10px;
+  font-size: 20px;
+  box-shadow: 4px 4px 18px 0px rgba(50, 50, 50, 0.125);
+}
+
+.CompanyInfo .vision .contents ul li ::after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 120px;
+  background-color: #e3342f;
+  z-index: -1;
+}
+
+.CompanyInfo .vision .contents ul li span {
+  font-size: 36px;
+  font-weight: bold;
+  color: #d9d9d9;
+}
+
+.CompanyInfo .vision .contents ul li:nth-child(1) {
+  text-align: left;
+}
+
+.CompanyInfo .vision .contents ul li:nth-child(1) ::after {
+  right: 15%;
+  top: -50%;
+  transform: rotate(45deg);
+}
+
+.CompanyInfo .vision .contents ul li:nth-child(2) {
+  text-align: right;
+}
+
+.CompanyInfo .vision .contents ul li:nth-child(2) ::after {
+  left: 15%;
+  top: -50%;
+  transform: rotate(-45deg);
+}
+
+.CompanyInfo .brandMission {
+  padding-bottom: 150px;
+  background-color: #f8f8f8;
+}
+
+.CompanyInfo .brandMission > p {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 50px;
+}
+
+.CompanyInfo .brandMission > p span {
+  font-weight: 600;
+}
+
+.CompanyInfo .brandMission .wrapper ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.CompanyInfo .brandMission .wrapper ul li {
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 16px;
+  vertical-align: baseline;
+}
+
+.CompanyInfo .brandMission .wrapper ul li span {
+  display: block;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.CompanyInfo .brandMission .wrapper ul li span.point {
+  display: unset;
+  font-size: 24px;
+  border-bottom: none;
+}
+
+.CompanyInfo .companyProfile {
+  background-color: #fff;
+  padding: 50px 0 20px;
+  margin-bottom: 100px;
+}
+
+.CompanyInfo .companyProfile .wrapper {
+  position: relative;
+  padding: 150px;
+  margin-bottom: 150px;
+  background: url("https://images.unsplash.com/photo-1500333070776-343c73e1eb4a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80") no-repeat 50% 50%/cover;
+}
+
+.CompanyInfo .companyProfile .wrapper::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.CompanyInfo .companyProfile .wrapper table {
+  display: inline-block;
+  padding: 20px;
+  background-color: #fff;
+  font-size: 16px;
+  line-height: 1.6;
+  z-index: 1;
+}
+
+.CompanyInfo .companyProfile .wrapper table tr {
+  display: block;
+  padding: 10px 0 15px;
+}
+
+.CompanyInfo .companyProfile .wrapper table tr:last-child {
+  border-bottom: none;
+}
+
+.CompanyInfo .companyProfile .wrapper table tr th {
+  width: 200px;
+  padding: 0 10px;
+  font-weight: bold;
+}
+
+.CompanyInfo .companyProfile .wrapper table tr td span {
+  color: #666;
+  font-size: 12px;
+}
+
+.CompanyInfo .members {
+  margin-bottom: 150px;
+}
+
+.CompanyInfo .members .wrapper ul {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.CompanyInfo .members .wrapper ul li p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 160px;
+  height: 160px;
+  border-radius: 100%;
+  background-color: #dc3838;
+  color: #fff;
+  font-size: 12px;
+  box-shadow: 4px 4px 18px 0px rgba(50, 50, 50, 0.125);
+  cursor: default;
+}
+
+.CompanyInfo .members .wrapper ul li p span {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.CompanyInfo .contact table {
+  display: inline-block;
+  padding: 20px;
+  background-color: #fff;
+  font-size: 16px;
+  line-height: 1.6;
+  z-index: 1;
+}
+
+.CompanyInfo .contact table tr {
+  display: block;
+  padding: 10px 0 15px;
+}
+
+.CompanyInfo .contact table tr:last-child {
+  border-bottom: none;
+}
+
+.CompanyInfo .contact table tr th {
+  width: 200px;
+  padding: 0 10px;
+  font-weight: bold;
 }
 
