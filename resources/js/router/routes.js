@@ -47,6 +47,16 @@ export default [
                     action: true
                 }
             },
+            {
+                path: `recruit`,
+                name: 'Recruit',
+                components: {
+                    default: asyncComponent(`recruit/Recruit`),
+                },
+                meta: {
+                    action: true
+                }
+            },
         ]
     }
 ]

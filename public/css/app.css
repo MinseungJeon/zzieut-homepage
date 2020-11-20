@@ -10903,3 +10903,258 @@ a.text-dark:focus {
   }
 }
 
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  outline: none;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+input {
+  outline: none;
+}
+
+.Recruit .recruitPageBody {
+  margin: 50px 0 0 50px;
+}
+
+.Recruit h2 {
+  font-size: 34px;
+  font-weight: bold;
+  color: #555;
+  letter-spacing: -1px;
+  max-width: 100%;
+  margin-bottom: 50px;
+}
+
+.Recruit .title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #46747a;
+  letter-spacing: -0.2px;
+  padding: 6px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #f3f3f3;
+  height: auto;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.Recruit .serverTeamMenu,
+.Recruit .iOSTeamMenu,
+.Recruit .androidTeamMenu,
+.Recruit .dataTeamMenu {
+  color: #555;
+  font-weight: bold;
+  display: block;
+  width: 100%;
+  height: 64px;
+  line-height: 64px;
+  padding: 0 0 0 20px;
+  cursor: pointer;
+}
+
+.Recruit .active {
+  background-color: #e5faf5;
+}
+
+.Recruit .recruitContainer {
+  display: flex;
+}
+
+.Recruit .descContainer {
+  padding: 0 20px;
+  width: 66.66667%;
+}
+
+.Recruit .descContainer .serverTeam.teams .description {
+  border: 1px solid #f3f3f3;
+  padding: 26px 24px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.Recruit .descContainer .serverTeam.teams .description h3 {
+  color: #555;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: -0.2px;
+  margin-bottom: 10px;
+}
+
+.Recruit .descContainer .serverTeam.teams .description ul {
+  margin-bottom: 30px;
+  list-style: unset;
+}
+
+.Recruit .descContainer .serverTeam.teams .description ul li {
+  color: #555;
+  font-size: 15px;
+  margin-bottom: 6px;
+  line-height: 30px;
+}
+
+.Recruit .descContainer .serverTeam.teams .description p {
+  color: #555;
+  font-size: 15px;
+  margin-bottom: 20px;
+  line-height: 30px;
+}
+
+.Recruit .descContainer .serverTeam.teams .description .apply a {
+  display: block;
+  margin: 10px auto 28px auto;
+  height: 60px;
+  width: 240px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 24px;
+  box-shadow: 2px 4px 0 0 rgba(0, 0, 0, 0.04);
+  background-color: #14c1c7;
+  text-decoration: none;
+}
+

@@ -58769,6 +58769,14 @@ var map = {
 	"./main/Test.vue": [
 		"./resources/js/components/main/Test.vue",
 		3
+	],
+	"./recruit/Recruit": [
+		"./resources/js/components/recruit/Recruit.vue",
+		4
+	],
+	"./recruit/Recruit.vue": [
+		"./resources/js/components/recruit/Recruit.vue",
+		4
 	]
 };
 function webpackAsyncContext(req) {
@@ -59011,6 +59019,15 @@ function getDefaultHeader(title) {
     components: {
       "default": Object(_utils__WEBPACK_IMPORTED_MODULE_0__["asyncComponent"])("main/Test"),
       header: getDefaultHeader('Test')
+    },
+    meta: {
+      action: true
+    }
+  }, {
+    path: "recruit",
+    name: 'Recruit',
+    components: {
+      "default": Object(_utils__WEBPACK_IMPORTED_MODULE_0__["asyncComponent"])("recruit/Recruit")
     },
     meta: {
       action: true
@@ -59382,8 +59399,8 @@ var Store = /*#__PURE__*/function (_Vuex$Store) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/sjwiq200/Desktop/test/zzieut-temp/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/sjwiq200/Desktop/test/zzieut-temp/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\ououh\Desktop\zzieut-homepage\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\ououh\Desktop\zzieut-homepage\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
