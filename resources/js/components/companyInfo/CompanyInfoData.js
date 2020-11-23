@@ -1,4 +1,4 @@
-export const data = {
+const data = {
     brandMission: [
         {
             id: 1,
@@ -167,3 +167,5 @@ export const data = {
         }
     ]
 };
+
+export { data };

@@ -30,6 +30,7 @@ import App from "./App.vue";
 import { sync } from "vuex-router-sync";
 import router from "./router";
 import store from "./store";
+import "vue-slick-carousel/dist/vue-slick-carousel.css";
 
 sync(store, router);
 const app = new Vue({

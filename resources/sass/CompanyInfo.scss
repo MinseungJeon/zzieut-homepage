@@ -19,14 +19,29 @@
 
     .mainBanner {
         position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         margin-bottom: 50px;
-        img {
-            width: 100%;
-            height: 100vh;
-            transition: 0.25s ease;
+        height: 100vh;
+
+        .sliderContainer {
+            position: relative;
+
+            div {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                background-size: cover;
+
+                &.active {
+                    animation-name: activeIndex;
+                    animation-duration: 3s;
+                    animation-fill-mode: forwards;
+                    animation-iteration-count: infinite;
+                }
+            }
         }
 
         p {
@@ -37,8 +52,35 @@
             color: #f8f8f8;
             font-size: 48px;
             font-weight: 600;
+            z-index: 10;
             span {
                 color: $red;
+            }
+        }
+
+        ul {
+            position: absolute;
+            display: flex;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+
+            li {
+                width: 8px;
+                height: 8px;
+                background-color: rgba(255, 255, 255, 0.5);
+                margin-right: 8px;
+                border-radius: 100%;
+                cursor: pointer;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &.active {
+                    background-color: #fff;
+                }
             }
         }
     }
@@ -276,19 +318,46 @@
                 grid-row-gap: 20px;
 
                 li {
+                    position: relative;
                     @include alignContentsCenter();
                     width: 160px;
                     height: 160px;
                     background-color: #dc3838;
                     border-radius: 100%;
                     box-shadow: 4px 4px 18px 0px rgba(50, 50, 50, 0.125);
+                    overflow: hidden;
                     cursor: default;
+
+                    &:hover {
+                        img {
+                            opacity: 0;
+                        }
+                        p {
+                            opacity: 1;
+                        }
+                    }
+
+                    img {
+                        width: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        transition: 0.25s ease;
+                    }
+
                     p {
+                        position: absolute;
+                        width: 100%;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        opacity: 0;
+                        text-align: center;
                         color: #fff;
                         font-size: 12px;
+
                         span {
                             display: block;
-                            text-align: center;
                             font-size: 16px;
                             font-weight: 600;
                         }
@@ -321,5 +390,14 @@
                 }
             }
         }
+    }
+}
+
+@keyframes activeIndex {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }

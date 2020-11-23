@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[4],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[9],{
 
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/companyInfo/MainBanner.vue?vue&type=script&lang=js&":
 /*!*********************************************************************************************************************************************************************************!*\
@@ -9,8 +9,6 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var vue_slick_carousel__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-slick-carousel */ "./node_modules/vue-slick-carousel/dist/vue-slick-carousel.umd.js");
-/* harmony import */ var vue_slick_carousel__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_slick_carousel__WEBPACK_IMPORTED_MODULE_0__);
 //
 //
 //
@@ -37,12 +35,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "MainBanner",
-  components: {
-    VueSlickCarousel: vue_slick_carousel__WEBPACK_IMPORTED_MODULE_0___default.a
-  },
   data: function data() {
     var imageList = [{
       id: 1,
@@ -72,6 +66,16 @@ __webpack_require__.r(__webpack_exports__);
     sliderHandler: function sliderHandler(idx) {
       console.log(idx);
       this.activeIndex = idx;
+
+      if (idx === 0) {
+        this.lastIndex = this.imageList.length - 1;
+      }
+
+      if (idx !== 0) {
+        this.lastIndex = idx - 1;
+      }
+
+      console.log(this.imageList);
       console.log(this.activeIndex);
     }
   },

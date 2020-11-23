@@ -26,6 +26,7 @@
     "dependencies": {
         "url-template": "^2.0.8",
         "vue-router": "^3.4.9",
+        "vue-slick-carousel": "^1.0.6",
         "vuex": "^3.5.1",
         "vuex-rest-api": "^2.13.0",
         "vuex-router-sync": "^5.0.0"

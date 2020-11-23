@@ -81,11 +81,11 @@
             <h3>MEMBERS</h3>
             <div class="wrapper">
                 <ul>
-                    <li v-for="member in members" :key="member.name">
-                        <p>
-                            <span>{{ member.name }}</span> {{ member.position }}
-                        </p>
-                    </li>
+                    <members-card
+                        v-for="member in members"
+                        :key="member.name"
+                        :member="member"
+                    />
                 </ul>
             </div>
         </div>
@@ -105,12 +105,14 @@
     </div>
 </template>
 <script>
-import { data } from "./CompanyInfoData";
+import { data } from "../companyInfo/CompanyInfoData";
 import MainBanner from "./MainBanner";
+import MembersCard from "./MembersCard";
 
 export default {
     components: {
-        "main-banner": MainBanner
+        "main-banner": MainBanner,
+        "members-card": MembersCard
     },
     methods: {},
     data: () => ({
