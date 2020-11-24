@@ -11077,39 +11077,39 @@ a.text-dark:focus {
   color: #e3342f;
 }
 
-.CompanyInfo .mainBanner {
+.CompanyInfo .MainBanner {
   position: relative;
   margin-bottom: 50px;
-  height: 100vh;
 }
 
-.CompanyInfo .mainBanner .sliderContainer {
+.CompanyInfo .MainBanner > div {
   position: relative;
-}
-
-.CompanyInfo .mainBanner .sliderContainer div {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
   height: 100vh;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
+  width: 100%;
+  overflow: hidden;
 }
 
-.CompanyInfo .mainBanner .sliderContainer div.active {
-  -webkit-animation-name: activeIndex;
-          animation-name: activeIndex;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+.CompanyInfo .MainBanner > div img {
+  width: 100%;
 }
 
-.CompanyInfo .mainBanner p {
+.CompanyInfo .MainBanner > div .slick-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 25%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.CompanyInfo .MainBanner > div .slick-dots li button::before {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.CompanyInfo .MainBanner > div .slick-dots li.slick-active button:before {
+  color: #fff;
+}
+
+.CompanyInfo .MainBanner p {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -11120,34 +11120,8 @@ a.text-dark:focus {
   z-index: 10;
 }
 
-.CompanyInfo .mainBanner p span {
+.CompanyInfo .MainBanner p span {
   color: #e3342f;
-}
-
-.CompanyInfo .mainBanner ul {
-  position: absolute;
-  display: flex;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-}
-
-.CompanyInfo .mainBanner ul li {
-  width: 8px;
-  height: 8px;
-  background-color: rgba(255, 255, 255, 0.5);
-  margin-right: 8px;
-  border-radius: 100%;
-  cursor: pointer;
-}
-
-.CompanyInfo .mainBanner ul li:last-child {
-  margin-right: 0;
-}
-
-.CompanyInfo .mainBanner ul li.active {
-  background-color: #fff;
 }
 
 .CompanyInfo .vision {
@@ -11392,11 +11366,11 @@ a.text-dark:focus {
   align-items: center;
   width: 160px;
   height: 160px;
-  background-color: #dc3838;
   border-radius: 100%;
   box-shadow: 4px 4px 18px 0px rgba(50, 50, 50, 0.125);
   overflow: hidden;
   cursor: default;
+  padding: 1px;
 }
 
 .CompanyInfo .members .wrapper ul li:hover img {
@@ -11412,23 +11386,27 @@ a.text-dark:focus {
   position: absolute;
   top: 0;
   left: 0;
-  transition: 0.25s ease;
+  transition: 0.35s ease;
 }
 
 .CompanyInfo .members .wrapper ul li p {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  height: 100%;
+  top: 0;
+  left: 0;
   opacity: 0;
-  text-align: center;
+  background-color: #dc3838;
   color: #fff;
   font-size: 12px;
+  transition: 0.35s ease;
 }
 
 .CompanyInfo .members .wrapper ul li p span {
-  display: block;
   font-size: 16px;
   font-weight: 600;
 }

@@ -105,9 +105,10 @@
     </div>
 </template>
 <script>
+import axios from "axios";
 import { data } from "../companyInfo/CompanyInfoData";
-import MainBanner from "./MainBanner";
-import MembersCard from "./MembersCard";
+import MainBanner from "./companyInfoComponents/MainBanner";
+import MembersCard from "./companyInfoComponents/MembersCard";
 
 export default {
     components: {
@@ -117,11 +118,23 @@ export default {
     methods: {},
     data: () => ({
         companyInfos: { ...data.companyProfile },
-        members: { ...data.members },
+        members: {},
         contactInfo: { ...data.contact },
         brandMission: { ...data.brandMission },
-        history: { ...data.history }
-    })
+        history: {}
+    }),
+    created() {
+        axios
+            .get("/data/companyInfo.json")
+            .then(({ data }) => {
+                const DATA = data.data;
+                this.members = { ...DATA.members };
+                this.history = { ...DATA.history };
+            })
+            .catch(e => {
+                console.log(e);
+            });
+    }
 };
 </script>
 <style lang="scss" scoped></style>

@@ -17,29 +17,40 @@
         color: $red;
     }
 
-    .mainBanner {
+    .MainBanner {
         position: relative;
         margin-bottom: 50px;
-        height: 100vh;
-
-        .sliderContainer {
+        > div {
             position: relative;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
 
-            div {
-                position: absolute;
-                top: 0;
-                left: 0;
+            img {
                 width: 100%;
-                height: 100vh;
-                background-repeat: no-repeat;
-                background-position: 50% 50%;
-                background-size: cover;
+            }
 
-                &.active {
-                    animation-name: activeIndex;
-                    animation-duration: 3s;
-                    animation-fill-mode: forwards;
-                    animation-iteration-count: infinite;
+            .slick-dots {
+                position: absolute;
+                left: 50%;
+                bottom: 25%;
+                transform: translateX(-50%);
+                z-index: 10;
+
+                li {
+                    button {
+                        &::before {
+                            color: rgba(255, 255, 255, 0.8);
+                        }
+                    }
+
+                    &.slick-active {
+                        button {
+                            &:before {
+                                color: #fff;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -55,32 +66,6 @@
             z-index: 10;
             span {
                 color: $red;
-            }
-        }
-
-        ul {
-            position: absolute;
-            display: flex;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 10;
-
-            li {
-                width: 8px;
-                height: 8px;
-                background-color: rgba(255, 255, 255, 0.5);
-                margin-right: 8px;
-                border-radius: 100%;
-                cursor: pointer;
-
-                &:last-child {
-                    margin-right: 0;
-                }
-
-                &.active {
-                    background-color: #fff;
-                }
             }
         }
     }
@@ -322,11 +307,11 @@
                     @include alignContentsCenter();
                     width: 160px;
                     height: 160px;
-                    background-color: #dc3838;
                     border-radius: 100%;
                     box-shadow: 4px 4px 18px 0px rgba(50, 50, 50, 0.125);
                     overflow: hidden;
                     cursor: default;
+                    padding: 1px;
 
                     &:hover {
                         img {
@@ -342,22 +327,24 @@
                         position: absolute;
                         top: 0;
                         left: 0;
-                        transition: 0.25s ease;
+                        transition: 0.35s ease;
                     }
 
                     p {
                         position: absolute;
+                        @include alignContentsCenter();
+                        flex-direction: column;
                         width: 100%;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
+                        height: 100%;
+                        top: 0;
+                        left: 0;
                         opacity: 0;
-                        text-align: center;
+                        background-color: #dc3838;
                         color: #fff;
                         font-size: 12px;
+                        transition: 0.35s ease;
 
                         span {
-                            display: block;
                             font-size: 16px;
                             font-weight: 600;
                         }
