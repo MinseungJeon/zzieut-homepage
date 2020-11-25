@@ -188,6 +188,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 
 
+ // css 집어넣는거 물어보기.
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "MyComponent",

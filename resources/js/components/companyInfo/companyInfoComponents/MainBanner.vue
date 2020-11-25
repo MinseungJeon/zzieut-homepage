@@ -12,6 +12,7 @@
 import VueSlickCarousel from "vue-slick-carousel";
 import "vue-slick-carousel/dist/vue-slick-carousel.css";
 import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
+// css 집어넣는거 물어보기.
 
 export default {
     name: "MyComponent",

@@ -11096,7 +11096,7 @@ a.text-dark:focus {
 .CompanyInfo .MainBanner > div .slick-dots {
   position: absolute;
   left: 50%;
-  bottom: 25%;
+  bottom: 17%;
   transform: translateX(-50%);
   z-index: 10;
 }
