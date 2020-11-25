@@ -1,52 +1,66 @@
-import { asyncComponent } from './utils'
-import store from '../store'
+import { asyncComponent } from "./utils";
+import store from "../store";
 
-import DefaultHeader from '@/js/components/headers/DefaultHeader'
+import DefaultHeader from "@/js/components/headers/DefaultHeader";
+import DefaultFooter from "@/js/components/footer/Footer";
 
-function getDefaultHeader (title) {
+function getDefaultHeader(title) {
     return {
         components: {
             DefaultHeader
         },
-        render (createElement) {
-            return createElement('DefaultHeader', {
+        render(createElement) {
+            return createElement("DefaultHeader", {
                 props: {
                     title
                 }
-            })
+            });
         }
-    }
+    };
+}
+
+function getDefaultFooter() {
+    return {
+        components: {
+            DefaultFooter
+        },
+        render(createElement) {
+            return createElement("DefaultFooter");
+        }
+    };
 }
 
 export default [
     {
-        path: '/',
+        path: "/",
         components: {
-            default:asyncComponent('Index')
+            default: asyncComponent("Index")
         },
         meta: {
             needAuth: true
         },
         children: [
             {
-                path: '',
-                name: 'HomeMain',
-                components:  {
-                    default: asyncComponent('main/Index'),
-                    header: getDefaultHeader('HomeMain')
-                },
+                path: "",
+                name: "HomeMain",
+                components: {
+                    default: asyncComponent("main/Index"),
+                    header: getDefaultHeader("HomeMain"),
+                    footer: getDefaultFooter()
+                }
             },
             {
                 path: `test`,
-                name: 'Test',
+                name: "Test",
                 components: {
                     default: asyncComponent(`main/Test`),
-                    header: getDefaultHeader('Test')
+                    header: getDefaultHeader("Test"),
+                    footer: getDefaultFooter()
                 },
                 meta: {
                     action: true
                 }
-            },
+            }
         ]
     }
-]
+];
