@@ -7,7 +7,7 @@
                 <div>
                     <p>
                         Let's help people
-                        <span>Play &amp; Rest Better</span>
+                        <span>Play Better</span>
                     </p>
                 </div>
                 <ul>
@@ -47,34 +47,13 @@
         <div class="companyProfile">
             <h3>COMPANY PROFILE</h3>
             <div class="wrapper">
-                <table>
-                    <tr
-                        v-for="companyInfo in companyInfos"
-                        :key="companyInfo.head"
-                    >
-                        <th>{{ companyInfo.head }}</th>
-                        <td v-html="`${companyInfo.description}`"></td>
-                    </tr>
-                </table>
+                <info-table :datas="companyInfos" />
             </div>
         </div>
         <div class="history">
             <h3>History</h3>
             <div class="wrapper">
-                <ul>
-                    <li v-for="story in history" :key="story.year">
-                        <span>{{ story.year }}</span>
-                        <table>
-                            <tr
-                                v-for="list in story.historyList"
-                                :key="list.month"
-                            >
-                                <td>{{ list.month }}</td>
-                                <td>{{ list.description }}</td>
-                            </tr>
-                        </table>
-                    </li>
-                </ul>
+                <company-history :history="history" />
             </div>
         </div>
         <div class="members">
@@ -92,14 +71,7 @@
         <div class="contact">
             <h3>CONTACT US</h3>
             <div class="wrapper">
-                <table>
-                    <tr v-for="contact in contactInfo" :key="contact.head">
-                        <th>{{ contact.head }}</th>
-                        <td>
-                            {{ contact.description }}
-                        </td>
-                    </tr>
-                </table>
+                <info-table :datas="contactInfo" />
             </div>
         </div>
     </div>
@@ -108,14 +80,17 @@
 import axios from "axios";
 import { data } from "../companyInfo/CompanyInfoData";
 import MainBanner from "./companyInfoComponents/MainBanner";
+import History from "./companyInfoComponents/History";
 import MembersCard from "./companyInfoComponents/MembersCard";
+import InfoTable from "./companyInfoComponents/InfoTable";
 
 export default {
     components: {
         "main-banner": MainBanner,
-        "members-card": MembersCard
+        "members-card": MembersCard,
+        "info-table": InfoTable,
+        "company-history": History
     },
-    methods: {},
     data: () => ({
         companyInfos: { ...data.companyProfile },
         members: {},

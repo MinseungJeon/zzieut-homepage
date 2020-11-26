@@ -11205,7 +11205,6 @@ a.text-dark:focus {
 
 .CompanyInfo .brandMission {
   padding-bottom: 150px;
-  background-color: #f8f8f8;
 }
 
 .CompanyInfo .brandMission > p {
@@ -11310,42 +11309,77 @@ a.text-dark:focus {
   margin-bottom: 150px;
 }
 
-.CompanyInfo .history ul {
+.CompanyInfo .history .wrapper > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.CompanyInfo .history .wrapper ul {
   display: grid;
   grid-template-columns: auto auto;
   -moz-column-gap: 50px;
        column-gap: 50px;
   max-width: 950px;
+  margin-bottom: 50px;
+  text-align: left;
 }
 
-.CompanyInfo .history ul li {
+.CompanyInfo .history .wrapper ul li {
   text-align: center;
 }
 
-.CompanyInfo .history ul li span {
+.CompanyInfo .history .wrapper ul li:nth-child(2n) {
+  position: relative;
+}
+
+.CompanyInfo .history .wrapper ul li:nth-child(2n)::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 1px;
+  height: 90%;
+  left: -25px;
+  bottom: 0;
+  background-color: #d9d9d9;
+}
+
+.CompanyInfo .history .wrapper ul li span {
   display: inline-block;
   font-size: 32px;
   margin-bottom: 30px;
   color: #666;
 }
 
-.CompanyInfo .history ul li table {
+.CompanyInfo .history .wrapper ul li table {
   text-align: left;
 }
 
-.CompanyInfo .history ul li table tr {
+.CompanyInfo .history .wrapper ul li table tr {
   display: inline-block;
   margin-bottom: 15px;
 }
 
-.CompanyInfo .history ul li table tr td {
+.CompanyInfo .history .wrapper ul li table tr td {
   word-break: keep-all;
 }
 
-.CompanyInfo .history ul li table tr td:nth-child(1) {
+.CompanyInfo .history .wrapper ul li table tr td:nth-child(1) {
   color: #e3342f;
   font-weight: bold;
   padding-right: 15px;
+}
+
+.CompanyInfo .history .wrapper button {
+  width: 30%;
+  margin: 0 auto;
+  border: none;
+  outline: none;
+  background-color: #e3342f;
+  padding: 10px 0;
+  border-radius: 100px;
+  font-size: 16px;
+  color: #fff;
 }
 
 .CompanyInfo .members {

@@ -147,7 +147,6 @@
 
     .brandMission {
         padding-bottom: 150px;
-        background-color: #f8f8f8;
 
         > p {
             text-align: center;
@@ -256,38 +255,71 @@
 
     .history {
         margin-bottom: 150px;
-        ul {
-            display: grid;
-            grid-template-columns: auto auto;
-            column-gap: 50px;
-            max-width: 950px;
+        .wrapper {
+            > div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            ul {
+                display: grid;
+                grid-template-columns: auto auto;
+                column-gap: 50px;
+                max-width: 950px;
+                margin-bottom: 50px;
+                text-align: left;
 
-            li {
-                text-align: center;
+                li {
+                    text-align: center;
+                    &:nth-child(2n) {
+                        position: relative;
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            display: block;
+                            width: 1px;
+                            height: 90%;
+                            left: -25px;
+                            bottom: 0;
+                            background-color: #d9d9d9;
+                        }
+                    }
 
-                span {
-                    display: inline-block;
-                    font-size: 32px;
-                    margin-bottom: 30px;
-                    color: #666;
-                }
-
-                table {
-                    text-align: left;
-
-                    tr {
+                    span {
                         display: inline-block;
-                        margin-bottom: 15px;
-                        td {
-                            word-break: keep-all;
-                            &:nth-child(1) {
-                                color: $red;
-                                font-weight: bold;
-                                padding-right: 15px;
+                        font-size: 32px;
+                        margin-bottom: 30px;
+                        color: #666;
+                    }
+
+                    table {
+                        text-align: left;
+
+                        tr {
+                            display: inline-block;
+                            margin-bottom: 15px;
+                            td {
+                                word-break: keep-all;
+                                &:nth-child(1) {
+                                    color: $red;
+                                    font-weight: bold;
+                                    padding-right: 15px;
+                                }
                             }
                         }
                     }
                 }
+            }
+            button {
+                width: 30%;
+                margin: 0 auto;
+                border: none;
+                outline: none;
+                background-color: $red;
+                padding: 10px 0;
+                border-radius: 100px;
+                font-size: 16px;
+                color: #fff;
             }
         }
     }
