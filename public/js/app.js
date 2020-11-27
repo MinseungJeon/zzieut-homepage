@@ -2078,7 +2078,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "Footer"
+  name: "Footer",
+  data: function data() {
+    return {
+      footerData: [{
+        title: "address",
+        desc: "서울시 성북구 동선동 4가 137 지안빌딩 4층"
+      }, {
+        title: "tel",
+        desc: "070-4905-2942"
+      }, {
+        title: "email",
+        desc: "kkotkkio@zzieut.com"
+      }]
+    };
+  }
 });
 
 /***/ }),
@@ -41249,31 +41263,31 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("footer", { staticClass: "Footer" }, [
-      _c("div", { staticClass: "wrapper" }, [
-        _c("span", [_vm._v("ZziEut Co.")]),
-        _vm._v(" "),
-        _c("address", [
-          _c("ul", [
-            _c("li", [_vm._v("서울시 성북구 동선동 4가 137 지안빌딩 4층")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("070-4905-2942")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("kkotkkio@zzieut.com")])
-          ])
-        ]),
-        _vm._v("\n        © Copyright 2020 찌읏\n    ")
-      ])
+  return _c("footer", { staticClass: "Footer" }, [
+    _c("div", { staticClass: "wrapper" }, [
+      _c("span", [_vm._v("ZziEut Co.")]),
+      _vm._v(" "),
+      _c("address", [
+        _c(
+          "ul",
+          _vm._l(_vm.footerData, function(data) {
+            return _c("li", { key: data.tile }, [
+              _vm._v(
+                "\n                    " +
+                  _vm._s(data.desc) +
+                  "\n                "
+              )
+            ])
+          }),
+          0
+        )
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "copyright" }, [_vm._v("© Copyright 2020 찌읏")])
     ])
-  }
-]
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -58838,19 +58852,19 @@ var map = {
 	],
 	"./main/Index": [
 		"./resources/js/components/main/Index.vue",
-		3
+		2
 	],
 	"./main/Index.vue": [
 		"./resources/js/components/main/Index.vue",
-		3
+		2
 	],
 	"./main/Test": [
 		"./resources/js/components/main/Test.vue",
-		4
+		3
 	],
 	"./main/Test.vue": [
 		"./resources/js/components/main/Test.vue",
-		4
+		3
 	]
 };
 function webpackAsyncContext(req) {

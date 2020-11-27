@@ -1,5 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
 html,
 body,
 div,
@@ -89,8 +95,6 @@ video {
   vertical-align: baseline;
 }
 
-/* HTML5 display-role reset for older browsers */
-
 article,
 aside,
 details,
@@ -138,8 +142,10 @@ a {
 }
 
 button {
-  background-color: transparent;
   outline: none;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: inherit;
 }
 
 input {
