@@ -11120,10 +11120,6 @@ a.text-dark:focus {
   z-index: 10;
 }
 
-.CompanyInfo .MainBanner p span {
-  color: #e3342f;
-}
-
 .CompanyInfo .vision {
   text-align: center;
   margin-bottom: 150px;
@@ -11208,8 +11204,12 @@ a.text-dark:focus {
 }
 
 .CompanyInfo .brandMission > p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   font-size: 28px;
+  word-break: keep-all;
   margin-bottom: 50px;
 }
 
@@ -11356,7 +11356,7 @@ a.text-dark:focus {
 }
 
 .CompanyInfo .history .wrapper ul li table tr {
-  display: inline-block;
+  display: block;
   margin-bottom: 15px;
 }
 
@@ -11486,6 +11486,196 @@ a.text-dark:focus {
 
   100% {
     opacity: 1;
+  }
+}
+
+@media (min-width: 720px) and (max-width: 1023px) {
+  .CompanyInfo .MainBanner {
+    position: relative;
+    margin-bottom: 50px;
+  }
+
+  .CompanyInfo .MainBanner > div {
+    height: 500px;
+  }
+
+  .CompanyInfo .MainBanner > div .slick-dots {
+    bottom: 30px;
+  }
+
+  .CompanyInfo .MainBanner > div .slick-dots li {
+    margin: 0;
+  }
+
+  .CompanyInfo .MainBanner p {
+    font-size: 36px;
+    word-break: keep-all;
+    text-align: center;
+  }
+
+  .CompanyInfo .vision {
+    text-align: center;
+    margin-bottom: 150px;
+  }
+
+  .CompanyInfo .vision .contents div {
+    padding: 0;
+    width: 180px;
+    height: 180px;
+  }
+
+  .CompanyInfo .vision .contents div p {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+
+  .CompanyInfo .vision .contents ul {
+    display: flex;
+    justify-content: space-between;
+    width: 650px;
+  }
+
+  .CompanyInfo .vision .contents ul li {
+    position: relative;
+    width: 280px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    font-size: 18px;
+    box-shadow: 4px 4px 18px 0px rgba(50, 50, 50, 0.125);
+  }
+
+  .CompanyInfo .vision .contents ul li span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #d9d9d9;
+  }
+
+  .CompanyInfo .vision .contents ul li:nth-child(1) {
+    text-align: left;
+  }
+
+  .CompanyInfo .vision .contents ul li:nth-child(1) ::after {
+    right: 15%;
+    top: -50%;
+    transform: rotate(45deg);
+  }
+
+  .CompanyInfo .vision .contents ul li:nth-child(2) {
+    text-align: right;
+  }
+
+  .CompanyInfo .vision .contents ul li:nth-child(2) ::after {
+    left: 15%;
+    top: -50%;
+    transform: rotate(-45deg);
+  }
+
+  .CompanyInfo .brandMission {
+    padding-bottom: 150px;
+  }
+
+  .CompanyInfo .brandMission > p {
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .CompanyInfo .brandMission .wrapper ul li {
+    font-size: 16px;
+  }
+
+  .CompanyInfo .brandMission .wrapper ul li span {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  .CompanyInfo .brandMission .wrapper ul li span.point {
+    font-size: 20px;
+  }
+
+  .CompanyInfo .brandMission .wrapper ul li span:after {
+    bottom: -15px;
+  }
+
+  .CompanyInfo .brandMission .companyProfile .wrapper {
+    padding: 150px 100px;
+  }
+
+  .CompanyInfo .brandMission .companyProfile .wrapper table {
+    padding: 15px;
+  }
+
+  .CompanyInfo .brandMission .companyProfile .wrapper table tr {
+    display: block;
+    padding: 10px 0 15px;
+  }
+
+  .CompanyInfo .brandMission .companyProfile .wrapper table tr th {
+    width: auto;
+    padding: 0 10px;
+    font-weight: bold;
+  }
+
+  .CompanyInfo .brandMission .companyProfile .wrapper table tr td span {
+    color: #666;
+    font-size: 12px;
+  }
+
+  .CompanyInfo .history {
+    margin-bottom: 150px;
+  }
+
+  .CompanyInfo .history .wrapper > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .CompanyInfo .history .wrapper > div ul {
+    grid-template-columns: auto;
+    margin-bottom: 0;
+  }
+
+  .CompanyInfo .history .wrapper > div ul li {
+    margin-bottom: 30px;
+  }
+
+  .CompanyInfo .history .wrapper > div ul li:nth-child(2n)::before {
+    display: none;
+  }
+
+  .CompanyInfo .members .wrapper ul {
+    grid-template-columns: auto auto auto auto;
+  }
+
+  .CompanyInfo .members .wrapper ul li {
+    width: 120px;
+    height: 120px;
+  }
+
+  .CompanyInfo .members .wrapper ul li img {
+    display: none;
+  }
+
+  .CompanyInfo .members .wrapper ul li p {
+    opacity: 1;
+    text-align: center;
+    padding: 0 5px;
+  }
+
+  .CompanyInfo .contact table tr {
+    padding: 5px 0 10px;
+  }
+
+  .CompanyInfo .contact table tr th {
+    width: 100px;
+  }
+
+  .CompanyInfo .contact table tr td {
+    width: 350px;
   }
 }
 

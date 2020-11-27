@@ -431,7 +431,7 @@ var staticRenderFns = [
           ]),
           _vm._v(" "),
           _c("li", [
-            _c("span", [_vm._v("02")]),
+            _c("span", { staticClass: "point" }, [_vm._v("02")]),
             _vm._v(" "),
             _c("p", [
               _vm._v(
@@ -453,11 +453,12 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("p", [
       _vm._v(
-        "\n            개개인 취향과 성향을 기반으로 나만을 위한 취향저격 콘텐츠를\n            추천해주는"
+        "\n            개개인 취향과 성향을 기반으로 나만을 위한 취향저격 콘텐츠를\n            추천해주는\n            "
       ),
-      _c("br"),
-      _vm._v("\n            여가생활 필수 어플, "),
-      _c("span", { staticClass: "point" }, [_vm._v("찜")])
+      _c("span", [
+        _vm._v("여가생활 필수 어플, "),
+        _c("span", { staticClass: "point" }, [_vm._v("찜")])
+      ])
     ])
   }
 ]
@@ -594,7 +595,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("p", [
       _vm._v("내가 원하는 그곳을 "),
-      _c("span", [_vm._v("찜")]),
+      _c("span", { staticClass: "point" }, [_vm._v("찜")]),
       _vm._v("하다.")
     ])
   }

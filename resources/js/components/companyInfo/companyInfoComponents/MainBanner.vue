@@ -5,7 +5,7 @@
                 <img v-for="img in imageList" :key="img.id" :src="img.imgSrc" />
             </VueSlickCarousel>
         </div>
-        <p>내가 원하는 그곳을 <span>찜</span>하다.</p>
+        <p>내가 원하는 그곳을 <span class="point">찜</span>하다.</p>
     </div>
 </template>
 <script>

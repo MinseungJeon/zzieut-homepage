@@ -104,7 +104,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("p", [
       _vm._v("내가 원하는 그곳을 "),
-      _c("span", [_vm._v("찜")]),
+      _c("span", { staticClass: "point" }, [_vm._v("찜")]),
       _vm._v("하다.")
     ])
   }

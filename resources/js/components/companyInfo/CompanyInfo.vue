@@ -16,7 +16,7 @@
                         <p>By making it convenient and accessible</p>
                     </li>
                     <li>
-                        <span>02</span>
+                        <span class="point">02</span>
                         <p>
                             By providing Inspiring
                             <br />
@@ -30,8 +30,8 @@
             <h3>Brand mission</h3>
             <p>
                 개개인 취향과 성향을 기반으로 나만을 위한 취향저격 콘텐츠를
-                추천해주는<br />
-                여가생활 필수 어플, <span class="point">찜</span>
+                추천해주는
+                <span>여가생활 필수 어플, <span class="point">찜</span></span>
             </p>
             <div class="wrapper">
                 <ul>

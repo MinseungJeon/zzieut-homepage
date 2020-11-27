@@ -1,0 +1,201 @@
+@import "../sass/mixins";
+
+@include tablet {
+    .CompanyInfo {
+        .MainBanner {
+            position: relative;
+            margin-bottom: 50px;
+            > div {
+                height: 500px;
+
+                .slick-dots {
+                    bottom: 30px;
+
+                    li {
+                        margin: 0;
+                    }
+                }
+            }
+
+            p {
+                font-size: 36px;
+                word-break: keep-all;
+                text-align: center;
+            }
+        }
+
+        .vision {
+            text-align: center;
+            margin-bottom: 150px;
+            .contents {
+                div {
+                    padding: 0;
+                    width: 180px;
+                    height: 180px;
+
+                    p {
+                        color: #fff;
+                        font-size: 20px;
+                        margin-bottom: 0;
+                    }
+                }
+                ul {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 650px;
+                    li {
+                        position: relative;
+                        width: 280px;
+                        padding: 15px;
+                        background-color: #fff;
+                        border-radius: 10px;
+                        font-size: 18px;
+                        box-shadow: 4px 4px 18px 0px rgba(50, 50, 50, 0.125);
+
+                        span {
+                            font-size: 24px;
+                            font-weight: bold;
+                            color: #d9d9d9;
+                        }
+
+                        &:nth-child(1) {
+                            text-align: left;
+                            ::after {
+                                right: 15%;
+                                top: -50%;
+                                transform: rotate(45deg);
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            text-align: right;
+                            ::after {
+                                left: 15%;
+                                top: -50%;
+                                transform: rotate(-45deg);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .brandMission {
+            padding-bottom: 150px;
+
+            > p {
+                font-size: 24px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .wrapper {
+                ul {
+                    li {
+                        font-size: 16px;
+
+                        span {
+                            font-size: 18px;
+                            margin-bottom: 30px;
+
+                            &.point {
+                                font-size: 20px;
+                            }
+                            &:after {
+                                bottom: -15px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .companyProfile {
+                .wrapper {
+                    padding: 150px 100px;
+
+                    table {
+                        padding: 15px;
+                        tr {
+                            display: block;
+                            padding: 10px 0 15px;
+
+                            th {
+                                width: auto;
+                                padding: 0 10px;
+                                font-weight: bold;
+                            }
+
+                            td {
+                                span {
+                                    color: #666;
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .history {
+            margin-bottom: 150px;
+            .wrapper {
+                > div {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    ul {
+                        grid-template-columns: auto;
+                        margin-bottom: 0;
+                        li {
+                            margin-bottom: 30px;
+                            &:nth-child(2n) {
+                                &::before {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .members {
+            .wrapper {
+                ul {
+                    grid-template-columns: auto auto auto auto;
+                    li {
+                        width: 120px;
+                        height: 120px;
+
+                        img {
+                            display: none;
+                        }
+
+                        p {
+                            opacity: 1;
+                            text-align: center;
+                            padding: 0 5px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .contact {
+            table {
+                tr {
+                    padding: 5px 0 10px;
+
+                    th {
+                        width: 100px;
+                    }
+                    td {
+                        width: 350px;
+                    }
+                }
+            }
+        }
+    }
+}
