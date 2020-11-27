@@ -1,10 +1,10 @@
 <template>
-    <li>
+    <div>
         <img :src="member.imgSrc" />
         <p>
             <span>{{ member.name }}</span> {{ member.position }}
         </p>
-    </li>
+    </div>
 </template>
 <script>
 export default {

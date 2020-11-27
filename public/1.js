@@ -98,8 +98,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
 
 
 
@@ -113,25 +111,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     "info-table": _companyInfoComponents_InfoTable__WEBPACK_IMPORTED_MODULE_5__["default"],
     "company-history": _companyInfoComponents_History__WEBPACK_IMPORTED_MODULE_3__["default"]
   },
-  data: function (_data) {
-    function data() {
-      return _data.apply(this, arguments);
-    }
-
-    data.toString = function () {
-      return _data.toString();
-    };
-
-    return data;
-  }(function () {
+  data: function data() {
     return {
-      companyInfos: _objectSpread({}, data.companyProfile),
+      companyInfos: _objectSpread({}, _companyInfo_CompanyInfoData__WEBPACK_IMPORTED_MODULE_1__["companyInfoData"].companyProfile),
       members: {},
-      contactInfo: _objectSpread({}, data.contact),
-      brandMission: _objectSpread({}, data.brandMission),
+      contactInfo: _objectSpread({}, _companyInfo_CompanyInfoData__WEBPACK_IMPORTED_MODULE_1__["companyInfoData"].contact),
+      brandMission: _objectSpread({}, _companyInfo_CompanyInfoData__WEBPACK_IMPORTED_MODULE_1__["companyInfoData"].brandMission),
       history: {}
     };
-  }),
+  },
   created: function created() {
     var _this = this;
 
@@ -391,12 +379,14 @@ var render = function() {
           _c(
             "ul",
             _vm._l(_vm.members, function(member) {
-              return _c("members-card", {
-                key: member.name,
-                attrs: { member: member }
-              })
+              return _c(
+                "li",
+                { key: member.name },
+                [_c("members-card", { attrs: { member: member } })],
+                1
+              )
             }),
-            1
+            0
           )
         ])
       ]),
@@ -630,7 +620,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("li", [
+  return _c("div", [
     _c("img", { attrs: { src: _vm.member.imgSrc } }),
     _vm._v(" "),
     _c("p", [

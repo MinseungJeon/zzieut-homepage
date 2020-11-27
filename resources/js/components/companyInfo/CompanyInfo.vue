@@ -60,11 +60,9 @@
             <h3>MEMBERS</h3>
             <div class="wrapper">
                 <ul>
-                    <members-card
-                        v-for="member in members"
-                        :key="member.name"
-                        :member="member"
-                    />
+                    <li v-for="member in members" :key="member.name">
+                        <members-card :member="member" />
+                    </li>
                 </ul>
             </div>
         </div>
@@ -92,10 +90,10 @@ export default {
         "company-history": History
     },
     data: () => ({
-        companyInfos: { ...data.companyProfile },
+        companyInfos: { ...companyInfoData.companyProfile },
         members: {},
-        contactInfo: { ...data.contact },
-        brandMission: { ...data.brandMission },
+        contactInfo: { ...companyInfoData.contact },
+        brandMission: { ...companyInfoData.brandMission },
         history: {}
     }),
     created() {
