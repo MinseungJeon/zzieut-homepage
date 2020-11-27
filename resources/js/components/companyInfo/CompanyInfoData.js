@@ -1,4 +1,4 @@
-const data = {
+const companyInfoData = {
     brandMission: [
         {
             id: 1,
@@ -61,4 +61,4 @@ const data = {
     ]
 };
 
-export { data };
+export { companyInfoData };

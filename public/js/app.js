@@ -58748,55 +58748,55 @@ var map = {
 	],
 	"./companyInfo/CompanyInfo": [
 		"./resources/js/components/companyInfo/CompanyInfo.vue",
-		11,
+		0,
 		1
 	],
 	"./companyInfo/CompanyInfo.vue": [
 		"./resources/js/components/companyInfo/CompanyInfo.vue",
-		11,
+		0,
 		1
 	],
 	"./companyInfo/CompanyInfoData": [
 		"./resources/js/components/companyInfo/CompanyInfoData.js",
-		9
+		10
 	],
 	"./companyInfo/CompanyInfoData.js": [
 		"./resources/js/components/companyInfo/CompanyInfoData.js",
-		9
+		10
 	],
 	"./companyInfo/companyInfoComponents/History": [
 		"./resources/js/components/companyInfo/companyInfoComponents/History.vue",
-		10
+		4
 	],
 	"./companyInfo/companyInfoComponents/History.vue": [
 		"./resources/js/components/companyInfo/companyInfoComponents/History.vue",
-		10
+		4
 	],
 	"./companyInfo/companyInfoComponents/InfoTable": [
 		"./resources/js/components/companyInfo/companyInfoComponents/InfoTable.vue",
-		4
+		5
 	],
 	"./companyInfo/companyInfoComponents/InfoTable.vue": [
 		"./resources/js/components/companyInfo/companyInfoComponents/InfoTable.vue",
-		4
+		5
 	],
 	"./companyInfo/companyInfoComponents/MainBanner": [
 		"./resources/js/components/companyInfo/companyInfoComponents/MainBanner.vue",
-		11,
-		5
+		0,
+		6
 	],
 	"./companyInfo/companyInfoComponents/MainBanner.vue": [
 		"./resources/js/components/companyInfo/companyInfoComponents/MainBanner.vue",
-		11,
-		5
+		0,
+		6
 	],
 	"./companyInfo/companyInfoComponents/MembersCard": [
 		"./resources/js/components/companyInfo/companyInfoComponents/MembersCard.vue",
-		6
+		7
 	],
 	"./companyInfo/companyInfoComponents/MembersCard.vue": [
 		"./resources/js/components/companyInfo/companyInfoComponents/MembersCard.vue",
-		6
+		7
 	],
 	"./headers/DefaultHeader": [
 		"./resources/js/components/headers/DefaultHeader.vue"
@@ -58806,19 +58806,19 @@ var map = {
 	],
 	"./main/Index": [
 		"./resources/js/components/main/Index.vue",
-		7
+		8
 	],
 	"./main/Index.vue": [
 		"./resources/js/components/main/Index.vue",
-		7
+		8
 	],
 	"./main/Test": [
 		"./resources/js/components/main/Test.vue",
-		8
+		9
 	],
 	"./main/Test.vue": [
 		"./resources/js/components/main/Test.vue",
-		8
+		9
 	]
 };
 function webpackAsyncContext(req) {

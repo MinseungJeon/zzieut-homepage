@@ -78,7 +78,7 @@
 </template>
 <script>
 import axios from "axios";
-import { data } from "../companyInfo/CompanyInfoData";
+import { companyInfoData } from "../companyInfo/CompanyInfoData";
 import MainBanner from "./companyInfoComponents/MainBanner";
 import History from "./companyInfoComponents/History";
 import MembersCard from "./companyInfoComponents/MembersCard";

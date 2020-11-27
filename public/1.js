@@ -113,15 +113,25 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     "info-table": _companyInfoComponents_InfoTable__WEBPACK_IMPORTED_MODULE_5__["default"],
     "company-history": _companyInfoComponents_History__WEBPACK_IMPORTED_MODULE_3__["default"]
   },
-  data: function data() {
+  data: function (_data) {
+    function data() {
+      return _data.apply(this, arguments);
+    }
+
+    data.toString = function () {
+      return _data.toString();
+    };
+
+    return data;
+  }(function () {
     return {
-      companyInfos: _objectSpread({}, _companyInfo_CompanyInfoData__WEBPACK_IMPORTED_MODULE_1__["data"].companyProfile),
+      companyInfos: _objectSpread({}, data.companyProfile),
       members: {},
-      contactInfo: _objectSpread({}, _companyInfo_CompanyInfoData__WEBPACK_IMPORTED_MODULE_1__["data"].contact),
-      brandMission: _objectSpread({}, _companyInfo_CompanyInfoData__WEBPACK_IMPORTED_MODULE_1__["data"].brandMission),
+      contactInfo: _objectSpread({}, data.contact),
+      brandMission: _objectSpread({}, data.brandMission),
       history: {}
     };
-  },
+  }),
   created: function created() {
     var _this = this;
 
@@ -709,13 +719,13 @@ __webpack_require__.r(__webpack_exports__);
 /*!****************************************************************!*\
   !*** ./resources/js/components/companyInfo/CompanyInfoData.js ***!
   \****************************************************************/
-/*! exports provided: data */
+/*! exports provided: companyInfoData */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "data", function() { return data; });
-var data = {
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "companyInfoData", function() { return companyInfoData; });
+var companyInfoData = {
   brandMission: [{
     id: 1,
     head: "여가 경험을 공유하는 <span class='point'>공간</span>",
