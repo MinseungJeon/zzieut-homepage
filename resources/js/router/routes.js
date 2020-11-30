@@ -49,7 +49,7 @@ export default [
                 }
             },
             {
-                path: "",
+                path: "companyInfo",
                 name: "CompanyInfo",
                 components: {
                     default: asyncComponent("companyInfo/CompanyInfo"),

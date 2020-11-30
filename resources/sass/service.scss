@@ -1,8 +1,16 @@
 .service {
+    margin-bottom: 150px;
     .slickContainer {
         width: 75%;
         margin: 0 auto;
-
+        .slick-prev {
+            left: 20px;
+            z-index: 3;
+        }
+        .slick-next {
+            right: 20px;
+            z-index: 3;
+        }
         .list {
             height: 280px;
 
@@ -21,17 +29,17 @@
                 }
             }
             .item1 {
-                background: url("../js/components/service/Img/찜.png");
+                background: url("../js/components/service/Img/찜.png");
                 background-size: cover;
             }
 
             .item2 {
-                background: url("../js/components/service/Img/찜스토어.png");
+                background: url("../js/components/service/Img/찜스토어.png");
                 background-size: cover;
             }
 
             .item3 {
-                background: url("../js/components/service/Img/츄릅.png");
+                background: url("../js/components/service/Img/츄릅.png");
                 background-size: cover;
             }
         }
@@ -119,15 +127,16 @@
 
                 .historyBox {
                     margin-top: 50px;
+                    ul {
+                        margin-bottom: 0;
+                    }
 
                     .history {
                         font-weight: bold;
                         margin-bottom: 20px;
                     }
-    
                 }
 
-                
                 h2,
                 span {
                     font-size: 12px;
@@ -139,7 +148,7 @@
 
                     li {
                         position: relative;
-                        padding: 10px 0 10px 0;
+                        padding: 8px 0 10px 0;
 
                         :before {
                             content: "";
