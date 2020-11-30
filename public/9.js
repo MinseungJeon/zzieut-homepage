@@ -34,8 +34,6 @@ __webpack_require__.r(__webpack_exports__);
     selectMenu: function selectMenu(idx) {
       this.isSelected = idx;
       this.$emit("changeSelected", this.isSelected);
-      var team = this.querySelector('.team');
-      team.style.background = '#e5faf5';
     }
   }
 });
@@ -98,7 +96,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.isActive[data-v-725e017b] {\r\n    background: #e5faf5;\n}\r\n", ""]);
+exports.push([module.i, "\n.teams[data-v-725e017b]:hover{\r\n    background-color: #e5faf5;\n}\r\n", ""]);
 
 // exports
 
@@ -158,7 +156,6 @@ var render = function() {
         "li",
         {
           staticClass: "teams",
-          class: { isActive: _vm.isSelected },
           on: {
             click: function($event) {
               return _vm.selectMenu(1)
@@ -172,7 +169,6 @@ var render = function() {
         "li",
         {
           staticClass: "teams",
-          class: { isActive: _vm.isSelected },
           on: {
             click: function($event) {
               return _vm.selectMenu(2)

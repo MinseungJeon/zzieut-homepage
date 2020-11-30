@@ -29,4 +29,7 @@ export default {
 };
 </script>
 <style scoped>
+.teams:hover{
+    background-color: #e5faf5;
+}
 </style>
