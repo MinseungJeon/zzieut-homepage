@@ -11056,7 +11056,7 @@ input {
 }
 
 .Recruit .recruitPageBody {
-  margin: 50px 0 0 50px;
+  margin: 10% 0 0 15%;
 }
 
 .Recruit h2 {
@@ -11068,7 +11068,11 @@ input {
   margin-bottom: 50px;
 }
 
-.Recruit .title {
+.Recruit .recruitContainer {
+  display: flex;
+}
+
+.Recruit .recruitContainer .Menu .title {
   font-size: 16px;
   font-weight: 500;
   color: #46747a;
@@ -11081,10 +11085,7 @@ input {
   cursor: pointer;
 }
 
-.Recruit .serverTeamMenu,
-.Recruit .iOSTeamMenu,
-.Recruit .androidTeamMenu,
-.Recruit .dataTeamMenu {
+.Recruit .recruitContainer .Menu .teams {
   color: #555;
   font-weight: bold;
   display: block;
@@ -11095,27 +11096,19 @@ input {
   cursor: pointer;
 }
 
-.Recruit .active {
-  background-color: #e5faf5;
-}
-
-.Recruit .recruitContainer {
-  display: flex;
-}
-
-.Recruit .descContainer {
+.Recruit .Description {
   padding: 0 20px;
   width: 66.66667%;
 }
 
-.Recruit .descContainer .serverTeam.teams .description {
+.Recruit .Description .teams .description {
   border: 1px solid #f3f3f3;
   padding: 26px 24px;
   color: #555;
   margin-bottom: 8px;
 }
 
-.Recruit .descContainer .serverTeam.teams .description h3 {
+.Recruit .Description .teams .description h3 {
   color: #555;
   font-size: 16px;
   font-weight: bold;
@@ -11123,26 +11116,38 @@ input {
   margin-bottom: 10px;
 }
 
-.Recruit .descContainer .serverTeam.teams .description ul {
+.Recruit .Description .teams .description ul {
   margin-bottom: 30px;
   list-style: unset;
 }
 
-.Recruit .descContainer .serverTeam.teams .description ul li {
+.Recruit .Description .teams .description ul li {
   color: #555;
   font-size: 15px;
   margin-bottom: 6px;
   line-height: 30px;
 }
 
-.Recruit .descContainer .serverTeam.teams .description p {
+.Recruit .Description .teams .description ul li ul {
+  margin-left: 1.8rem;
+}
+
+.Recruit .Description .teams .description ul li ul li {
+  list-style: circle;
+}
+
+.Recruit .Description .teams .description p {
   color: #555;
   font-size: 15px;
   margin-bottom: 20px;
   line-height: 30px;
 }
 
-.Recruit .descContainer .serverTeam.teams .description .apply a {
+.Recruit .Description .teams .description .apply {
+  background: #f2faf9;
+}
+
+.Recruit .Description .teams .description .apply a {
   display: block;
   margin: 10px auto 28px auto;
   height: 60px;

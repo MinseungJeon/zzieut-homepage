@@ -58734,49 +58734,103 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 var map = {
 	"./ExampleComponent": [
 		"./resources/js/components/ExampleComponent.vue",
-		0
+		9,
+		3
 	],
 	"./ExampleComponent.vue": [
 		"./resources/js/components/ExampleComponent.vue",
-		0
+		9,
+		3
 	],
 	"./Index": [
 		"./resources/js/components/Index.vue",
-		1
+		9,
+		4
 	],
 	"./Index.vue": [
 		"./resources/js/components/Index.vue",
-		1
+		9,
+		4
 	],
 	"./headers/DefaultHeader": [
-		"./resources/js/components/headers/DefaultHeader.vue"
+		"./resources/js/components/headers/DefaultHeader.vue",
+		9
 	],
 	"./headers/DefaultHeader.vue": [
-		"./resources/js/components/headers/DefaultHeader.vue"
+		"./resources/js/components/headers/DefaultHeader.vue",
+		9
 	],
 	"./main/Index": [
 		"./resources/js/components/main/Index.vue",
-		2
+		9,
+		5
 	],
 	"./main/Index.vue": [
 		"./resources/js/components/main/Index.vue",
-		2
+		9,
+		5
 	],
 	"./main/Test": [
 		"./resources/js/components/main/Test.vue",
-		3
+		9,
+		6
 	],
 	"./main/Test.vue": [
 		"./resources/js/components/main/Test.vue",
-		3
+		9,
+		6
+	],
+	"./recruit/Description": [
+		"./resources/js/components/recruit/Description.vue",
+		9,
+		2
+	],
+	"./recruit/Description.vue": [
+		"./resources/js/components/recruit/Description.vue",
+		9,
+		2
+	],
+	"./recruit/Menu": [
+		"./resources/js/components/recruit/Menu.vue",
+		9,
+		1
+	],
+	"./recruit/Menu.vue": [
+		"./resources/js/components/recruit/Menu.vue",
+		9,
+		1
 	],
 	"./recruit/Recruit": [
 		"./resources/js/components/recruit/Recruit.vue",
-		4
+		9,
+		2,
+		0
+	],
+	"./recruit/Recruit copy": [
+		"./resources/js/components/recruit/Recruit copy.vue",
+		9,
+		7
+	],
+	"./recruit/Recruit copy.vue": [
+		"./resources/js/components/recruit/Recruit copy.vue",
+		9,
+		7
 	],
 	"./recruit/Recruit.vue": [
 		"./resources/js/components/recruit/Recruit.vue",
-		4
+		9,
+		2,
+		0
+	],
+	"./recruit/content": [
+		"./resources/js/components/recruit/content.json",
+		3,
+		8
+	],
+	"./recruit/content.json": [
+		"./resources/js/components/recruit/content.json",
+		3,
+		8
 	]
 };
 function webpackAsyncContext(req) {
@@ -58789,8 +58843,8 @@ function webpackAsyncContext(req) {
 	}
 
 	var ids = map[req], id = ids[0];
-	return Promise.all(ids.slice(1).map(__webpack_require__.e)).then(function() {
-		return __webpack_require__(id);
+	return Promise.all(ids.slice(2).map(__webpack_require__.e)).then(function() {
+		return __webpack_require__.t(id, ids[1])
 	});
 }
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
@@ -59028,6 +59082,15 @@ function getDefaultHeader(title) {
     name: 'Recruit',
     components: {
       "default": Object(_utils__WEBPACK_IMPORTED_MODULE_0__["asyncComponent"])("recruit/Recruit")
+    },
+    meta: {
+      action: true
+    }
+  }, {
+    path: "recruit2",
+    name: 'Recruit2',
+    components: {
+      "default": Object(_utils__WEBPACK_IMPORTED_MODULE_0__["asyncComponent"])("recruit2/Recruit2")
     },
     meta: {
       action: true
