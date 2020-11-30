@@ -2,6 +2,7 @@ import { asyncComponent } from "./utils";
 import store from "../store";
 
 import DefaultHeader from "@/js/components/headers/DefaultHeader";
+import DefaultFooter from "@/js/components/footer/Footer";
 import { defaults } from "lodash";
 
 function getDefaultHeader(title) {
@@ -15,6 +16,17 @@ function getDefaultHeader(title) {
                     title,
                 },
             });
+        },
+    };
+}
+
+function getDefaultFooter() {
+    return {
+        components: {
+            DefaultFooter,
+        },
+        render(createElement) {
+            return createElement("DefaultFooter");
         },
     };
 }
@@ -35,6 +47,7 @@ export default [
                 components: {
                     default: asyncComponent("main/Index"),
                     header: getDefaultHeader("HomeMain"),
+                    footer: getDefaultFooter(),
                 },
             },
             {
@@ -54,28 +67,31 @@ export default [
                 components: {
                     default: asyncComponent("companyInfo/CompanyInfo"),
                     header: getDefaultHeader("CompanyInfo"),
+                    footer: getDefaultFooter(),
                 },
             },
             {
-                path: `recruit`,
-                name: "Recruit",
+                path: "service",
+                name: "Service",
                 components: {
-                    default: asyncComponent(`recruit/Recruit`),
+                    default: asyncComponent("service/Service"),
+                    footer: getDefaultFooter(),
                 },
                 meta: {
                     action: true,
                 },
             },
-            // {
-            //     path: `recruit2`,
-            //     name: "Recruit2",
-            //     components: {
-            //         default: asyncComponent(`recruit2/Recruit2`),
-            //     },
-            //     meta: {
-            //         action: true,
-            //     },
-            // },
+            {
+                path: "recruit",
+                name: "Recruit",
+                components: {
+                    default: asyncComponent("recruit/Recruit"),
+                    footer: getDefaultFooter(),
+                },
+                meta: {
+                    action: true,
+                },
+            },
         ],
     },
 ];

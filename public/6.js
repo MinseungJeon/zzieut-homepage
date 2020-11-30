@@ -16,6 +16,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {},
   mounted: function mounted() {}
@@ -43,7 +44,9 @@ var render = function() {
     [
       _c("router-view", { attrs: { name: "header" } }),
       _vm._v(" "),
-      _c("router-view")
+      _c("router-view"),
+      _vm._v(" "),
+      _c("router-view", { attrs: { name: "footer" } })
     ],
     1
   )
