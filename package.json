@@ -24,6 +24,7 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "node-sass": "^4.14.1",
         "url-template": "^2.0.8",
         "vue-router": "^3.4.9",
         "vue-slick-carousel": "^1.0.6",

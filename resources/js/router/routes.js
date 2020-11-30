@@ -47,21 +47,23 @@ export default [
                 meta: {
                     action: true
                 }
-            }
-        ]
-    },
-    {
-        path: "/companyInfo",
-        components: {
-            default: asyncComponent("Index")
-        },
-        children: [
+            },
             {
                 path: "",
                 name: "CompanyInfo",
                 components: {
                     default: asyncComponent("companyInfo/CompanyInfo"),
                     header: getDefaultHeader("CompanyInfo")
+                }
+            },
+            {
+                path: `service`,
+                name: "Service",
+                components: {
+                    default: asyncComponent(`service/Service`)
+                },
+                meta: {
+                    action: true
                 }
             }
         ]

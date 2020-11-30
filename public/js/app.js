@@ -58732,93 +58732,162 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 var map = {
 	"./ExampleComponent": [
 		"./resources/js/components/ExampleComponent.vue",
-		2
+		9,
+		3
 	],
 	"./ExampleComponent.vue": [
 		"./resources/js/components/ExampleComponent.vue",
-		2
+		9,
+		3
 	],
 	"./Index": [
 		"./resources/js/components/Index.vue",
-		3
+		9,
+		4
 	],
 	"./Index.vue": [
 		"./resources/js/components/Index.vue",
-		3
+		9,
+		4
 	],
 	"./companyInfo/CompanyInfo": [
 		"./resources/js/components/companyInfo/CompanyInfo.vue",
+		9,
 		0,
 		1
 	],
 	"./companyInfo/CompanyInfo.vue": [
 		"./resources/js/components/companyInfo/CompanyInfo.vue",
+		9,
 		0,
 		1
 	],
 	"./companyInfo/CompanyInfoData": [
 		"./resources/js/components/companyInfo/CompanyInfoData.js",
-		10
+		9,
+		12
 	],
 	"./companyInfo/CompanyInfoData.js": [
 		"./resources/js/components/companyInfo/CompanyInfoData.js",
-		10
+		9,
+		12
 	],
 	"./companyInfo/companyInfoComponents/History": [
 		"./resources/js/components/companyInfo/companyInfoComponents/History.vue",
-		4
+		9,
+		5
 	],
 	"./companyInfo/companyInfoComponents/History.vue": [
 		"./resources/js/components/companyInfo/companyInfoComponents/History.vue",
-		4
+		9,
+		5
 	],
 	"./companyInfo/companyInfoComponents/InfoTable": [
 		"./resources/js/components/companyInfo/companyInfoComponents/InfoTable.vue",
-		5
+		9,
+		6
 	],
 	"./companyInfo/companyInfoComponents/InfoTable.vue": [
 		"./resources/js/components/companyInfo/companyInfoComponents/InfoTable.vue",
-		5
+		9,
+		6
 	],
 	"./companyInfo/companyInfoComponents/MainBanner": [
 		"./resources/js/components/companyInfo/companyInfoComponents/MainBanner.vue",
+		9,
 		0,
-		6
+		7
 	],
 	"./companyInfo/companyInfoComponents/MainBanner.vue": [
 		"./resources/js/components/companyInfo/companyInfoComponents/MainBanner.vue",
+		9,
 		0,
-		6
+		7
 	],
 	"./companyInfo/companyInfoComponents/MembersCard": [
 		"./resources/js/components/companyInfo/companyInfoComponents/MembersCard.vue",
-		7
+		9,
+		8
 	],
 	"./companyInfo/companyInfoComponents/MembersCard.vue": [
 		"./resources/js/components/companyInfo/companyInfoComponents/MembersCard.vue",
-		7
+		9,
+		8
 	],
 	"./headers/DefaultHeader": [
-		"./resources/js/components/headers/DefaultHeader.vue"
+		"./resources/js/components/headers/DefaultHeader.vue",
+		9
 	],
 	"./headers/DefaultHeader.vue": [
-		"./resources/js/components/headers/DefaultHeader.vue"
+		"./resources/js/components/headers/DefaultHeader.vue",
+		9
 	],
 	"./main/Index": [
 		"./resources/js/components/main/Index.vue",
-		8
+		9,
+		9
 	],
 	"./main/Index.vue": [
 		"./resources/js/components/main/Index.vue",
-		8
+		9,
+		9
 	],
 	"./main/Test": [
 		"./resources/js/components/main/Test.vue",
-		9
+		9,
+		10
 	],
 	"./main/Test.vue": [
 		"./resources/js/components/main/Test.vue",
-		9
+		9,
+		10
+	],
+	"./service/Img/찜.png": [
+		"./resources/js/components/service/Img/찜.png",
+		7,
+		14
+	],
+	"./service/Img/찜스토어.png": [
+		"./resources/js/components/service/Img/찜스토어.png",
+		7,
+		15
+	],
+	"./service/Img/츄릅.png": [
+		"./resources/js/components/service/Img/츄릅.png",
+		7,
+		16
+	],
+	"./service/Platform": [
+		"./resources/js/components/service/Platform.vue",
+		9,
+		11
+	],
+	"./service/Platform.vue": [
+		"./resources/js/components/service/Platform.vue",
+		9,
+		11
+	],
+	"./service/Service": [
+		"./resources/js/components/service/Service.vue",
+		9,
+		0,
+		2
+	],
+	"./service/Service.vue": [
+		"./resources/js/components/service/Service.vue",
+		9,
+		0,
+		2
+	],
+	"./service/recruit/content": [
+		"./resources/js/components/service/recruit/content.json",
+		3,
+		13
+	],
+	"./service/recruit/content.json": [
+		"./resources/js/components/service/recruit/content.json",
+		3,
+		13
 	]
 };
 function webpackAsyncContext(req) {
@@ -58831,8 +58900,8 @@ function webpackAsyncContext(req) {
 	}
 
 	var ids = map[req], id = ids[0];
-	return Promise.all(ids.slice(1).map(__webpack_require__.e)).then(function() {
-		return __webpack_require__(id);
+	return Promise.all(ids.slice(2).map(__webpack_require__.e)).then(function() {
+		return __webpack_require__.t(id, ids[1])
 	});
 }
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
@@ -59068,18 +59137,21 @@ function getDefaultHeader(title) {
     meta: {
       action: true
     }
-  }]
-}, {
-  path: "/companyInfo",
-  components: {
-    "default": Object(_utils__WEBPACK_IMPORTED_MODULE_0__["asyncComponent"])("Index")
-  },
-  children: [{
+  }, {
     path: "",
     name: "CompanyInfo",
     components: {
       "default": Object(_utils__WEBPACK_IMPORTED_MODULE_0__["asyncComponent"])("companyInfo/CompanyInfo"),
       header: getDefaultHeader("CompanyInfo")
+    }
+  }, {
+    path: "service",
+    name: "Service",
+    components: {
+      "default": Object(_utils__WEBPACK_IMPORTED_MODULE_0__["asyncComponent"])("service/Service")
+    },
+    meta: {
+      action: true
     }
   }]
 }]);
@@ -59437,7 +59509,7 @@ var Store = /*#__PURE__*/function (_Vuex$Store) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleNotFoundError: Module not found: Error: Can't resolve '../js/components/service/Img/찜.png' in 'C:\\Users\\koo\\laravel\\zzieut-homepage\\resources\\sass'\n    at C:\\Users\\koo\\laravel\\zzieut-homepage\\node_modules\\webpack\\lib\\Compilation.js:925:10\n    at C:\\Users\\koo\\laravel\\zzieut-homepage\\node_modules\\webpack\\lib\\NormalModuleFactory.js:401:22\n    at C:\\Users\\koo\\laravel\\zzieut-homepage\\node_modules\\webpack\\lib\\NormalModuleFactory.js:130:21\n    at C:\\Users\\koo\\laravel\\zzieut-homepage\\node_modules\\webpack\\lib\\NormalModuleFactory.js:224:22\n    at C:\\Users\\koo\\laravel\\zzieut-homepage\\node_modules\\neo-async\\async.js:2830:7\n    at C:\\Users\\koo\\laravel\\zzieut-homepage\\node_modules\\neo-async\\async.js:6877:13\n    at C:\\Users\\koo\\laravel\\zzieut-homepage\\node_modules\\webpack\\lib\\NormalModuleFactory.js:214:25\n    at C:\\Users\\koo\\laravel\\zzieut-homepage\\node_modules\\enhanced-resolve\\lib\\Resolver.js:213:14\n    at C:\\Users\\koo\\laravel\\zzieut-homepage\\node_modules\\enhanced-resolve\\lib\\Resolver.js:285:5\n    at eval (eval at create (C:\\Users\\koo\\laravel\\zzieut-homepage\\node_modules\\tapable\\lib\\HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at C:\\Users\\koo\\laravel\\zzieut-homepage\\node_modules\\enhanced-resolve\\lib\\UnsafeCachePlugin.js:44:7\n    at C:\\Users\\koo\\laravel\\zzieut-homepage\\node_modules\\enhanced-resolve\\lib\\Resolver.js:285:5\n    at eval (eval at create (C:\\Users\\koo\\laravel\\zzieut-homepage\\node_modules\\tapable\\lib\\HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at C:\\Users\\koo\\laravel\\zzieut-homepage\\node_modules\\enhanced-resolve\\lib\\Resolver.js:285:5\n    at eval (eval at create (C:\\Users\\koo\\laravel\\zzieut-homepage\\node_modules\\tapable\\lib\\HookCodeFactory.js:33:10), <anonymous>:27:1)\n    at C:\\Users\\koo\\laravel\\zzieut-homepage\\node_modules\\enhanced-resolve\\lib\\DescriptionFilePlugin.js:67:43\n    at C:\\Users\\koo\\laravel\\zzieut-homepage\\node_modules\\enhanced-resolve\\lib\\Resolver.js:285:5\n    at eval (eval at create (C:\\Users\\koo\\laravel\\zzieut-homepage\\node_modules\\tapable\\lib\\HookCodeFactory.js:33:10), <anonymous>:16:1)\n    at C:\\Users\\koo\\laravel\\zzieut-homepage\\node_modules\\enhanced-resolve\\lib\\Resolver.js:285:5\n    at eval (eval at create (C:\\Users\\koo\\laravel\\zzieut-homepage\\node_modules\\tapable\\lib\\HookCodeFactory.js:33:10), <anonymous>:27:1)\n    at C:\\Users\\koo\\laravel\\zzieut-homepage\\node_modules\\enhanced-resolve\\lib\\DescriptionFilePlugin.js:67:43\n    at C:\\Users\\koo\\laravel\\zzieut-homepage\\node_modules\\enhanced-resolve\\lib\\Resolver.js:285:5\n    at eval (eval at create (C:\\Users\\koo\\laravel\\zzieut-homepage\\node_modules\\tapable\\lib\\HookCodeFactory.js:33:10), <anonymous>:16:1)\n    at C:\\Users\\koo\\laravel\\zzieut-homepage\\node_modules\\enhanced-resolve\\lib\\Resolver.js:285:5\n    at eval (eval at create (C:\\Users\\koo\\laravel\\zzieut-homepage\\node_modules\\tapable\\lib\\HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at C:\\Users\\koo\\laravel\\zzieut-homepage\\node_modules\\enhanced-resolve\\lib\\DirectoryExistsPlugin.js:27:15\n    at C:\\Users\\koo\\laravel\\zzieut-homepage\\node_modules\\enhanced-resolve\\lib\\CachedInputFileSystem.js:85:15\n    at processTicksAndRejections (internal/process/task_queues.js:75:11)");
 
 /***/ }),
 
