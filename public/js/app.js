@@ -59705,86 +59705,86 @@ var map = {
 	"./ExampleComponent": [
 		"./resources/js/components/ExampleComponent.vue",
 		9,
-		3
+		5
 	],
 	"./ExampleComponent.vue": [
 		"./resources/js/components/ExampleComponent.vue",
 		9,
-		3
+		5
 	],
 	"./Index": [
 		"./resources/js/components/Index.vue",
 		9,
-		4
+		6
 	],
 	"./Index.vue": [
 		"./resources/js/components/Index.vue",
 		9,
-		4
+		6
 	],
 	"./companyInfo/CompanyInfo": [
 		"./resources/js/components/companyInfo/CompanyInfo.vue",
 		9,
 		0,
-		1
+		2
 	],
 	"./companyInfo/CompanyInfo.vue": [
 		"./resources/js/components/companyInfo/CompanyInfo.vue",
 		9,
 		0,
-		1
+		2
 	],
 	"./companyInfo/CompanyInfoData": [
 		"./resources/js/components/companyInfo/CompanyInfoData.js",
 		9,
-		12
+		16
 	],
 	"./companyInfo/CompanyInfoData.js": [
 		"./resources/js/components/companyInfo/CompanyInfoData.js",
 		9,
-		12
+		16
 	],
 	"./companyInfo/companyInfoComponents/History": [
 		"./resources/js/components/companyInfo/companyInfoComponents/History.vue",
 		9,
-		5
+		7
 	],
 	"./companyInfo/companyInfoComponents/History.vue": [
 		"./resources/js/components/companyInfo/companyInfoComponents/History.vue",
 		9,
-		5
+		7
 	],
 	"./companyInfo/companyInfoComponents/InfoTable": [
 		"./resources/js/components/companyInfo/companyInfoComponents/InfoTable.vue",
 		9,
-		6
+		8
 	],
 	"./companyInfo/companyInfoComponents/InfoTable.vue": [
 		"./resources/js/components/companyInfo/companyInfoComponents/InfoTable.vue",
 		9,
-		6
+		8
 	],
 	"./companyInfo/companyInfoComponents/MainBanner": [
 		"./resources/js/components/companyInfo/companyInfoComponents/MainBanner.vue",
 		9,
 		0,
-		7
+		13
 	],
 	"./companyInfo/companyInfoComponents/MainBanner.vue": [
 		"./resources/js/components/companyInfo/companyInfoComponents/MainBanner.vue",
 		9,
 		0,
-		7
+		13
 	],
 	"./companyInfo/companyInfoComponents/MembersCard": [
 		"./resources/js/components/companyInfo/companyInfoComponents/MembersCard.vue",
 		9,
-		8
+		10
 	],
 	"./companyInfo/companyInfoComponents/MembersCard.vue": [
 		"./resources/js/components/companyInfo/companyInfoComponents/MembersCard.vue",
 		9,
-		8
+		10
 	],
 	"./headers/DefaultHeader": [
 		"./resources/js/components/headers/DefaultHeader.vue",
@@ -59797,69 +59797,111 @@ var map = {
 	"./main/Index": [
 		"./resources/js/components/main/Index.vue",
 		9,
-		9
+		11
 	],
 	"./main/Index.vue": [
 		"./resources/js/components/main/Index.vue",
 		9,
-		9
+		11
 	],
 	"./main/Test": [
 		"./resources/js/components/main/Test.vue",
 		9,
-		10
+		12
 	],
 	"./main/Test.vue": [
 		"./resources/js/components/main/Test.vue",
 		9,
-		10
+		12
+	],
+	"./recruit/Description": [
+		"./resources/js/components/recruit/Description.vue",
+		9,
+		3
+	],
+	"./recruit/Description.vue": [
+		"./resources/js/components/recruit/Description.vue",
+		9,
+		3
+	],
+	"./recruit/Menu": [
+		"./resources/js/components/recruit/Menu.vue",
+		9,
+		22
+	],
+	"./recruit/Menu.vue": [
+		"./resources/js/components/recruit/Menu.vue",
+		9,
+		22
+	],
+	"./recruit/Recruit": [
+		"./resources/js/components/recruit/Recruit.vue",
+		9,
+		3,
+		4
+	],
+	"./recruit/Recruit copy": [
+		"./resources/js/components/recruit/Recruit copy.vue",
+		9,
+		14
+	],
+	"./recruit/Recruit copy.vue": [
+		"./resources/js/components/recruit/Recruit copy.vue",
+		9,
+		14
+	],
+	"./recruit/Recruit.vue": [
+		"./resources/js/components/recruit/Recruit.vue",
+		9,
+		3,
+		4
+	],
+	"./recruit/content": [
+		"./resources/js/components/recruit/content.json",
+		3,
+		17
+	],
+	"./recruit/content.json": [
+		"./resources/js/components/recruit/content.json",
+		3,
+		17
 	],
 	"./service/Img/찜.png": [
 		"./resources/js/components/service/Img/찜.png",
 		7,
-		14
+		18
 	],
 	"./service/Img/찜스토어.png": [
 		"./resources/js/components/service/Img/찜스토어.png",
 		7,
-		15
+		19
 	],
 	"./service/Img/츄릅.png": [
 		"./resources/js/components/service/Img/츄릅.png",
 		7,
-		16
+		20
 	],
 	"./service/Platform": [
 		"./resources/js/components/service/Platform.vue",
 		9,
-		11
+		15
 	],
 	"./service/Platform.vue": [
 		"./resources/js/components/service/Platform.vue",
 		9,
-		11
+		15
 	],
 	"./service/Service": [
 		"./resources/js/components/service/Service.vue",
 		9,
 		0,
-		2
+		9
 	],
 	"./service/Service.vue": [
 		"./resources/js/components/service/Service.vue",
 		9,
 		0,
-		2
-	],
-	"./service/recruit/content": [
-		"./resources/js/components/service/recruit/content.json",
-		3,
-		13
-	],
-	"./service/recruit/content.json": [
-		"./resources/js/components/service/recruit/content.json",
-		3,
-		13
+		9
 	]
 };
 function webpackAsyncContext(req) {
@@ -60117,15 +60159,25 @@ function getDefaultHeader(title) {
       header: getDefaultHeader("CompanyInfo")
     }
   }, {
-    path: "service",
-    name: "Service",
+    path: "recruit",
+    name: "Recruit",
     components: {
-      "default": Object(_utils__WEBPACK_IMPORTED_MODULE_0__["asyncComponent"])("service/Service")
+      "default": Object(_utils__WEBPACK_IMPORTED_MODULE_0__["asyncComponent"])("recruit/Recruit")
     },
     meta: {
       action: true
     }
-  }]
+  } // {
+  //     path: `recruit2`,
+  //     name: "Recruit2",
+  //     components: {
+  //         default: asyncComponent(`recruit2/Recruit2`),
+  //     },
+  //     meta: {
+  //         action: true,
+  //     },
+  // },
+  ]
 }]);
 
 /***/ }),

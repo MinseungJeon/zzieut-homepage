@@ -12152,3 +12152,124 @@ a.text-dark:focus {
   color: #ed3f37;
 }
 
+.Recruit .recruitPageBody {
+  margin: 10% 0 0 15%;
+}
+
+.Recruit h2 {
+  font-size: 34px;
+  font-weight: bold;
+  color: #555;
+  letter-spacing: -1px;
+  max-width: 100%;
+  margin-bottom: 50px;
+}
+
+.Recruit .recruitContainer {
+  display: flex;
+}
+
+.Recruit .recruitContainer .Menu .title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #e3342f;
+  letter-spacing: -0.2px;
+  padding: 6px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #f3f3f3;
+  height: auto;
+  line-height: 24px;
+}
+
+.Recruit .recruitContainer .Menu .teams {
+  color: #555;
+  font-weight: bold;
+  display: block;
+  width: 100%;
+  height: 64px;
+  line-height: 64px;
+  padding: 0 0 0 20px;
+  cursor: pointer;
+}
+
+.Recruit .recruitContainer .Menu .teams:hover {
+  background-color: rgba(243, 56, 50, 0.05);
+}
+
+.Recruit .recruitContainer .Menu .active {
+  background-color: rgba(243, 56, 50, 0.15);
+}
+
+.Recruit .recruitContainer .Menu .active:hover {
+  background-color: rgba(243, 56, 50, 0.15);
+}
+
+.Recruit .Description {
+  padding: 0 20px;
+  width: 66.66667%;
+}
+
+.Recruit .Description .teams .description {
+  border: 1px solid #f3f3f3;
+  padding: 26px 24px;
+  padding: 26px 45px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.Recruit .Description .teams .description h3 {
+  color: #555;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: -0.2px;
+  margin-bottom: 10px;
+}
+
+.Recruit .Description .teams .description ul {
+  margin-bottom: 30px;
+  list-style: unset;
+}
+
+.Recruit .Description .teams .description ul li {
+  color: #555;
+  font-size: 15px;
+  margin-bottom: 6px;
+  line-height: 30px;
+}
+
+.Recruit .Description .teams .description ul li ul {
+  margin-left: 1.8rem;
+}
+
+.Recruit .Description .teams .description ul li ul li {
+  list-style: circle;
+}
+
+.Recruit .Description .teams .description p {
+  color: #555;
+  font-size: 15px;
+  margin-bottom: 20px;
+  line-height: 30px;
+}
+
+.Recruit .Description .teams .description .apply {
+  background: rgba(227, 52, 47, 0.015);
+  padding: 10px;
+}
+
+.Recruit .Description .teams .description .apply a {
+  display: block;
+  margin: 10px auto 28px auto;
+  height: 60px;
+  width: 240px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 24px;
+  box-shadow: 2px 4px 0 0 rgba(0, 0, 0, 0.04);
+  background-color: #e3342f;
+  text-decoration: none;
+}
+

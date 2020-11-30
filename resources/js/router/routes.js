@@ -7,15 +7,15 @@ import { defaults } from "lodash";
 function getDefaultHeader(title) {
     return {
         components: {
-            DefaultHeader
+            DefaultHeader,
         },
         render(createElement) {
             return createElement("DefaultHeader", {
                 props: {
-                    title
-                }
+                    title,
+                },
             });
-        }
+        },
     };
 }
 
@@ -23,10 +23,10 @@ export default [
     {
         path: "/",
         components: {
-            default: asyncComponent("Index")
+            default: asyncComponent("Index"),
         },
         meta: {
-            needAuth: true
+            needAuth: true,
         },
         children: [
             {
@@ -34,38 +34,48 @@ export default [
                 name: "HomeMain",
                 components: {
                     default: asyncComponent("main/Index"),
-                    header: getDefaultHeader("HomeMain")
-                }
+                    header: getDefaultHeader("HomeMain"),
+                },
             },
             {
                 path: `test`,
                 name: "Test",
                 components: {
                     default: asyncComponent(`main/Test`),
-                    header: getDefaultHeader("Test")
+                    header: getDefaultHeader("Test"),
                 },
                 meta: {
-                    action: true
-                }
+                    action: true,
+                },
             },
             {
                 path: "companyInfo",
                 name: "CompanyInfo",
                 components: {
                     default: asyncComponent("companyInfo/CompanyInfo"),
-                    header: getDefaultHeader("CompanyInfo")
-                }
+                    header: getDefaultHeader("CompanyInfo"),
+                },
             },
             {
-                path: `service`,
-                name: "Service",
+                path: `recruit`,
+                name: "Recruit",
                 components: {
-                    default: asyncComponent(`service/Service`)
+                    default: asyncComponent(`recruit/Recruit`),
                 },
                 meta: {
-                    action: true
-                }
-            }
-        ]
-    }
+                    action: true,
+                },
+            },
+            // {
+            //     path: `recruit2`,
+            //     name: "Recruit2",
+            //     components: {
+            //         default: asyncComponent(`recruit2/Recruit2`),
+            //     },
+            //     meta: {
+            //         action: true,
+            //     },
+            // },
+        ],
+    },
 ];
