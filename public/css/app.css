@@ -11199,7 +11199,7 @@ input {
 
 .service .serviceLists article .flatformBody .timelineArea li {
   position: relative;
-  padding: 10px 0 10px 0;
+  padding: 8px 0 10px 0;
 }
 
 .service .serviceLists article .flatformBody .timelineArea li :before {

@@ -138,7 +138,7 @@ __webpack_require__.r(__webpack_exports__);
         dots: true,
         dotsClass: "slick-dots custom-dot-class",
         edgeFriction: 0.35,
-        infinite: false,
+        infinite: true,
         autoplay: true,
         speed: 500,
         autoplaySpeed: 2000,
