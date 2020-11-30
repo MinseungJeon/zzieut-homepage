@@ -58734,41 +58734,98 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 var map = {
 	"./ExampleComponent": [
 		"./resources/js/components/ExampleComponent.vue",
-		0
+		9,
+		1
 	],
 	"./ExampleComponent.vue": [
 		"./resources/js/components/ExampleComponent.vue",
-		0
+		9,
+		1
 	],
 	"./Index": [
 		"./resources/js/components/Index.vue",
-		1
+		9,
+		2
 	],
 	"./Index.vue": [
 		"./resources/js/components/Index.vue",
-		1
+		9,
+		2
 	],
 	"./headers/DefaultHeader": [
-		"./resources/js/components/headers/DefaultHeader.vue"
+		"./resources/js/components/headers/DefaultHeader.vue",
+		9
 	],
 	"./headers/DefaultHeader.vue": [
-		"./resources/js/components/headers/DefaultHeader.vue"
+		"./resources/js/components/headers/DefaultHeader.vue",
+		9
 	],
 	"./main/Index": [
 		"./resources/js/components/main/Index.vue",
-		2
+		9,
+		3
 	],
 	"./main/Index.vue": [
 		"./resources/js/components/main/Index.vue",
-		2
+		9,
+		3
 	],
 	"./main/Test": [
 		"./resources/js/components/main/Test.vue",
-		3
+		9,
+		4
 	],
 	"./main/Test.vue": [
 		"./resources/js/components/main/Test.vue",
-		3
+		9,
+		4
+	],
+	"./service/Img/찜.png": [
+		"./resources/js/components/service/Img/찜.png",
+		7,
+		8
+	],
+	"./service/Img/찜스토어.png": [
+		"./resources/js/components/service/Img/찜스토어.png",
+		7,
+		9
+	],
+	"./service/Img/츄릅.png": [
+		"./resources/js/components/service/Img/츄릅.png",
+		7,
+		10
+	],
+	"./service/Platform": [
+		"./resources/js/components/service/Platform.vue",
+		9,
+		5
+	],
+	"./service/Platform.vue": [
+		"./resources/js/components/service/Platform.vue",
+		9,
+		5
+	],
+	"./service/Service": [
+		"./resources/js/components/service/Service.vue",
+		9,
+		6,
+		0
+	],
+	"./service/Service.vue": [
+		"./resources/js/components/service/Service.vue",
+		9,
+		6,
+		0
+	],
+	"./service/recruit/content": [
+		"./resources/js/components/service/recruit/content.json",
+		3,
+		7
+	],
+	"./service/recruit/content.json": [
+		"./resources/js/components/service/recruit/content.json",
+		3,
+		7
 	]
 };
 function webpackAsyncContext(req) {
@@ -58781,8 +58838,8 @@ function webpackAsyncContext(req) {
 	}
 
 	var ids = map[req], id = ids[0];
-	return Promise.all(ids.slice(1).map(__webpack_require__.e)).then(function() {
-		return __webpack_require__(id);
+	return Promise.all(ids.slice(2).map(__webpack_require__.e)).then(function() {
+		return __webpack_require__.t(id, ids[1])
 	});
 }
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
@@ -58981,7 +59038,7 @@ function getDefaultHeader(title) {
       DefaultHeader: _js_components_headers_DefaultHeader__WEBPACK_IMPORTED_MODULE_2__["default"]
     },
     render: function render(createElement) {
-      return createElement('DefaultHeader', {
+      return createElement("DefaultHeader", {
         props: {
           title: title
         }
@@ -58991,26 +59048,35 @@ function getDefaultHeader(title) {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ([{
-  path: '/',
+  path: "/",
   components: {
-    "default": Object(_utils__WEBPACK_IMPORTED_MODULE_0__["asyncComponent"])('Index')
+    "default": Object(_utils__WEBPACK_IMPORTED_MODULE_0__["asyncComponent"])("Index")
   },
   meta: {
     needAuth: true
   },
   children: [{
-    path: '',
-    name: 'HomeMain',
+    path: "",
+    name: "HomeMain",
     components: {
-      "default": Object(_utils__WEBPACK_IMPORTED_MODULE_0__["asyncComponent"])('main/Index'),
-      header: getDefaultHeader('HomeMain')
+      "default": Object(_utils__WEBPACK_IMPORTED_MODULE_0__["asyncComponent"])("main/Index"),
+      header: getDefaultHeader("HomeMain")
     }
   }, {
     path: "test",
-    name: 'Test',
+    name: "Test",
     components: {
       "default": Object(_utils__WEBPACK_IMPORTED_MODULE_0__["asyncComponent"])("main/Test"),
-      header: getDefaultHeader('Test')
+      header: getDefaultHeader("Test")
+    },
+    meta: {
+      action: true
+    }
+  }, {
+    path: "service",
+    name: "Service",
+    components: {
+      "default": Object(_utils__WEBPACK_IMPORTED_MODULE_0__["asyncComponent"])("service/Service")
     },
     meta: {
       action: true
@@ -59382,8 +59448,8 @@ var Store = /*#__PURE__*/function (_Vuex$Store) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/sjwiq200/Desktop/test/zzieut-temp/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/sjwiq200/Desktop/test/zzieut-temp/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/jyj/Documents/zzieut-homepage/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/jyj/Documents/zzieut-homepage/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
