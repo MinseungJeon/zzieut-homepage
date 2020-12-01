@@ -1,0 +1,19 @@
+@import "../sass/mixins";
+
+@include tablet {
+    .Footer {
+        .wrapper {
+            width: 650px;
+        }
+    }
+}
+
+@include mobile {
+    .Footer {
+        .wrapper {
+            address {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

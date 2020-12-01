@@ -59827,12 +59827,12 @@ var map = {
 	"./companyInfo/CompanyInfoData": [
 		"./resources/js/components/companyInfo/CompanyInfoData.js",
 		9,
-		16
+		15
 	],
 	"./companyInfo/CompanyInfoData.js": [
 		"./resources/js/components/companyInfo/CompanyInfoData.js",
 		9,
-		16
+		15
 	],
 	"./companyInfo/companyInfoComponents/History": [
 		"./resources/js/components/companyInfo/companyInfoComponents/History.vue",
@@ -59947,37 +59947,37 @@ var map = {
 	"./recruit/content": [
 		"./resources/js/components/recruit/content.json",
 		3,
-		17
+		16
 	],
 	"./recruit/content.json": [
 		"./resources/js/components/recruit/content.json",
 		3,
-		17
+		16
 	],
 	"./service/Img/찜.png": [
 		"./resources/js/components/service/Img/찜.png",
 		7,
-		19
+		18
 	],
 	"./service/Img/찜스토어.png": [
 		"./resources/js/components/service/Img/찜스토어.png",
 		7,
-		20
+		19
 	],
 	"./service/Img/츄릅.png": [
 		"./resources/js/components/service/Img/츄릅.png",
 		7,
-		21
+		20
 	],
 	"./service/Platform": [
 		"./resources/js/components/service/Platform.vue",
 		9,
-		15
+		14
 	],
 	"./service/Platform.vue": [
 		"./resources/js/components/service/Platform.vue",
 		9,
-		15
+		14
 	],
 	"./service/Service": [
 		"./resources/js/components/service/Service.vue",

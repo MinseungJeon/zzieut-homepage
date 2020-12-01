@@ -237,6 +237,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 
  // css 집어넣는거 물어보기.
@@ -577,7 +584,13 @@ var render = function() {
           "VueSlickCarousel",
           _vm._b({}, "VueSlickCarousel", _vm.settings, false),
           _vm._l(_vm.imageList, function(img) {
-            return _c("img", { key: img.id, attrs: { src: img.imgSrc } })
+            return _c("div", {
+              key: img.id,
+              staticClass: "carouselImage",
+              style: {
+                backgroundImage: "url(" + img.imgSrc + ")"
+              }
+            })
           }),
           0
         )

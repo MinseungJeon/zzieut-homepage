@@ -2,7 +2,14 @@
     <div class="MainBanner">
         <div>
             <VueSlickCarousel v-bind="settings">
-                <img v-for="img in imageList" :key="img.id" :src="img.imgSrc" />
+                <div
+                    v-for="img in imageList"
+                    :key="img.id"
+                    :style="{
+                        backgroundImage: `url(${img.imgSrc})`
+                    }"
+                    class="carouselImage"
+                />
             </VueSlickCarousel>
         </div>
         <p>내가 원하는 그곳을 <span class="point">찜</span>하다.</p>
