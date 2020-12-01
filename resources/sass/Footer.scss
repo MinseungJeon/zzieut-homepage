@@ -13,5 +13,22 @@
         address {
             margin-bottom: 0;
         }
+
+        .download {
+            display: flex;
+            li {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 10px;
+                img {
+                    width: 20px;
+                }
+
+                &:nth-child(2) {
+                    opacity: 0.9;
+                }
+            }
+        }
     }
 }

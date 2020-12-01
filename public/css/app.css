@@ -11085,7 +11085,6 @@ a.text-dark:focus {
 
 .CompanyInfo .MainBanner > div {
   position: relative;
-  height: 100vh;
   width: 100%;
   overflow: hidden;
 }
@@ -11500,7 +11499,7 @@ a.text-dark:focus {
     margin-bottom: 50px;
   }
 
-  .CompanyInfo .MainBanner > div {
+  .CompanyInfo .MainBanner > div .carouselImage {
     height: 500px;
   }
 
@@ -11701,8 +11700,8 @@ a.text-dark:focus {
     margin-bottom: 30px;
   }
 
-  .CompanyInfo .MainBanner > div {
-    height: 210px;
+  .CompanyInfo .MainBanner > div .carouselImage {
+    height: 300px;
   }
 
   .CompanyInfo .MainBanner > div .slick-dots {
@@ -11861,7 +11860,7 @@ a.text-dark:focus {
   .CompanyInfo .history .wrapper ul li:nth-child(2n)::before {
     content: "";
     position: absolute;
-    display: block;
+    display: none;
     width: 1px;
     height: 90%;
     left: -25px;
@@ -12300,6 +12299,25 @@ a.text-dark:focus {
 
 .Footer .wrapper address {
   margin-bottom: 0;
+}
+
+.Footer .wrapper .download {
+  display: flex;
+}
+
+.Footer .wrapper .download li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.Footer .wrapper .download li img {
+  width: 20px;
+}
+
+.Footer .wrapper .download li:nth-child(2) {
+  opacity: 0.9;
 }
 
 @media (min-width: 720px) and (max-width: 1023px) {

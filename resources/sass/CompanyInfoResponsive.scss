@@ -6,7 +6,9 @@
             position: relative;
             margin-bottom: 50px;
             > div {
-                height: 500px;
+                .carouselImage {
+                    height: 500px;
+                }
 
                 .slick-dots {
                     bottom: 30px;
@@ -215,7 +217,9 @@
         .MainBanner {
             margin-bottom: 30px;
             > div {
-                height: 210px;
+                .carouselImage {
+                    height: 300px;
+                }
 
                 .slick-dots {
                     bottom: 5%;
@@ -371,7 +375,7 @@
                             &::before {
                                 content: "";
                                 position: absolute;
-                                display: block;
+                                display: none;
                                 width: 1px;
                                 height: 90%;
                                 left: -25px;

@@ -2077,6 +2077,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Footer",
   data: function data() {
@@ -41868,11 +41884,54 @@ var render = function() {
         )
       ]),
       _vm._v(" "),
-      _c("p", { staticClass: "copyright" }, [_vm._v("© Copyright 2020 찌읏")])
+      _c("p", { staticClass: "copyright" }, [_vm._v("© Copyright 2020 찌읏")]),
+      _vm._v(" "),
+      _vm._m(0)
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("ul", { staticClass: "download" }, [
+      _c("li", [
+        _c(
+          "a",
+          {
+            attrs: {
+              href:
+                "https://play.google.com/store/apps/details?id=com.zzieut.meu&hl=ko"
+            }
+          },
+          [
+            _c("img", {
+              attrs: { src: __webpack_require__(/*! ./playStore_w.png */ "./resources/js/components/footer/playStore_w.png"), alt: "playstore" }
+            })
+          ]
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c(
+          "a",
+          {
+            attrs: {
+              href:
+                "https://apps.apple.com/kr/app/%EC%B0%9C-%ED%95%98%EA%B3%A0-%EC%8B%B6%EC%9D%80-%EA%B7%B8%EA%B2%83/id1451798919"
+            }
+          },
+          [
+            _c("img", {
+              attrs: { src: __webpack_require__(/*! ./appStore_w.png */ "./resources/js/components/footer/appStore_w.png"), alt: "appstore" }
+            })
+          ]
+        )
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -59884,6 +59943,14 @@ var map = {
 		"./resources/js/components/footer/Footer.vue",
 		9
 	],
+	"./footer/appStore_w.png": [
+		"./resources/js/components/footer/appStore_w.png",
+		7
+	],
+	"./footer/playStore_w.png": [
+		"./resources/js/components/footer/playStore_w.png",
+		7
+	],
 	"./headers/DefaultHeader": [
 		"./resources/js/components/headers/DefaultHeader.vue",
 		9
@@ -60080,6 +60147,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_template_id_22837618___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
+
+/***/ }),
+
+/***/ "./resources/js/components/footer/appStore_w.png":
+/*!*******************************************************!*\
+  !*** ./resources/js/components/footer/appStore_w.png ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/appStore_w.png?f4d92945bd807df67ea4599d50de7097";
+
+/***/ }),
+
+/***/ "./resources/js/components/footer/playStore_w.png":
+/*!********************************************************!*\
+  !*** ./resources/js/components/footer/playStore_w.png ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/playStore_w.png?5f79bfd7dc3cb6363f264917da9c607d";
 
 /***/ }),
 

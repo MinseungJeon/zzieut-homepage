@@ -10,6 +10,22 @@
                 </ul>
             </address>
             <p class="copyright">&copy; Copyright 2020 찌읏</p>
+            <ul class="download">
+                <li>
+                    <a
+                        href="https://play.google.com/store/apps/details?id=com.zzieut.meu&hl=ko"
+                    >
+                        <img src="./playStore_w.png" alt="playstore" />
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="https://apps.apple.com/kr/app/%EC%B0%9C-%ED%95%98%EA%B3%A0-%EC%8B%B6%EC%9D%80-%EA%B7%B8%EA%B2%83/id1451798919"
+                    >
+                        <img src="./appStore_w.png" alt="appstore" />
+                    </a>
+                </li>
+            </ul>
         </div>
     </footer>
 </template>
