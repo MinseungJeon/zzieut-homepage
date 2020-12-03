@@ -6,8 +6,8 @@
             <div class="contents">
                 <div>
                     <p>
-                        Let's help people
-                        <span>Play Better</span>
+                        취향의 그곳을 <br />
+                        <span>찜하다</span>
                     </p>
                 </div>
                 <ul>

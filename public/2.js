@@ -223,10 +223,6 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_slick_carousel__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-slick-carousel */ "./node_modules/vue-slick-carousel/dist/vue-slick-carousel.umd.js");
 /* harmony import */ var vue_slick_carousel__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_slick_carousel__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var vue_slick_carousel_dist_vue_slick_carousel_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-slick-carousel/dist/vue-slick-carousel.css */ "./node_modules/vue-slick-carousel/dist/vue-slick-carousel.css");
-/* harmony import */ var vue_slick_carousel_dist_vue_slick_carousel_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_slick_carousel_dist_vue_slick_carousel_css__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var vue_slick_carousel_dist_vue_slick_carousel_theme_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-slick-carousel/dist/vue-slick-carousel-theme.css */ "./node_modules/vue-slick-carousel/dist/vue-slick-carousel-theme.css");
-/* harmony import */ var vue_slick_carousel_dist_vue_slick_carousel_theme_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue_slick_carousel_dist_vue_slick_carousel_theme_css__WEBPACK_IMPORTED_MODULE_2__);
 //
 //
 //
@@ -244,9 +240,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
-
- // css 집어넣는거 물어보기.
+ // import "vue-slick-carousel/dist/vue-slick-carousel.css";
+// import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "MyComponent",
@@ -423,10 +418,10 @@ var staticRenderFns = [
       _c("div", { staticClass: "contents" }, [
         _c("div", [
           _c("p", [
-            _vm._v(
-              "\n                    Let's help people\n                    "
-            ),
-            _c("span", [_vm._v("Play Better")])
+            _vm._v("\n                    취향의 그곳을 "),
+            _c("br"),
+            _vm._v(" "),
+            _c("span", [_vm._v("찜하다")])
           ])
         ]),
         _vm._v(" "),

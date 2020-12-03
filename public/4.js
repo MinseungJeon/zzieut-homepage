@@ -63,11 +63,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var vue_slick_carousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-slick-carousel */ "./node_modules/vue-slick-carousel/dist/vue-slick-carousel.umd.js");
 /* harmony import */ var vue_slick_carousel__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_slick_carousel__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var vue_slick_carousel_dist_vue_slick_carousel_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-slick-carousel/dist/vue-slick-carousel.css */ "./node_modules/vue-slick-carousel/dist/vue-slick-carousel.css");
-/* harmony import */ var vue_slick_carousel_dist_vue_slick_carousel_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue_slick_carousel_dist_vue_slick_carousel_css__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var vue_slick_carousel_dist_vue_slick_carousel_theme_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-slick-carousel/dist/vue-slick-carousel-theme.css */ "./node_modules/vue-slick-carousel/dist/vue-slick-carousel-theme.css");
-/* harmony import */ var vue_slick_carousel_dist_vue_slick_carousel_theme_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(vue_slick_carousel_dist_vue_slick_carousel_theme_css__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _Platform_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Platform.vue */ "./resources/js/components/service/Platform.vue");
+/* harmony import */ var _Platform_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Platform.vue */ "./resources/js/components/service/Platform.vue");
 //
 //
 //
@@ -109,8 +105,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
-
 
 
 
@@ -118,7 +112,7 @@ __webpack_require__.r(__webpack_exports__);
   name: "MyComponent",
   components: {
     VueSlickCarousel: vue_slick_carousel__WEBPACK_IMPORTED_MODULE_1___default.a,
-    Platform: _Platform_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
+    Platform: _Platform_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
   },
   created: function created() {
     var _this = this;

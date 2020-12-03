@@ -1,13 +1,13 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[17],{
 
-/***/ "./resources/js/components/footer/app-store.svg":
-/*!******************************************************!*\
-  !*** ./resources/js/components/footer/app-store.svg ***!
-  \******************************************************/
+/***/ "./resources/js/components/service/Img/찜.png":
+/*!***************************************************!*\
+  !*** ./resources/js/components/service/Img/찜.png ***!
+  \***************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/app-store.svg?fc698f31ee990942a2eae7a94030125e";
+module.exports = "/images/찜.png?1a0f17ce8dcb982fc5fcda8ad592a357";
 
 /***/ })
 

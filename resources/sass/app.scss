@@ -10,6 +10,10 @@
 // Bootstrap
 @import "~bootstrap/scss/bootstrap";
 
+// VueSlickCarousel
+@import "../../node_modules/vue-slick-carousel/dist/vue-slick-carousel.css";
+@import "../../node_modules//vue-slick-carousel/dist/vue-slick-carousel-theme.css";
+
 //CompanyInfo
 @import "./CompanyInfo";
 @import "./CompanyInfoResponsive";

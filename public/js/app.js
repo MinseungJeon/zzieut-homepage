@@ -60024,17 +60024,17 @@ var map = {
 	"./service/Img/찜.png": [
 		"./resources/js/components/service/Img/찜.png",
 		7,
-		18
+		17
 	],
 	"./service/Img/찜스토어.png": [
 		"./resources/js/components/service/Img/찜스토어.png",
 		7,
-		19
+		18
 	],
 	"./service/Img/츄릅.png": [
 		"./resources/js/components/service/Img/츄릅.png",
 		7,
-		20
+		19
 	],
 	"./service/Platform": [
 		"./resources/js/components/service/Platform.vue",
