@@ -170,18 +170,6 @@
             }
         }
     }
-    .from-bottom {
-        width: 100px;
-        height: 50px;
-        background-color: blue;
-        transform: translateY(-50%);
-        transition: transform 400ms ease-in;
-    }
-
-    .from-bottom {
-       
-        transform: translateY(0);
-    }
 }
 
 @media (min-width: 320px) and (max-width: 720px) {

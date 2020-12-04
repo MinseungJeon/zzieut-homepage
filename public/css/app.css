@@ -12150,18 +12150,6 @@ a.text-dark:focus {
   color: #ed3f37;
 }
 
-.service .from-bottom {
-  width: 100px;
-  height: 50px;
-  background-color: blue;
-  transform: translateY(-50%);
-  transition: transform 400ms ease-in;
-}
-
-.service .from-bottom {
-  transform: translateY(0);
-}
-
 @media (min-width: 320px) and (max-width: 720px) {
   .service .slickContainer {
     width: 100%;

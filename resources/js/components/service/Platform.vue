@@ -29,9 +29,6 @@
                 </div>
             </article>
         </section>
-        <div class="from-bottom">
-            어떻게 움직이는지 한번 볼까요?
-        </div>
     </div>
 </template>
 

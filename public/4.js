@@ -43,9 +43,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["data"]
 });
@@ -213,10 +210,6 @@ var render = function() {
           )
         ])
       ])
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "from-bottom" }, [
-      _vm._v("\n        어떻게 움직이는지 한번 볼까요?\n    ")
     ])
   ])
 }
