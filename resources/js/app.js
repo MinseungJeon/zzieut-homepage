@@ -4,9 +4,9 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
+require("./bootstrap");
 
-window.Vue = require('vue');
+window.Vue = require("vue");
 
 /**
  * The following block of code may be used to automatically register your
@@ -26,14 +26,14 @@ window.Vue = require('vue');
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-import App from './App.vue'
-import { sync } from 'vuex-router-sync'
-import router from './router'
-import store from './store'
+import App from "./App.vue";
+import { sync } from "vuex-router-sync";
+import router from "./router";
+import store from "./store";
 
-sync(store, router)
+sync(store, router);
 const app = new Vue({
-    el: '#app',
+    el: "#app",
     router,
     store,
     render: h => h(App)

@@ -1,3 +1,6 @@
+// Reset
+@import "./reset";
+
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Nunito");
 
@@ -7,8 +10,17 @@
 // Bootstrap
 @import "~bootstrap/scss/bootstrap";
 
-// Reset
-@import "reset";
+//CompanyInfo
+@import "./CompanyInfo";
+@import "./CompanyInfoResponsive";
+
+//service
+@import "./service.scss";
 
 // Recruit
 @import "Recruit";
+//Footer
+@import "Footer";
+//Header
+@import "DefaultHeader";
+@import "defaultHeaderResponsive";

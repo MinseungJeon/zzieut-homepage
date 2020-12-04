@@ -18,14 +18,18 @@
         "lodash": "^4.17.19",
         "popper.js": "^1.12",
         "resolve-url-loader": "^2.3.1",
-        "sass": "^1.20.1",
-        "sass-loader": "^8.0.0",
+        "sass": "^1.29.0",
+        "sass-loader": "^8.0.2",
         "vue": "^2.5.17",
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^1.2.32",
+        "@fortawesome/free-solid-svg-icons": "^5.15.1",
+        "node-sass": "^4.14.1",
         "url-template": "^2.0.8",
         "vue-router": "^3.4.9",
+        "vue-slick-carousel": "^1.0.6",
         "vuex": "^3.5.1",
         "vuex-rest-api": "^2.13.0",
         "vuex-router-sync": "^5.0.0"
