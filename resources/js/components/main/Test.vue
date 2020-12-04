@@ -2,19 +2,19 @@
     <div>
         home/Test.vue
 
-        {{testState}}
+        {{ testState }}
     </div>
 </template>
 
 <script>
-    import {mapState} from 'vuex'
-    export default {
-        computed: {
-            ...mapState('tests', ['testState'])
-        },
+import { mapState } from "vuex";
+console.log(mapState);
+
+export default {
+    computed: {
+        ...mapState("tests", ["testState"])
     }
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

@@ -1,5 +1,157 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  outline: none;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+input {
+  outline: none;
+}
+
 /*!
  * Bootstrap v4.5.3 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
@@ -10903,161 +11055,938 @@ a.text-dark:focus {
   }
 }
 
-*,
-*:after,
-*:before {
-  box-sizing: border-box;
+.CompanyInfo {
+  padding-bottom: 150px;
+  min-width: 320px;
 }
 
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
+.CompanyInfo h3 {
+  text-align: center;
+  padding: 50px 0;
+  font-size: 20px;
+  font-weight: bolder;
+  color: #e3342f;
+}
+
+.CompanyInfo .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.CompanyInfo .point {
+  color: #e3342f;
+}
+
+.CompanyInfo .MainBanner {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.CompanyInfo .MainBanner > div {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.CompanyInfo .MainBanner > div img {
+  width: 100%;
+}
+
+.CompanyInfo .MainBanner > div .slick-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 17%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.CompanyInfo .MainBanner > div .slick-dots li button::before {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.CompanyInfo .MainBanner > div .slick-dots li.slick-active button:before {
+  color: #fff;
+}
+
+.CompanyInfo .MainBanner p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f8f8f8;
+  font-size: 48px;
+  font-weight: 600;
+  z-index: 10;
+}
+
+.CompanyInfo .vision {
+  text-align: center;
+  margin-bottom: 150px;
+}
+
+.CompanyInfo .vision .contents {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.CompanyInfo .vision .contents div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px 0;
+  width: 230px;
+  height: 230px;
+  border-radius: 100%;
+  background-color: #e3342f;
+}
+
+.CompanyInfo .vision .contents div p {
+  color: #fff;
+  font-size: 24px;
+}
+
+.CompanyInfo .vision .contents ul {
+  display: flex;
+  justify-content: space-between;
+  width: 750px;
+}
+
+.CompanyInfo .vision .contents ul li {
+  position: relative;
+  width: 300px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 10px;
+  font-size: 20px;
+  box-shadow: 4px 4px 18px 0px rgba(50, 50, 50, 0.125);
+}
+
+.CompanyInfo .vision .contents ul li ::after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 120px;
+  background-color: #e3342f;
+  z-index: -1;
+}
+
+.CompanyInfo .vision .contents ul li span {
+  font-size: 36px;
+  font-weight: bold;
+  color: #d9d9d9;
+}
+
+.CompanyInfo .vision .contents ul li:nth-child(1) {
+  text-align: left;
+}
+
+.CompanyInfo .vision .contents ul li:nth-child(1) ::after {
+  right: 15%;
+  top: -50%;
+  transform: rotate(45deg);
+}
+
+.CompanyInfo .vision .contents ul li:nth-child(2) {
+  text-align: right;
+}
+
+.CompanyInfo .vision .contents ul li:nth-child(2) ::after {
+  left: 15%;
+  top: -50%;
+  transform: rotate(-45deg);
+}
+
+.CompanyInfo .brandMission {
+  padding-bottom: 150px;
+}
+
+.CompanyInfo .brandMission > p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 28px;
+  word-break: keep-all;
+  margin-bottom: 50px;
+}
+
+.CompanyInfo .brandMission > p span {
+  font-weight: 600;
+}
+
+.CompanyInfo .brandMission .wrapper ul li {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 16px;
   vertical-align: baseline;
 }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
+.CompanyInfo .brandMission .wrapper ul li span {
+  font-size: 20px;
+  font-weight: bolder;
+  margin-bottom: 50px;
+  position: relative;
 }
 
-body {
-  line-height: 1;
+.CompanyInfo .brandMission .wrapper ul li span.point {
+  font-size: 24px;
+  border-bottom: none;
+  margin-bottom: 0;
 }
 
-ol,
-ul {
-  list-style: none;
+.CompanyInfo .brandMission .wrapper ul li span.point:after {
+  display: none;
 }
 
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+.CompanyInfo .brandMission .wrapper ul li span:after {
   content: "";
-  content: none;
+  position: absolute;
+  left: 50%;
+  bottom: -25px;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 100px;
+  background-color: #e3342f;
 }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+.CompanyInfo .companyProfile {
+  background-color: #fff;
+  padding: 50px 0 0;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+.CompanyInfo .companyProfile .wrapper {
+  position: relative;
+  padding: 150px;
+  background: url("https://images.unsplash.com/photo-1500333070776-343c73e1eb4a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80") no-repeat 50% 50%/cover;
 }
 
-button {
+.CompanyInfo .companyProfile .wrapper::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.CompanyInfo .companyProfile .wrapper table {
+  display: inline-block;
+  padding: 20px;
+  background-color: #fff;
+  font-size: 16px;
+  line-height: 1.6;
+  z-index: 1;
+}
+
+.CompanyInfo .companyProfile .wrapper table tr {
+  display: block;
+  padding: 10px 0 15px;
+}
+
+.CompanyInfo .companyProfile .wrapper table tr:last-child {
+  border-bottom: none;
+}
+
+.CompanyInfo .companyProfile .wrapper table tr th {
+  width: 200px;
+  padding: 0 10px;
+  font-weight: bold;
+}
+
+.CompanyInfo .companyProfile .wrapper table tr td span {
+  color: #666;
+  font-size: 12px;
+}
+
+.CompanyInfo .history {
+  margin-bottom: 150px;
+}
+
+.CompanyInfo .history .wrapper > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.CompanyInfo .history .wrapper ul {
+  display: grid;
+  grid-template-columns: auto auto;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  max-width: 950px;
+  margin-bottom: 50px;
+  text-align: left;
+}
+
+.CompanyInfo .history .wrapper ul li {
+  text-align: center;
+}
+
+.CompanyInfo .history .wrapper ul li:nth-child(2n) {
+  position: relative;
+}
+
+.CompanyInfo .history .wrapper ul li:nth-child(2n)::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 1px;
+  height: 90%;
+  left: -25px;
+  bottom: 0;
+  background-color: #d9d9d9;
+}
+
+.CompanyInfo .history .wrapper ul li span {
+  display: inline-block;
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.CompanyInfo .history .wrapper ul li table {
+  text-align: left;
+}
+
+.CompanyInfo .history .wrapper ul li table tr {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.CompanyInfo .history .wrapper ul li table tr td {
+  word-break: keep-all;
+}
+
+.CompanyInfo .history .wrapper ul li table tr td:nth-child(1) {
+  color: #e3342f;
+  font-weight: bold;
+  padding-right: 15px;
+}
+
+.CompanyInfo .history .wrapper button {
+  width: 30%;
+  margin: 0 auto;
+  border: none;
   outline: none;
-  background-color: transparent;
-  font-family: inherit;
-  font-size: inherit;
+  background-color: #e3342f;
+  padding: 10px 0;
+  border-radius: 100px;
+  font-size: 16px;
+  color: #fff;
 }
 
-input {
-  outline: none;
+.CompanyInfo .members {
+  margin-bottom: 150px;
+}
+
+.CompanyInfo .members .wrapper ul {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.CompanyInfo .members .wrapper ul li {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 160px;
+  border-radius: 100%;
+  box-shadow: 4px 4px 18px 0px rgba(50, 50, 50, 0.125);
+  overflow: hidden;
+  cursor: default;
+  padding: 1px;
+}
+
+.CompanyInfo .members .wrapper ul li:hover img {
+  opacity: 0;
+}
+
+.CompanyInfo .members .wrapper ul li:hover p {
+  opacity: 1;
+}
+
+.CompanyInfo .members .wrapper ul li img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.35s ease;
+}
+
+.CompanyInfo .members .wrapper ul li p {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background-color: #dc3838;
+  color: #fff;
+  font-size: 12px;
+  transition: 0.35s ease;
+}
+
+.CompanyInfo .members .wrapper ul li p span {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.CompanyInfo .contact table {
+  display: inline-block;
+  padding: 20px;
+  background-color: #fff;
+  font-size: 16px;
+  line-height: 1.6;
+  z-index: 1;
+}
+
+.CompanyInfo .contact table tr {
+  display: block;
+  padding: 10px 0 15px;
+}
+
+.CompanyInfo .contact table tr:last-child {
+  border-bottom: none;
+}
+
+.CompanyInfo .contact table tr th {
+  width: 200px;
+  padding: 0 10px;
+  font-weight: bold;
+}
+
+@-webkit-keyframes activeIndex {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes activeIndex {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 720px) and (max-width: 1023px) {
+  .CompanyInfo .MainBanner {
+    position: relative;
+    margin-bottom: 50px;
+  }
+
+  .CompanyInfo .MainBanner > div {
+    height: 500px;
+  }
+
+  .CompanyInfo .MainBanner > div .slick-dots {
+    bottom: 30px;
+  }
+
+  .CompanyInfo .MainBanner > div .slick-dots li {
+    margin: 0;
+  }
+
+  .CompanyInfo .MainBanner p {
+    font-size: 36px;
+    word-break: keep-all;
+    text-align: center;
+  }
+
+  .CompanyInfo .vision {
+    text-align: center;
+    margin-bottom: 150px;
+  }
+
+  .CompanyInfo .vision .contents div {
+    padding: 0;
+    width: 180px;
+    height: 180px;
+  }
+
+  .CompanyInfo .vision .contents div p {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+
+  .CompanyInfo .vision .contents ul {
+    display: flex;
+    justify-content: space-between;
+    width: 650px;
+  }
+
+  .CompanyInfo .vision .contents ul li {
+    position: relative;
+    width: 280px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    font-size: 18px;
+    box-shadow: 4px 4px 18px 0px rgba(50, 50, 50, 0.125);
+  }
+
+  .CompanyInfo .vision .contents ul li span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #d9d9d9;
+  }
+
+  .CompanyInfo .vision .contents ul li:nth-child(1) {
+    text-align: left;
+  }
+
+  .CompanyInfo .vision .contents ul li:nth-child(1) ::after {
+    right: 15%;
+    top: -50%;
+    transform: rotate(45deg);
+  }
+
+  .CompanyInfo .vision .contents ul li:nth-child(2) {
+    text-align: right;
+  }
+
+  .CompanyInfo .vision .contents ul li:nth-child(2) ::after {
+    left: 15%;
+    top: -50%;
+    transform: rotate(-45deg);
+  }
+
+  .CompanyInfo .brandMission {
+    padding-bottom: 150px;
+  }
+
+  .CompanyInfo .brandMission > p {
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .CompanyInfo .brandMission .wrapper ul li {
+    font-size: 16px;
+  }
+
+  .CompanyInfo .brandMission .wrapper ul li span {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  .CompanyInfo .brandMission .wrapper ul li span.point {
+    font-size: 20px;
+  }
+
+  .CompanyInfo .brandMission .wrapper ul li span:after {
+    bottom: -15px;
+  }
+
+  .CompanyInfo .brandMission .companyProfile .wrapper {
+    padding: 150px 100px;
+  }
+
+  .CompanyInfo .brandMission .companyProfile .wrapper table {
+    padding: 15px;
+  }
+
+  .CompanyInfo .brandMission .companyProfile .wrapper table tr {
+    display: block;
+    padding: 10px 0 15px;
+  }
+
+  .CompanyInfo .brandMission .companyProfile .wrapper table tr th {
+    width: auto;
+    padding: 0 10px;
+    font-weight: bold;
+  }
+
+  .CompanyInfo .brandMission .companyProfile .wrapper table tr td span {
+    color: #666;
+    font-size: 12px;
+  }
+
+  .CompanyInfo .history {
+    margin-bottom: 150px;
+  }
+
+  .CompanyInfo .history .wrapper > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .CompanyInfo .history .wrapper > div ul {
+    grid-template-columns: auto;
+    margin-bottom: 0;
+  }
+
+  .CompanyInfo .history .wrapper > div ul li {
+    margin-bottom: 30px;
+  }
+
+  .CompanyInfo .history .wrapper > div ul li:nth-child(2n)::before {
+    display: none;
+  }
+
+  .CompanyInfo .members .wrapper ul {
+    grid-template-columns: auto auto auto auto;
+  }
+
+  .CompanyInfo .members .wrapper ul li {
+    width: 120px;
+    height: 120px;
+  }
+
+  .CompanyInfo .members .wrapper ul li img {
+    display: none;
+  }
+
+  .CompanyInfo .members .wrapper ul li p {
+    opacity: 1;
+    text-align: center;
+    padding: 0 5px;
+  }
+
+  .CompanyInfo .contact table tr {
+    padding: 5px 0 10px;
+  }
+
+  .CompanyInfo .contact table tr th {
+    width: 100px;
+  }
+
+  .CompanyInfo .contact table tr td {
+    width: 350px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 719px) {
+  .CompanyInfo {
+    padding-bottom: 150px;
+  }
+
+  .CompanyInfo h3 {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 18px;
+    font-weight: bolder;
+    color: #e3342f;
+  }
+
+  .CompanyInfo .MainBanner {
+    margin-bottom: 30px;
+  }
+
+  .CompanyInfo .MainBanner > div {
+    height: 210px;
+  }
+
+  .CompanyInfo .MainBanner > div .slick-dots {
+    bottom: 5%;
+  }
+
+  .CompanyInfo .MainBanner > div .slick-dots li {
+    margin: 0;
+  }
+
+  .CompanyInfo .MainBanner p {
+    font-size: 16px;
+    text-align: center;
+    word-break: keep-all;
+  }
+
+  .CompanyInfo .vision {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .CompanyInfo .vision .contents {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .CompanyInfo .vision .contents div {
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    background-color: #e3342f;
+  }
+
+  .CompanyInfo .vision .contents div p {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+
+  .CompanyInfo .vision .contents ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: unset;
+    width: 280px;
+  }
+
+  .CompanyInfo .vision .contents ul li {
+    position: relative;
+    width: auto;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+    font-size: 16px;
+    box-shadow: none;
+    text-align: center;
+  }
+
+  .CompanyInfo .vision .contents ul li ::after {
+    display: none;
+  }
+
+  .CompanyInfo .vision .contents ul li span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #d9d9d9;
+  }
+
+  .CompanyInfo .vision .contents ul li:nth-child(1) {
+    text-align: inherit;
+    margin-top: 20px;
+  }
+
+  .CompanyInfo .vision .contents ul li:nth-child(2) {
+    text-align: inherit;
+  }
+
+  .CompanyInfo .brandMission {
+    padding: 0 10px 0;
+    word-break: keep-all;
+  }
+
+  .CompanyInfo .brandMission > p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  .CompanyInfo .brandMission > p span {
+    font-weight: 600;
+  }
+
+  .CompanyInfo .brandMission .wrapper ul li {
+    margin-bottom: 30px;
+    font-size: 16px;
+  }
+
+  .CompanyInfo .brandMission .wrapper ul li span {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .CompanyInfo .brandMission .wrapper ul li span.point {
+    font-size: 18px;
+  }
+
+  .CompanyInfo .brandMission .wrapper ul li span:after {
+    bottom: -15px;
+    width: 5px;
+    height: 5px;
+  }
+
+  .CompanyInfo .companyProfile {
+    background-color: #fff;
+    padding: 20px 0 0;
+    margin-bottom: 50px;
+  }
+
+  .CompanyInfo .companyProfile .wrapper {
+    padding: 50px;
+  }
+
+  .CompanyInfo .companyProfile .wrapper table {
+    padding: 10px;
+    font-size: 14px;
+    line-height: 1.4;
+    word-break: keep-all;
+  }
+
+  .CompanyInfo .companyProfile .wrapper table tr th {
+    width: 100px;
+  }
+
+  .CompanyInfo .history {
+    margin-bottom: 50px;
+  }
+
+  .CompanyInfo .history .wrapper > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .CompanyInfo .history .wrapper ul {
+    grid-template-columns: auto;
+    margin-bottom: 0px;
+  }
+
+  .CompanyInfo .history .wrapper ul li {
+    padding: 10px;
+  }
+
+  .CompanyInfo .history .wrapper ul li:nth-child(2n) {
+    position: relative;
+  }
+
+  .CompanyInfo .history .wrapper ul li:nth-child(2n)::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 1px;
+    height: 90%;
+    left: -25px;
+    bottom: 0;
+    background-color: #d9d9d9;
+  }
+
+  .CompanyInfo .history .wrapper ul li span {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .CompanyInfo .history .wrapper ul li table {
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .CompanyInfo .history .wrapper ul li table tr {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  .CompanyInfo .history .wrapper ul li table tr td {
+    word-break: keep-all;
+  }
+
+  .CompanyInfo .history .wrapper ul li table tr td:nth-child(1) {
+    color: #e3342f;
+    font-weight: bold;
+    padding-right: 15px;
+  }
+
+  .CompanyInfo .history .wrapper button {
+    padding: 5px 0;
+    font-size: 14px;
+  }
+
+  .CompanyInfo .members {
+    margin-bottom: 50px;
+  }
+
+  .CompanyInfo .members .wrapper ul {
+    grid-template-columns: auto auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+
+  .CompanyInfo .members .wrapper ul li {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .CompanyInfo .members .wrapper ul li img {
+    display: none;
+  }
+
+  .CompanyInfo .members .wrapper ul li p {
+    opacity: 1;
+  }
+
+  .CompanyInfo .members .wrapper ul li p span {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .CompanyInfo .contact table {
+    display: inline-block;
+    padding: 20px;
+    background-color: #fff;
+    font-size: 14px;
+    line-height: 1.6;
+    z-index: 1;
+  }
+
+  .CompanyInfo .contact table tr {
+    display: block;
+    padding: 10px 0 15px;
+  }
+
+  .CompanyInfo .contact table tr:last-child {
+    border-bottom: none;
+  }
+
+  .CompanyInfo .contact table tr th {
+    width: 100px;
+    padding: 0 10px;
+    font-weight: bold;
+  }
+
+@-webkit-keyframes activeIndex {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+}
+
+@keyframes activeIndex {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+}
+}
+
+.service {
+  margin-bottom: 150px;
 }
 
 .service .slickContainer {
   width: 75%;
   margin: 0 auto;
+}
+
+.service .slickContainer .slick-prev {
+  left: 20px;
+  z-index: 3;
+}
+
+.service .slickContainer .slick-next {
+  right: 20px;
+  z-index: 3;
 }
 
 .service .slickContainer .list {
@@ -11080,24 +12009,24 @@ input {
 }
 
 .service .slickContainer .list .item1 {
-  background: url(/images/찜.png?1a0f17ce8dcb982fc5fcda8ad592a357);
+  background: url(/images/찜.png?1a0f17ce8dcb982fc5fcda8ad592a357);
   background-size: cover;
 }
 
 .service .slickContainer .list .item2 {
-  background: url(/images/찜스토어.png?1b1896b518dc75dced8a8f878cc0eaff);
+  background: url(/images/찜스토어.png?1b1896b518dc75dced8a8f878cc0eaff);
   background-size: cover;
 }
 
 .service .slickContainer .list .item3 {
-  background: url(/images/츄릅.png?cd4da695b1aeb0adb57c4a5f7a23e016);
+  background: url(/images/츄릅.png?cd4da695b1aeb0adb57c4a5f7a23e016);
   background-size: cover;
 }
 
 .service .summarySection {
   display: flex;
   width: 75%;
-  height: 350px;
+  height: 250px;
   margin: 0 auto;
   margin-top: 50px;
   border-bottom: #bcc0c6 solid 1px;
@@ -11114,23 +12043,23 @@ input {
 }
 
 .service .summarySection .descriptionBox .description {
-  height: 50%;
+  height: 100px;
   border-bottom: black solid 1px;
   line-height: 20px;
   font-size: 12px;
 }
 
 .service .summarySection .descriptionBox .listBox {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20%;
   height: 50%;
 }
 
 .service .summarySection .descriptionBox .listBox .logoList {
   display: flex;
   align-items: center;
-  font-size: 12px;
+  font-size: 0.8vw;
 }
 
 .service .serviceLists {
@@ -11157,10 +12086,7 @@ input {
 
 .service .serviceLists article {
   display: flex;
-}
-
-.service .serviceLists article .emptyBox {
-  width: 20%;
+  padding-left: 8rem;
 }
 
 .service .serviceLists article .flatformBody {
@@ -11179,7 +12105,12 @@ input {
 }
 
 .service .serviceLists article .flatformBody .historyBox {
+  padding-left: 10px;
   margin-top: 50px;
+}
+
+.service .serviceLists article .flatformBody .historyBox ul {
+  margin-bottom: 0;
 }
 
 .service .serviceLists article .flatformBody .historyBox .history {
@@ -11217,5 +12148,275 @@ input {
 
 .service .serviceLists article .flatformBody .timelineArea li .content {
   color: #ed3f37;
+}
+
+.service .from-bottom {
+  width: 100px;
+  height: 50px;
+  background-color: blue;
+  transform: translateY(-50%);
+  transition: transform 400ms ease-in;
+}
+
+.service .from-bottom {
+  transform: translateY(0);
+}
+
+@media (min-width: 320px) and (max-width: 720px) {
+  .service .slickContainer {
+    width: 100%;
+  }
+
+  .service .summarySection {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .service .summarySection .mainTitle {
+    font-size: 4vw;
+  }
+
+  .service .summarySection .descriptionBox {
+    width: 100%;
+  }
+
+  .service .summarySection .descriptionBox .description {
+    font-size: 1vw;
+  }
+
+  .service .summarySection .descriptionBox .listBox {
+    display: inline;
+  }
+
+  .service .serviceLists {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .service .serviceLists .mainContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .service .serviceLists .mainContainer .serviceName {
+    width: 75%;
+    margin: auto;
+    font-size: 4vw;
+  }
+
+  .service .serviceLists article {
+    padding-left: 40px;
+  }
+
+  .service .serviceLists article h2,
+  .service .serviceLists article span {
+    padding-left: 10px;
+  }
+}
+
+@media (min-width: 720px) and (max-width: 1024px) {
+  .service .slickContainer {
+    width: 100%;
+  }
+
+  .service .summarySection {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .service .summarySection .mainTitle {
+    width: auto;
+    font-size: 3vw;
+  }
+
+  .service .summarySection .descriptionBox {
+    width: 100%;
+  }
+
+  .service .summarySection .descriptionBox .description {
+    font-size: 1vw;
+  }
+
+  .service .summarySection .descriptionBox .listBox {
+    display: flex;
+    justify-content: space-between;
+    grid-gap: 0px;
+    height: auto;
+  }
+
+  .service .serviceLists {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .service .serviceLists .mainContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .service .serviceLists .mainContainer .serviceName {
+    width: 75%;
+    margin: auto;
+    font-size: 3vw;
+  }
+
+  .service .serviceLists article {
+    width: 75%;
+    margin: auto;
+    padding: 0;
+  }
+
+  .service .serviceLists article h2,
+  .service .serviceLists article span {
+    padding-left: 10px;
+  }
+}
+
+.Recruit {
+  margin-bottom: 100px;
+}
+
+.Recruit .recruitPageBody {
+  margin: 10% 0 0 15%;
+}
+
+.Recruit h2 {
+  font-size: 34px;
+  font-weight: bold;
+  color: #555;
+  letter-spacing: -1px;
+  max-width: 100%;
+  margin-bottom: 50px;
+}
+
+.Recruit .recruitContainer {
+  display: flex;
+}
+
+.Recruit .recruitContainer .Menu .title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #e3342f;
+  letter-spacing: -0.2px;
+  padding: 6px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #f3f3f3;
+  height: auto;
+  line-height: 24px;
+}
+
+.Recruit .recruitContainer .Menu .teams {
+  color: #555;
+  font-weight: bold;
+  display: block;
+  width: 100%;
+  height: 64px;
+  line-height: 64px;
+  padding: 0 0 0 20px;
+  cursor: pointer;
+}
+
+.Recruit .recruitContainer .Menu .teams:hover {
+  background-color: rgba(243, 56, 50, 0.05);
+}
+
+.Recruit .recruitContainer .Menu .active {
+  background-color: rgba(243, 56, 50, 0.15);
+}
+
+.Recruit .recruitContainer .Menu .active:hover {
+  background-color: rgba(243, 56, 50, 0.15);
+}
+
+.Recruit .Description {
+  padding: 0 20px;
+  width: 66.66667%;
+}
+
+.Recruit .Description .teams .description {
+  border: 1px solid #f3f3f3;
+  padding: 26px 24px;
+  padding: 26px 45px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.Recruit .Description .teams .description h3 {
+  color: #555;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: -0.2px;
+  margin-bottom: 10px;
+}
+
+.Recruit .Description .teams .description ul {
+  margin-bottom: 30px;
+  list-style: unset;
+}
+
+.Recruit .Description .teams .description ul li {
+  color: #555;
+  font-size: 15px;
+  margin-bottom: 6px;
+  line-height: 30px;
+}
+
+.Recruit .Description .teams .description ul li ul {
+  margin-left: 1.8rem;
+}
+
+.Recruit .Description .teams .description ul li ul li {
+  list-style: circle;
+}
+
+.Recruit .Description .teams .description p {
+  color: #555;
+  font-size: 15px;
+  margin-bottom: 20px;
+  line-height: 30px;
+}
+
+.Recruit .Description .teams .description .apply {
+  background: rgba(227, 52, 47, 0.015);
+  padding: 10px;
+}
+
+.Recruit .Description .teams .description .apply a {
+  display: block;
+  margin: 10px auto 28px auto;
+  height: 60px;
+  width: 240px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 24px;
+  box-shadow: 2px 4px 0 0 rgba(0, 0, 0, 0.04);
+  background-color: #e3342f;
+  text-decoration: none;
+}
+
+.Footer {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+  background-color: #333;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.Footer .wrapper {
+  width: 960px;
+}
+
+.Footer .wrapper > span {
+  font-size: 16px;
+}
+
+.Footer .wrapper address {
+  margin-bottom: 0;
 }
 

@@ -2,13 +2,12 @@
     <div>
         <section class="serviceLists">
             <div class="mainContainer">
-                <span class="serviceName">{{ data.name }}</span>
+                <div class="serviceName">{{ data.name }}</div>
                 <div>
                     <img class="representativeImage" :src="data.img" />
                 </div>
             </div>
             <article>
-                <div class="emptyBox"></div>
                 <div class="flatformBody">
                     <div class="logoBox">
                         <img class="logo" :src="data.logo" />
@@ -30,6 +29,9 @@
                 </div>
             </article>
         </section>
+        <div class="from-bottom">
+            어떻게 움직이는지 한번 볼까요?
+        </div>
     </div>
 </template>
 
