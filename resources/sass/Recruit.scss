@@ -1,5 +1,6 @@
 .Recruit {
     margin-bottom: 100px;
+
     .recruitPageBody {
         margin: 10% 0 0 15%;
     }
@@ -21,7 +22,6 @@
                 font-size: 16px;
                 font-weight: 600;
                 color: $red;
-                // background-color: $red;
                 letter-spacing: -0.2px;
                 padding: 6px;
                 margin-bottom: 4px;
@@ -120,6 +120,44 @@
                     }
                 }
             }
+        }
+    }
+}
+@media (min-width: 320px) and (max-width: 720px) {
+    .Description {
+        display: none;
+        &:hover {
+            .activeMenu {
+                display: block;
+            }
+        }
+
+        .activeMenu {
+            display: none;
+            position: absolute;
+            background-color: rgba(243, 56, 50, 0.05);
+            min-width: 120px;
+            padding: 8px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 200;
+        }
+    }
+
+    .Menu {
+        &:hover {
+            .Description {
+                display: block;
+            }
+        }
+
+        .activeMenu {
+            display: none;
+            position: absolute;
+            background-color: rgba(243, 56, 50, 0.05);
+            min-width: 120px;
+            padding: 8px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 200;
         }
     }
 }

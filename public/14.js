@@ -43,6 +43,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+<<<<<<< HEAD
+=======
+//
+>>>>>>> 38fb9dd76996a301aa12b5296139dd744f8c4f84
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["data"]
 });
@@ -67,7 +71,11 @@ var render = function() {
   return _c("div", [
     _c("section", { staticClass: "serviceLists" }, [
       _c("div", { staticClass: "mainContainer" }, [
+<<<<<<< HEAD
         _c("div", { staticClass: "serviceName" }, [
+=======
+        _c("span", { staticClass: "serviceName" }, [
+>>>>>>> 38fb9dd76996a301aa12b5296139dd744f8c4f84
           _vm._v(_vm._s(_vm.data.name))
         ]),
         _vm._v(" "),
@@ -80,6 +88,11 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("article", [
+<<<<<<< HEAD
+=======
+        _c("div", { staticClass: "emptyBox" }),
+        _vm._v(" "),
+>>>>>>> 38fb9dd76996a301aa12b5296139dd744f8c4f84
         _c("div", { staticClass: "flatformBody" }, [
           _c("div", { staticClass: "logoBox" }, [
             _c("img", { staticClass: "logo", attrs: { src: _vm.data.logo } })

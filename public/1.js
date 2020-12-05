@@ -104,7 +104,7 @@ var render = function() {
     _c("div", { staticClass: "teams" }, [
       _c(
         "div",
-        { staticClass: "description" },
+        { staticClass: "description activeMenu" },
         [
           _c("h3", [_vm._v("팀 소개")]),
           _vm._v(" "),

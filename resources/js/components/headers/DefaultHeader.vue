@@ -1,13 +1,63 @@
 <template>
-    <div>{{ title }}</div>
+    <header class="Header">
+        <div class="nav">
+            <div class="logo" @click="goToCompanyInfo">로고</div>
+            <div class="menutab">
+                <div @click="goToCompanyInfo">찌읏 소개</div>
+                <div @click="goToService">서비스</div>
+                <div @click="goToRecruit">채용</div>
+            </div>
+            <div class="hamburger" @click="activeMenuHandler">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div :class="activeMenuVisible?'activeMenu visible':'activeMenu'">
+            <div @click="goToCompanyInfo">찌읏 소개</div>
+            <div @click="goToService">서비스</div>
+            <div @click="goToRecruit">채용</div>
+        </div>
+    </header>
 </template>
 <script>
 export default {
+    name: "Header",
     props: ["title"],
     components: {},
-    mounted() {},
-    methods: {}
+    created() {
+        const resizing = () => {
+            this.activeMenuVisible = false;
+        }
+
+        window.addEventListener('resize', ()=>{
+            resizing();
+        });
+        return window.removeEventListener('resize', ()=>{
+            resizing();
+        });
+    },
+    data(){
+        return{
+            activeMenuVisible:false,
+        }
+    },
+    methods: {
+        goToMain: function (event) {
+            this.$router.push('/')
+        },
+        goToCompanyInfo: function (event) {
+            this.$router.push('/companyInfo')
+        },
+        goToService: function (evnet) {
+            this.$router.push('/service')
+        },
+        goToRecruit: function (event) {
+            this.$router.push('/recruit')
+        },
+        activeMenuHandler(){
+            this.activeMenuVisible=!this.activeMenuVisible;
+        },
+    }
 };
 </script>
-
-<style scoped></style>

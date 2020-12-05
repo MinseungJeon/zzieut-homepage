@@ -1,7 +1,7 @@
 <template>
     <div class="Description">
         <div class="teams">
-            <div class="description">
+            <div class="description activeMenu">
                 <h3>팀 소개</h3>
                 <ul v-for="text in content.team" :key="text">
                     <li>{{ text }}</li>

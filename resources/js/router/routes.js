@@ -75,6 +75,7 @@ export default [
                 name: "Service",
                 components: {
                     default: asyncComponent("service/Service"),
+                    header: getDefaultHeader("Service"),
                     footer: getDefaultFooter(),
                 },
                 meta: {
@@ -86,6 +87,7 @@ export default [
                 name: "Recruit",
                 components: {
                     default: asyncComponent("recruit/Recruit"),
+                    header: getDefaultHeader("Recruit"),
                     footer: getDefaultFooter(),
                 },
                 meta: {
