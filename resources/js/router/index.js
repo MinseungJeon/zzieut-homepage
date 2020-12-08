@@ -9,7 +9,13 @@ Vue.use(Router)
 const router = new Router({
     mode: 'history',
     scrollBehavior,
-    routes
+    routes: [
+        {
+            path: '/bulletin',
+            name: 'Read',
+            component: Read
+        }
+    ]
 })
 router.beforeEach(dispatchAction)
 

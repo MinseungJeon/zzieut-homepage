@@ -6,7 +6,7 @@
                 <div @click="goToCompanyInfo">찌읏 소개</div>
                 <div @click="goToService">서비스</div>
                 <div @click="goToRecruit">채용</div>
-                <div @click="goToBoard">게시판</div>
+                <div @click="goToBulletin">게시판</div>
             </div>
             <div class="hamburger" @click="activeMenuHandler">
                 <span></span>
@@ -18,7 +18,7 @@
             <div @click="goToCompanyInfo">찌읏 소개</div>
             <div @click="goToService">서비스</div>
             <div @click="goToRecruit">채용</div>
-            <div @click="goToBoard">게시판</div>
+            <div @click="goToBulletin">게시판</div>
         </div>
     </header>
 </template>
@@ -57,8 +57,8 @@ export default {
         goToRecruit: function (event) {
             this.$router.push('/recruit')
         },
-        goToBoard(event) {
-            this.$router.push('/board')
+        goToBulletin(event) {
+            this.$router.push('/bulletin')
         },
         activeMenuHandler(){
             this.activeMenuVisible=!this.activeMenuVisible;

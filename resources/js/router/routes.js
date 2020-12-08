@@ -95,11 +95,11 @@ export default [
                 },
             },
             {
-                path: "board",
-                name: "Board",
+                path: "bulletin",
+                name: "Bulletin",
                 components: {
-                    default: asyncComponent("board/Board"),
-                    header: getDefaultHeader("Board"),
+                    default: asyncComponent("bulletin/Bulletin"),
+                    header: getDefaultHeader("Bulletin"),
                     footer: getDefaultFooter(),
                 },
                 meta: {
