@@ -12408,3 +12408,75 @@ a.text-dark:focus {
   margin-bottom: 0;
 }
 
+.registerWrapper {
+  width: 320px;
+  margin: 50px auto;
+  font-size: 30px;
+  background-color: #ee3f35;
+}
+
+.registerWrapper .tabs {
+  display: flex;
+  background-color: #f0f3f5;
+}
+
+.registerWrapper .tabs > li {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  color: #888888;
+  cursor: pointer;
+}
+
+.registerWrapper .tabs > li:hover {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+}
+
+.loginForm {
+  width: 320px;
+  padding: 60px 25px 80px;
+  margin: 50px auto;
+  background: #ee3f35;
+  display: flex;
+  flex-direction: column;
+}
+
+.loginForm svg {
+  width: 70%;
+  border-radius: 50%;
+  background: #fff;
+  margin-bottom: 40px;
+  align-self: center;
+  transform-style: preserve-3d;
+}
+
+.loginForm input {
+  font-size: 16px;
+  padding: 10px 15px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.loginForm button {
+  background: wheat;
+  height: 35px;
+  margin-top: 25px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.loginForm button:hover {
+  color: #ee3f35;
+  font-weight: bold;
+}
+
+.loginForm button:focus {
+  outline: none;
+}
+

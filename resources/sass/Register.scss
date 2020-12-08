@@ -1,0 +1,29 @@
+.registerWrapper {
+    // padding: 60px 25px 80px;
+    // display: flex;
+    // flex-direction: column;
+    width: 320px;
+    margin: 50px auto;
+    font-size: 30px;
+    background-color: #ee3f35;
+
+    .tabs {
+        display: flex;
+        background-color: #f0f3f5;
+
+        > li {
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+            font-size: 18px;
+            color: #888888;
+            cursor: pointer;
+
+            &:hover {
+                background-color: white;
+                color: black;
+                font-weight: bold;
+            }
+        }
+    }
+}

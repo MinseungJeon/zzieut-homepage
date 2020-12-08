@@ -58982,6 +58982,36 @@ var map = {
 		3,
 		16
 	],
+	"./register/Register": [
+		"./resources/js/components/register/Register.vue",
+		9,
+		23
+	],
+	"./register/Register.vue": [
+		"./resources/js/components/register/Register.vue",
+		9,
+		23
+	],
+	"./register/components/Login": [
+		"./resources/js/components/register/components/Login.vue",
+		9,
+		17
+	],
+	"./register/components/Login.vue": [
+		"./resources/js/components/register/components/Login.vue",
+		9,
+		17
+	],
+	"./register/components/Signup": [
+		"./resources/js/components/register/components/Signup.vue",
+		9,
+		22
+	],
+	"./register/components/Signup.vue": [
+		"./resources/js/components/register/components/Signup.vue",
+		9,
+		22
+	],
 	"./service/Img/찜.png": [
 		"./resources/js/components/service/Img/찜.png",
 		7,
@@ -59363,6 +59393,7 @@ function getDefaultFooter() {
     name: "Service",
     components: {
       "default": Object(_utils__WEBPACK_IMPORTED_MODULE_0__["asyncComponent"])("service/Service"),
+      header: getDefaultHeader("service"),
       footer: getDefaultFooter()
     },
     meta: {
@@ -59373,6 +59404,18 @@ function getDefaultFooter() {
     name: "Recruit",
     components: {
       "default": Object(_utils__WEBPACK_IMPORTED_MODULE_0__["asyncComponent"])("recruit/Recruit"),
+      header: getDefaultHeader("recruit"),
+      footer: getDefaultFooter()
+    },
+    meta: {
+      action: true
+    }
+  }, {
+    path: "register",
+    name: "Register",
+    components: {
+      "default": Object(_utils__WEBPACK_IMPORTED_MODULE_0__["asyncComponent"])("register/Register"),
+      header: getDefaultHeader("register"),
       footer: getDefaultFooter()
     },
     meta: {

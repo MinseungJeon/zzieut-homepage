@@ -8,26 +8,26 @@ import { defaults } from "lodash";
 function getDefaultHeader(title) {
     return {
         components: {
-            DefaultHeader,
+            DefaultHeader
         },
         render(createElement) {
             return createElement("DefaultHeader", {
                 props: {
-                    title,
-                },
+                    title
+                }
             });
-        },
+        }
     };
 }
 
 function getDefaultFooter() {
     return {
         components: {
-            DefaultFooter,
+            DefaultFooter
         },
         render(createElement) {
             return createElement("DefaultFooter");
-        },
+        }
     };
 }
 
@@ -35,10 +35,10 @@ export default [
     {
         path: "/",
         components: {
-            default: asyncComponent("Index"),
+            default: asyncComponent("Index")
         },
         meta: {
-            needAuth: true,
+            needAuth: true
         },
         children: [
             {
@@ -47,19 +47,19 @@ export default [
                 components: {
                     default: asyncComponent("main/Index"),
                     header: getDefaultHeader("HomeMain"),
-                    footer: getDefaultFooter(),
-                },
+                    footer: getDefaultFooter()
+                }
             },
             {
                 path: `test`,
                 name: "Test",
                 components: {
                     default: asyncComponent(`main/Test`),
-                    header: getDefaultHeader("Test"),
+                    header: getDefaultHeader("Test")
                 },
                 meta: {
-                    action: true,
-                },
+                    action: true
+                }
             },
             {
                 path: "companyInfo",
@@ -67,31 +67,45 @@ export default [
                 components: {
                     default: asyncComponent("companyInfo/CompanyInfo"),
                     header: getDefaultHeader("CompanyInfo"),
-                    footer: getDefaultFooter(),
-                },
+                    footer: getDefaultFooter()
+                }
             },
             {
                 path: "service",
                 name: "Service",
                 components: {
                     default: asyncComponent("service/Service"),
-                    footer: getDefaultFooter(),
+                    header: getDefaultHeader("service"),
+                    footer: getDefaultFooter()
                 },
                 meta: {
-                    action: true,
-                },
+                    action: true
+                }
             },
             {
                 path: "recruit",
                 name: "Recruit",
                 components: {
                     default: asyncComponent("recruit/Recruit"),
-                    footer: getDefaultFooter(),
+                    header: getDefaultHeader("recruit"),
+                    footer: getDefaultFooter()
                 },
                 meta: {
-                    action: true,
-                },
+                    action: true
+                }
             },
-        ],
-    },
+            {
+                path: "register",
+                name: "Register",
+                components: {
+                    default: asyncComponent("register/Register"),
+                    header: getDefaultHeader("register"),
+                    footer: getDefaultFooter()
+                },
+                meta: {
+                    action: true
+                }
+            }
+        ]
+    }
 ];
