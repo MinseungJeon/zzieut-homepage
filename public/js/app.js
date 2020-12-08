@@ -2128,6 +2128,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Header",
   props: ["title"],
@@ -2163,6 +2165,9 @@ __webpack_require__.r(__webpack_exports__);
     },
     goToRecruit: function goToRecruit(event) {
       this.$router.push('/recruit');
+    },
+    goToBoard: function goToBoard(event) {
+      this.$router.push('/board');
     },
     activeMenuHandler: function activeMenuHandler() {
       this.activeMenuVisible = !this.activeMenuVisible;
@@ -41961,7 +41966,9 @@ var render = function() {
         _vm._v(" "),
         _c("div", { on: { click: _vm.goToService } }, [_vm._v("서비스")]),
         _vm._v(" "),
-        _c("div", { on: { click: _vm.goToRecruit } }, [_vm._v("채용")])
+        _c("div", { on: { click: _vm.goToRecruit } }, [_vm._v("채용")]),
+        _vm._v(" "),
+        _c("div", { on: { click: _vm.goToBoard } }, [_vm._v("게시판")])
       ]),
       _vm._v(" "),
       _c(
@@ -41981,7 +41988,9 @@ var render = function() {
         _vm._v(" "),
         _c("div", { on: { click: _vm.goToService } }, [_vm._v("서비스")]),
         _vm._v(" "),
-        _c("div", { on: { click: _vm.goToRecruit } }, [_vm._v("채용")])
+        _c("div", { on: { click: _vm.goToRecruit } }, [_vm._v("채용")]),
+        _vm._v(" "),
+        _c("div", { on: { click: _vm.goToBoard } }, [_vm._v("게시판")])
       ]
     )
   ])
@@ -59902,6 +59911,26 @@ var map = {
 		9,
 		6
 	],
+	"./board/Board": [
+		"./resources/js/components/board/Board.vue",
+		9,
+		7
+	],
+	"./board/Board.vue": [
+		"./resources/js/components/board/Board.vue",
+		9,
+		7
+	],
+	"./board/Write": [
+		"./resources/js/components/board/Write.vue",
+		9,
+		21
+	],
+	"./board/Write.vue": [
+		"./resources/js/components/board/Write.vue",
+		9,
+		21
+	],
 	"./companyInfo/CompanyInfo": [
 		"./resources/js/components/companyInfo/CompanyInfo.vue",
 		9,
@@ -59917,54 +59946,54 @@ var map = {
 	"./companyInfo/CompanyInfoData": [
 		"./resources/js/components/companyInfo/CompanyInfoData.js",
 		9,
-		15
+		16
 	],
 	"./companyInfo/CompanyInfoData.js": [
 		"./resources/js/components/companyInfo/CompanyInfoData.js",
 		9,
-		15
+		16
 	],
 	"./companyInfo/companyInfoComponents/History": [
 		"./resources/js/components/companyInfo/companyInfoComponents/History.vue",
 		9,
-		7
+		8
 	],
 	"./companyInfo/companyInfoComponents/History.vue": [
 		"./resources/js/components/companyInfo/companyInfoComponents/History.vue",
 		9,
-		7
+		8
 	],
 	"./companyInfo/companyInfoComponents/InfoTable": [
 		"./resources/js/components/companyInfo/companyInfoComponents/InfoTable.vue",
 		9,
-		8
+		9
 	],
 	"./companyInfo/companyInfoComponents/InfoTable.vue": [
 		"./resources/js/components/companyInfo/companyInfoComponents/InfoTable.vue",
 		9,
-		8
+		9
 	],
 	"./companyInfo/companyInfoComponents/MainBanner": [
 		"./resources/js/components/companyInfo/companyInfoComponents/MainBanner.vue",
 		9,
 		0,
-		9
+		10
 	],
 	"./companyInfo/companyInfoComponents/MainBanner.vue": [
 		"./resources/js/components/companyInfo/companyInfoComponents/MainBanner.vue",
 		9,
 		0,
-		9
+		10
 	],
 	"./companyInfo/companyInfoComponents/MembersCard": [
 		"./resources/js/components/companyInfo/companyInfoComponents/MembersCard.vue",
 		9,
-		10
+		11
 	],
 	"./companyInfo/companyInfoComponents/MembersCard.vue": [
 		"./resources/js/components/companyInfo/companyInfoComponents/MembersCard.vue",
 		9,
-		10
+		11
 	],
 	"./footer/Footer": [
 		"./resources/js/components/footer/Footer.vue",
@@ -59985,22 +60014,22 @@ var map = {
 	"./main/Index": [
 		"./resources/js/components/main/Index.vue",
 		9,
-		11
+		12
 	],
 	"./main/Index.vue": [
 		"./resources/js/components/main/Index.vue",
 		9,
-		11
+		12
 	],
 	"./main/Test": [
 		"./resources/js/components/main/Test.vue",
 		9,
-		12
+		13
 	],
 	"./main/Test.vue": [
 		"./resources/js/components/main/Test.vue",
 		9,
-		12
+		13
 	],
 	"./recruit/Description": [
 		"./resources/js/components/recruit/Description.vue",
@@ -60015,12 +60044,12 @@ var map = {
 	"./recruit/Menu": [
 		"./resources/js/components/recruit/Menu.vue",
 		9,
-		13
+		14
 	],
 	"./recruit/Menu.vue": [
 		"./resources/js/components/recruit/Menu.vue",
 		9,
-		13
+		14
 	],
 	"./recruit/Recruit": [
 		"./resources/js/components/recruit/Recruit.vue",
@@ -60037,37 +60066,37 @@ var map = {
 	"./recruit/content": [
 		"./resources/js/components/recruit/content.json",
 		3,
-		16
+		17
 	],
 	"./recruit/content.json": [
 		"./resources/js/components/recruit/content.json",
 		3,
-		16
+		17
 	],
 	"./service/Img/찜.png": [
 		"./resources/js/components/service/Img/찜.png",
 		7,
-		17
+		18
 	],
 	"./service/Img/찜스토어.png": [
 		"./resources/js/components/service/Img/찜스토어.png",
 		7,
-		18
+		19
 	],
 	"./service/Img/츄릅.png": [
 		"./resources/js/components/service/Img/츄릅.png",
 		7,
-		19
+		20
 	],
 	"./service/Platform": [
 		"./resources/js/components/service/Platform.vue",
 		9,
-		14
+		15
 	],
 	"./service/Platform.vue": [
 		"./resources/js/components/service/Platform.vue",
 		9,
-		14
+		15
 	],
 	"./service/Service": [
 		"./resources/js/components/service/Service.vue",
@@ -60437,6 +60466,28 @@ function getDefaultFooter() {
     components: {
       "default": Object(_utils__WEBPACK_IMPORTED_MODULE_0__["asyncComponent"])("recruit/Recruit"),
       header: getDefaultHeader("Recruit"),
+      footer: getDefaultFooter()
+    },
+    meta: {
+      action: true
+    }
+  }, {
+    path: "board",
+    name: "Board",
+    components: {
+      "default": Object(_utils__WEBPACK_IMPORTED_MODULE_0__["asyncComponent"])("board/Board"),
+      header: getDefaultHeader("Board"),
+      footer: getDefaultFooter()
+    },
+    meta: {
+      action: true
+    }
+  }, {
+    path: "write",
+    name: "Write",
+    components: {
+      "default": Object(_utils__WEBPACK_IMPORTED_MODULE_0__["asyncComponent"])("write/Write"),
+      header: getDefaultHeader("Write"),
       footer: getDefaultFooter()
     },
     meta: {

@@ -94,6 +94,30 @@ export default [
                     action: true,
                 },
             },
+            {
+                path: "board",
+                name: "Board",
+                components: {
+                    default: asyncComponent("board/Board"),
+                    header: getDefaultHeader("Board"),
+                    footer: getDefaultFooter(),
+                },
+                meta: {
+                    action: true,
+                },
+            },
+            {
+                path: "write",
+                name: "Write",
+                components: {
+                    default: asyncComponent("write/Write"),
+                    header: getDefaultHeader("Write"),
+                    footer: getDefaultFooter(),
+                },
+                meta: {
+                    action: true,
+                },
+            },
         ],
     },
 ];
