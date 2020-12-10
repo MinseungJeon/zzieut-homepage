@@ -1,0 +1,79 @@
+.registerWrapper {
+    background: rgba(59, 128, 131, 0.3);
+    .test {
+        width: 380px;
+        margin: 0 auto;
+        font-size: 30px;
+        background-color: #e3342f;
+        .tabs {
+            display: flex;
+            background-color: #f0f3f5;
+            > li {
+                width: 100%;
+                text-align: center;
+                padding: 15px;
+                font-size: 16px;
+                color: #888888;
+                cursor: pointer;
+            }
+            .activeTab {
+                background: #e3342f;
+                color: black;
+                font-weight: bold;
+            }
+        }
+        .content {
+            height: 571px;
+        }
+    }
+}
+.loginForm {
+    width: 320px;
+    padding: 0 25px;
+    margin: auto;
+    background: #e3342f;
+    display: flex;
+    flex-direction: column;
+    svg {
+        width: 70%;
+        border-radius: 50%;
+        background: #fff;
+        margin-bottom: 40px;
+        align-self: center;
+        transform-style: preserve-3d;
+    }
+    input {
+        width: 100%;
+        font-size: 16px;
+        padding: 10px 15px;
+        margin-top: 25px;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+    }
+    button {
+        background: wheat;
+        height: 35px;
+        margin-top: 25px;
+        border-radius: 5px;
+        border: none;
+        font-size: 1rem;
+        cursor: pointer;
+        &:hover {
+            color: #ee3f35;
+            font-weight: bold;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+    .forgetPW {
+        margin-top: 5px;
+        padding-right: 5px;
+        font-size: 11px;
+        color: dimgrey;
+        font-weight: bold;
+        text-align: right;
+        cursor: pointer;
+    }
+}

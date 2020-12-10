@@ -4,7 +4,7 @@
     background-color: #f8fafc;
 
     .nav {
-        padding: 15px 0;
+        padding: 0;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
@@ -12,12 +12,21 @@
 
         .logo {
             cursor: pointer;
+            font-size: 30px;
+            font-weight: 800;
+            color: rgb(238, 75, 69);
+            img {
+                margin-left: 50px;
+                margin-bottom: 5px;
+            }
         }
 
         .menutab {
             display: flex;
             justify-content: space-between;
             cursor: pointer;
+            font-size: 0.8rem;
+            margin-right: 50px;
 
             div {
                 padding-left: 1rem;
@@ -29,10 +38,11 @@
 
         .hamburger {
             cursor: pointer;
+            margin-right: 50px;
 
             span {
                 display: block;
-                width: 2rem;
+                width: 1.25rem;
                 height: 3px;
                 margin-bottom: 5px;
                 background-color: #333;

@@ -95,23 +95,11 @@ export default [
                 },
             },
             {
-                path: "bulletin",
-                name: "Bulletin",
+                path: "register",
+                name: "Register",
                 components: {
-                    default: asyncComponent("bulletin/Bulletin"),
-                    header: getDefaultHeader("Bulletin"),
-                    footer: getDefaultFooter(),
-                },
-                meta: {
-                    action: true,
-                },
-            },
-            {
-                path: "write",
-                name: "Write",
-                components: {
-                    default: asyncComponent("write/Write"),
-                    header: getDefaultHeader("Write"),
+                    default: asyncComponent("register/Register"),
+                    header: getDefaultHeader("Register"),
                     footer: getDefaultFooter(),
                 },
                 meta: {

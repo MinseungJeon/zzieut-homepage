@@ -2130,6 +2130,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Header",
   props: ["title"],
@@ -2141,10 +2148,10 @@ __webpack_require__.r(__webpack_exports__);
       _this.activeMenuVisible = false;
     };
 
-    window.addEventListener('resize', function () {
+    window.addEventListener("resize", function () {
       resizing();
     });
-    return window.removeEventListener('resize', function () {
+    return window.removeEventListener("resize", function () {
       resizing();
     });
   },
@@ -2155,19 +2162,19 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     goToMain: function goToMain(event) {
-      this.$router.push('/');
+      this.$router.push("/");
     },
     goToCompanyInfo: function goToCompanyInfo(event) {
-      this.$router.push('/companyInfo');
+      this.$router.push("/companyInfo");
     },
     goToService: function goToService(evnet) {
-      this.$router.push('/service');
+      this.$router.push("/service");
     },
     goToRecruit: function goToRecruit(event) {
-      this.$router.push('/recruit');
+      this.$router.push("/recruit");
     },
-    goToBulletin: function goToBulletin(event) {
-      this.$router.push('/bulletin');
+    goToRegister: function goToRegister(event) {
+      this.$router.push("/register");
     },
     activeMenuHandler: function activeMenuHandler() {
       this.activeMenuVisible = !this.activeMenuVisible;
@@ -41153,7 +41160,7 @@ module.exports = function isBuffer(arg) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(global, process) {// Copyright Joyent, Inc. and other Node contributors.
+/* WEBPACK VAR INJECTION */(function(process) {// Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
 // copy of this software and associated documentation files (the
@@ -41173,6 +41180,16 @@ module.exports = function isBuffer(arg) {
 // DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
 // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
 // USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+var getOwnPropertyDescriptors = Object.getOwnPropertyDescriptors ||
+  function getOwnPropertyDescriptors(obj) {
+    var keys = Object.keys(obj);
+    var descriptors = {};
+    for (var i = 0; i < keys.length; i++) {
+      descriptors[keys[i]] = Object.getOwnPropertyDescriptor(obj, keys[i]);
+    }
+    return descriptors;
+  };
 
 var formatRegExp = /%[sdj%]/g;
 exports.format = function(f) {
@@ -41218,15 +41235,15 @@ exports.format = function(f) {
 // Returns a modified function which warns once by default.
 // If --no-deprecation is set, then it is a no-op.
 exports.deprecate = function(fn, msg) {
+  if (typeof process !== 'undefined' && process.noDeprecation === true) {
+    return fn;
+  }
+
   // Allow for deprecating things in the process of starting up.
-  if (isUndefined(global.process)) {
+  if (typeof process === 'undefined') {
     return function() {
       return exports.deprecate(fn, msg).apply(this, arguments);
     };
-  }
-
-  if (process.noDeprecation === true) {
-    return fn;
   }
 
   var warned = false;
@@ -41740,7 +41757,114 @@ function hasOwnProperty(obj, prop) {
   return Object.prototype.hasOwnProperty.call(obj, prop);
 }
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js"), __webpack_require__(/*! ./../process/browser.js */ "./node_modules/process/browser.js")))
+var kCustomPromisifiedSymbol = typeof Symbol !== 'undefined' ? Symbol('util.promisify.custom') : undefined;
+
+exports.promisify = function promisify(original) {
+  if (typeof original !== 'function')
+    throw new TypeError('The "original" argument must be of type Function');
+
+  if (kCustomPromisifiedSymbol && original[kCustomPromisifiedSymbol]) {
+    var fn = original[kCustomPromisifiedSymbol];
+    if (typeof fn !== 'function') {
+      throw new TypeError('The "util.promisify.custom" argument must be of type Function');
+    }
+    Object.defineProperty(fn, kCustomPromisifiedSymbol, {
+      value: fn, enumerable: false, writable: false, configurable: true
+    });
+    return fn;
+  }
+
+  function fn() {
+    var promiseResolve, promiseReject;
+    var promise = new Promise(function (resolve, reject) {
+      promiseResolve = resolve;
+      promiseReject = reject;
+    });
+
+    var args = [];
+    for (var i = 0; i < arguments.length; i++) {
+      args.push(arguments[i]);
+    }
+    args.push(function (err, value) {
+      if (err) {
+        promiseReject(err);
+      } else {
+        promiseResolve(value);
+      }
+    });
+
+    try {
+      original.apply(this, args);
+    } catch (err) {
+      promiseReject(err);
+    }
+
+    return promise;
+  }
+
+  Object.setPrototypeOf(fn, Object.getPrototypeOf(original));
+
+  if (kCustomPromisifiedSymbol) Object.defineProperty(fn, kCustomPromisifiedSymbol, {
+    value: fn, enumerable: false, writable: false, configurable: true
+  });
+  return Object.defineProperties(
+    fn,
+    getOwnPropertyDescriptors(original)
+  );
+}
+
+exports.promisify.custom = kCustomPromisifiedSymbol
+
+function callbackifyOnRejected(reason, cb) {
+  // `!reason` guard inspired by bluebird (Ref: https://goo.gl/t5IS6M).
+  // Because `null` is a special error value in callbacks which means "no error
+  // occurred", we error-wrap so the callback consumer can distinguish between
+  // "the promise rejected with null" or "the promise fulfilled with undefined".
+  if (!reason) {
+    var newReason = new Error('Promise was rejected with a falsy value');
+    newReason.reason = reason;
+    reason = newReason;
+  }
+  return cb(reason);
+}
+
+function callbackify(original) {
+  if (typeof original !== 'function') {
+    throw new TypeError('The "original" argument must be of type Function');
+  }
+
+  // We DO NOT return the promise as it gives the user a false sense that
+  // the promise is actually somehow related to the callback's execution
+  // and that the callback throwing will reject the promise.
+  function callbackified() {
+    var args = [];
+    for (var i = 0; i < arguments.length; i++) {
+      args.push(arguments[i]);
+    }
+
+    var maybeCb = args.pop();
+    if (typeof maybeCb !== 'function') {
+      throw new TypeError('The last argument must be of type Function');
+    }
+    var self = this;
+    var cb = function() {
+      return maybeCb.apply(self, arguments);
+    };
+    // In true node style we process the callback on `nextTick` with all the
+    // implications (stack, `uncaughtException`, `async_hooks`)
+    original.apply(this, args)
+      .then(function(ret) { process.nextTick(cb, null, ret) },
+            function(rej) { process.nextTick(callbackifyOnRejected, rej, cb) });
+  }
+
+  Object.setPrototypeOf(callbackified, Object.getPrototypeOf(original));
+  Object.defineProperties(callbackified,
+                          getOwnPropertyDescriptors(original));
+  return callbackified;
+}
+exports.callbackify = callbackify;
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 
@@ -41839,7 +41963,14 @@ var render = function() {
   return _c("header", { staticClass: "Header" }, [
     _c("div", { staticClass: "nav" }, [
       _c("div", { staticClass: "logo", on: { click: _vm.goToCompanyInfo } }, [
-        _vm._v("로고")
+        _c("img", {
+          attrs: {
+            src: "images/zzieut.png",
+            alt: "logo",
+            width: "35px",
+            height: "35px"
+          }
+        })
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "menutab" }, [
@@ -41851,7 +41982,7 @@ var render = function() {
         _vm._v(" "),
         _c("div", { on: { click: _vm.goToRecruit } }, [_vm._v("채용")]),
         _vm._v(" "),
-        _c("div", { on: { click: _vm.goToBulletin } }, [_vm._v("게시판")])
+        _c("div", { on: { click: _vm.goToRegister } }, [_vm._v("로그인")])
       ]),
       _vm._v(" "),
       _c(
@@ -41873,7 +42004,7 @@ var render = function() {
         _vm._v(" "),
         _c("div", { on: { click: _vm.goToRecruit } }, [_vm._v("채용")]),
         _vm._v(" "),
-        _c("div", { on: { click: _vm.goToBulletin } }, [_vm._v("게시판")])
+        _c("div", { on: { click: _vm.goToRegister } }, [_vm._v("로그인")])
       ]
     )
   ])
@@ -57560,7 +57691,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapMutations", function() { return mapMutations; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapState", function() { return mapState; });
 /*!
- * vuex v3.5.1
+ * vuex v3.6.0
  * (c) 2020 Evan You
  * @license MIT
  */
@@ -57847,7 +57978,11 @@ ModuleCollection.prototype.isRegistered = function isRegistered (path) {
   var parent = this.get(path.slice(0, -1));
   var key = path[path.length - 1];
 
-  return parent.hasChild(key)
+  if (parent) {
+    return parent.hasChild(key)
+  }
+
+  return false
 };
 
 function update (path, targetModule, newModule) {
@@ -58787,7 +58922,7 @@ function pad (num, maxLength) {
 var index = {
   Store: Store,
   install: install,
-  version: '3.5.1',
+  version: '3.6.0',
   mapState: mapState,
   mapMutations: mapMutations,
   mapGetters: mapGetters,
@@ -58867,34 +59002,12 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ "./node_modules/yallist/iterator.js":
-/*!******************************************!*\
-  !*** ./node_modules/yallist/iterator.js ***!
-  \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-module.exports = function (Yallist) {
-  Yallist.prototype[Symbol.iterator] = function* () {
-    for (let walker = this.head; walker; walker = walker.next) {
-      yield walker.value
-    }
-  }
-}
-
-
-/***/ }),
-
 /***/ "./node_modules/yallist/yallist.js":
 /*!*****************************************!*\
   !*** ./node_modules/yallist/yallist.js ***!
   \*****************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
+/***/ (function(module, exports) {
 
 module.exports = Yallist
 
@@ -58951,8 +59064,6 @@ Yallist.prototype.removeNode = function (node) {
   node.next = null
   node.prev = null
   node.list = null
-
-  return next
 }
 
 Yallist.prototype.unshiftNode = function (node) {
@@ -59217,37 +59328,6 @@ Yallist.prototype.sliceReverse = function (from, to) {
   return ret
 }
 
-Yallist.prototype.splice = function (start, deleteCount, ...nodes) {
-  if (start > this.length) {
-    start = this.length - 1
-  }
-  if (start < 0) {
-    start = this.length + start;
-  }
-
-  for (var i = 0, walker = this.head; walker !== null && i < start; i++) {
-    walker = walker.next
-  }
-
-  var ret = []
-  for (var i = 0; walker && i < deleteCount; i++) {
-    ret.push(walker.value)
-    walker = this.removeNode(walker)
-  }
-  if (walker === null) {
-    walker = this.tail
-  }
-
-  if (walker !== this.head && walker !== this.tail) {
-    walker = walker.prev
-  }
-
-  for (var i = 0; i < nodes.length; i++) {
-    walker = insert(this, walker, nodes[i])
-  }
-  return ret;
-}
-
 Yallist.prototype.reverse = function () {
   var head = this.head
   var tail = this.tail
@@ -59259,23 +59339,6 @@ Yallist.prototype.reverse = function () {
   this.head = tail
   this.tail = head
   return this
-}
-
-function insert (self, node, value) {
-  var inserted = node === self.head ?
-    new Node(value, null, node, self) :
-    new Node(value, node, node.next, self)
-
-  if (inserted.next === null) {
-    self.tail = inserted
-  }
-  if (inserted.prev === null) {
-    self.head = inserted
-  }
-
-  self.length++
-
-  return inserted
 }
 
 function push (self, item) {
@@ -59316,11 +59379,6 @@ function Node (value, prev, next, list) {
     this.next = null
   }
 }
-
-try {
-  // add if support for Symbol.iterator is present
-  __webpack_require__(/*! ./iterator.js */ "./node_modules/yallist/iterator.js")(Yallist)
-} catch (er) {}
 
 
 /***/ }),
@@ -59867,105 +59925,69 @@ var map = {
 		9,
 		6
 	],
-	"./board/Bulletin": [
-		"./resources/js/components/board/Bulletin.vue",
-		9,
-		7,
-		10
-	],
-	"./board/Bulletin.vue": [
-		"./resources/js/components/board/Bulletin.vue",
-		9,
-		7,
-		10
-	],
-	"./board/Read": [
-		"./resources/js/components/board/Read.vue",
-		9,
-		4
-	],
-	"./board/Read.vue": [
-		"./resources/js/components/board/Read.vue",
-		9,
-		4
-	],
-	"./board/Write": [
-		"./resources/js/components/board/Write.vue",
-		9,
-		21
-	],
-	"./board/Write.vue": [
-		"./resources/js/components/board/Write.vue",
-		9,
-		21
-	],
 	"./companyInfo/CompanyInfo": [
 		"./resources/js/components/companyInfo/CompanyInfo.vue",
 		9,
-		7,
-		2,
-		22
+		0,
+		2
 	],
 	"./companyInfo/CompanyInfo.vue": [
 		"./resources/js/components/companyInfo/CompanyInfo.vue",
 		9,
-		7,
-		2,
-		22
+		0,
+		2
 	],
 	"./companyInfo/CompanyInfoData": [
 		"./resources/js/components/companyInfo/CompanyInfoData.js",
 		9,
-		16
+		15
 	],
 	"./companyInfo/CompanyInfoData.js": [
 		"./resources/js/components/companyInfo/CompanyInfoData.js",
 		9,
-		16
+		15
 	],
 	"./companyInfo/companyInfoComponents/History": [
 		"./resources/js/components/companyInfo/companyInfoComponents/History.vue",
 		9,
-		8
+		7
 	],
 	"./companyInfo/companyInfoComponents/History.vue": [
 		"./resources/js/components/companyInfo/companyInfoComponents/History.vue",
 		9,
-		8
+		7
 	],
 	"./companyInfo/companyInfoComponents/InfoTable": [
 		"./resources/js/components/companyInfo/companyInfoComponents/InfoTable.vue",
 		9,
-		9
+		8
 	],
 	"./companyInfo/companyInfoComponents/InfoTable.vue": [
 		"./resources/js/components/companyInfo/companyInfoComponents/InfoTable.vue",
 		9,
-		9
+		8
 	],
 	"./companyInfo/companyInfoComponents/MainBanner": [
 		"./resources/js/components/companyInfo/companyInfoComponents/MainBanner.vue",
 		9,
-		7,
-		2,
-		25
+		0,
+		9
 	],
 	"./companyInfo/companyInfoComponents/MainBanner.vue": [
 		"./resources/js/components/companyInfo/companyInfoComponents/MainBanner.vue",
 		9,
-		7,
-		2,
-		25
+		0,
+		9
 	],
 	"./companyInfo/companyInfoComponents/MembersCard": [
 		"./resources/js/components/companyInfo/companyInfoComponents/MembersCard.vue",
 		9,
-		11
+		10
 	],
 	"./companyInfo/companyInfoComponents/MembersCard.vue": [
 		"./resources/js/components/companyInfo/companyInfoComponents/MembersCard.vue",
 		9,
-		11
+		10
 	],
 	"./footer/Footer": [
 		"./resources/js/components/footer/Footer.vue",
@@ -59986,22 +60008,22 @@ var map = {
 	"./main/Index": [
 		"./resources/js/components/main/Index.vue",
 		9,
-		12
+		11
 	],
 	"./main/Index.vue": [
 		"./resources/js/components/main/Index.vue",
 		9,
-		12
+		11
 	],
 	"./main/Test": [
 		"./resources/js/components/main/Test.vue",
 		9,
-		13
+		12
 	],
 	"./main/Test.vue": [
 		"./resources/js/components/main/Test.vue",
 		9,
-		13
+		12
 	],
 	"./recruit/Description": [
 		"./resources/js/components/recruit/Description.vue",
@@ -60016,12 +60038,12 @@ var map = {
 	"./recruit/Menu": [
 		"./resources/js/components/recruit/Menu.vue",
 		9,
-		14
+		13
 	],
 	"./recruit/Menu.vue": [
 		"./resources/js/components/recruit/Menu.vue",
 		9,
-		14
+		13
 	],
 	"./recruit/Recruit": [
 		"./resources/js/components/recruit/Recruit.vue",
@@ -60038,51 +60060,79 @@ var map = {
 	"./recruit/content": [
 		"./resources/js/components/recruit/content.json",
 		3,
-		17
+		16
 	],
 	"./recruit/content.json": [
 		"./resources/js/components/recruit/content.json",
 		3,
-		17
+		16
+	],
+	"./register/Register": [
+		"./resources/js/components/register/Register.vue",
+		9,
+		22
+	],
+	"./register/Register.vue": [
+		"./resources/js/components/register/Register.vue",
+		9,
+		22
+	],
+	"./register/components/Login": [
+		"./resources/js/components/register/components/Login.vue",
+		9,
+		20
+	],
+	"./register/components/Login.vue": [
+		"./resources/js/components/register/components/Login.vue",
+		9,
+		20
+	],
+	"./register/components/Signup": [
+		"./resources/js/components/register/components/Signup.vue",
+		9,
+		21
+	],
+	"./register/components/Signup.vue": [
+		"./resources/js/components/register/components/Signup.vue",
+		9,
+		21
 	],
 	"./service/Img/찜.png": [
 		"./resources/js/components/service/Img/찜.png",
 		7,
-		18
+		17
 	],
 	"./service/Img/찜스토어.png": [
 		"./resources/js/components/service/Img/찜스토어.png",
 		7,
-		19
+		18
 	],
 	"./service/Img/츄릅.png": [
 		"./resources/js/components/service/Img/츄릅.png",
 		7,
-		20
+		19
 	],
 	"./service/Platform": [
 		"./resources/js/components/service/Platform.vue",
 		9,
-		15
+		14
 	],
 	"./service/Platform.vue": [
 		"./resources/js/components/service/Platform.vue",
 		9,
-		15
+		14
 	],
 	"./service/Service": [
 		"./resources/js/components/service/Service.vue",
 		9,
-		7,
-		2,
-		23
+		0,
+		4
 	],
 	"./service/Service.vue": [
 		"./resources/js/components/service/Service.vue",
 		9,
-		7,
-		2,
-		23
+		0,
+		4
 	]
 };
 function webpackAsyncContext(req) {
@@ -60335,11 +60385,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   mode: 'history',
   scrollBehavior: _utils__WEBPACK_IMPORTED_MODULE_2__["scrollBehavior"],
-  routes: [{
-    path: '/bulletin',
-    name: 'Read',
-    component: Read
-  }]
+  routes: _routes__WEBPACK_IMPORTED_MODULE_3__["default"]
 });
 router.beforeEach(_hooks__WEBPACK_IMPORTED_MODULE_4__["dispatchAction"]);
 /* harmony default export */ __webpack_exports__["default"] = (router);
@@ -60450,22 +60496,11 @@ function getDefaultFooter() {
       action: true
     }
   }, {
-    path: "bulletin",
-    name: "Bulletin",
+    path: "register",
+    name: "Register",
     components: {
-      "default": Object(_utils__WEBPACK_IMPORTED_MODULE_0__["asyncComponent"])("bulletin/Bulletin"),
-      header: getDefaultHeader("Bulletin"),
-      footer: getDefaultFooter()
-    },
-    meta: {
-      action: true
-    }
-  }, {
-    path: "write",
-    name: "Write",
-    components: {
-      "default": Object(_utils__WEBPACK_IMPORTED_MODULE_0__["asyncComponent"])("write/Write"),
-      header: getDefaultHeader("Write"),
+      "default": Object(_utils__WEBPACK_IMPORTED_MODULE_0__["asyncComponent"])("register/Register"),
+      header: getDefaultHeader("Register"),
       footer: getDefaultFooter()
     },
     meta: {

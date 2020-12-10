@@ -12339,7 +12339,7 @@ a.text-dark:focus {
 }
 
 .Header .nav {
-  padding: 15px 0;
+  padding: 0;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -12348,12 +12348,22 @@ a.text-dark:focus {
 
 .Header .nav .logo {
   cursor: pointer;
+  font-size: 30px;
+  font-weight: 800;
+  color: #ee4b45;
+}
+
+.Header .nav .logo img {
+  margin-left: 50px;
+  margin-bottom: 5px;
 }
 
 .Header .nav .menutab {
   display: flex;
   justify-content: space-between;
   cursor: pointer;
+  font-size: 0.8rem;
+  margin-right: 50px;
 }
 
 .Header .nav .menutab div {
@@ -12366,12 +12376,13 @@ a.text-dark:focus {
 
 .Header .nav .hamburger {
   cursor: pointer;
+  margin-right: 50px;
   display: none;
 }
 
 .Header .nav .hamburger span {
   display: block;
-  width: 2rem;
+  width: 1.25rem;
   height: 3px;
   margin-bottom: 5px;
   background-color: #333;
@@ -12424,5 +12435,97 @@ a.text-dark:focus {
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 10;
   }
+}
+
+.registerWrapper {
+  background: rgba(59, 128, 131, 0.3);
+}
+
+.registerWrapper .test {
+  width: 380px;
+  margin: 0 auto;
+  font-size: 30px;
+  background-color: #e3342f;
+}
+
+.registerWrapper .test .tabs {
+  display: flex;
+  background-color: #f0f3f5;
+}
+
+.registerWrapper .test .tabs > li {
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  font-size: 16px;
+  color: #888888;
+  cursor: pointer;
+}
+
+.registerWrapper .test .tabs .activeTab {
+  background: #e3342f;
+  color: black;
+  font-weight: bold;
+}
+
+.registerWrapper .test .content {
+  height: 571px;
+}
+
+.loginForm {
+  width: 320px;
+  padding: 0 25px;
+  margin: auto;
+  background: #e3342f;
+  display: flex;
+  flex-direction: column;
+}
+
+.loginForm svg {
+  width: 70%;
+  border-radius: 50%;
+  background: #fff;
+  margin-bottom: 40px;
+  align-self: center;
+  transform-style: preserve-3d;
+}
+
+.loginForm input {
+  width: 100%;
+  font-size: 16px;
+  padding: 10px 15px;
+  margin-top: 25px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.loginForm button {
+  background: wheat;
+  height: 35px;
+  margin-top: 25px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.loginForm button:hover {
+  color: #ee3f35;
+  font-weight: bold;
+}
+
+.loginForm button:focus {
+  outline: none;
+}
+
+.loginForm .forgetPW {
+  margin-top: 5px;
+  padding-right: 5px;
+  font-size: 11px;
+  color: dimgrey;
+  font-weight: bold;
+  text-align: right;
+  cursor: pointer;
 }
 

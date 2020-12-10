@@ -1,12 +1,19 @@
 <template>
     <header class="Header">
         <div class="nav">
-            <div class="logo" @click="goToCompanyInfo">로고</div>
+            <div class="logo" @click="goToCompanyInfo">
+                <img
+                    src="images/zzieut.png"
+                    alt="logo"
+                    width="35px"
+                    height="35px"
+                />
+            </div>
             <div class="menutab">
                 <div @click="goToCompanyInfo">찌읏 소개</div>
                 <div @click="goToService">서비스</div>
                 <div @click="goToRecruit">채용</div>
-                <div @click="goToBulletin">게시판</div>
+                <div @click="goToRegister">로그인</div>
             </div>
             <div class="hamburger" @click="activeMenuHandler">
                 <span></span>
@@ -14,11 +21,11 @@
                 <span></span>
             </div>
         </div>
-        <div :class="activeMenuVisible?'activeMenu visible':'activeMenu'">
+        <div :class="activeMenuVisible ? 'activeMenu visible' : 'activeMenu'">
             <div @click="goToCompanyInfo">찌읏 소개</div>
             <div @click="goToService">서비스</div>
             <div @click="goToRecruit">채용</div>
-            <div @click="goToBulletin">게시판</div>
+            <div @click="goToRegister">로그인</div>
         </div>
     </header>
 </template>
@@ -30,39 +37,39 @@ export default {
     created() {
         const resizing = () => {
             this.activeMenuVisible = false;
-        }
+        };
 
-        window.addEventListener('resize', ()=>{
+        window.addEventListener("resize", () => {
             resizing();
         });
-        return window.removeEventListener('resize', ()=>{
+        return window.removeEventListener("resize", () => {
             resizing();
         });
     },
-    data(){
-        return{
-            activeMenuVisible:false,
-        }
+    data() {
+        return {
+            activeMenuVisible: false
+        };
     },
     methods: {
-        goToMain: function (event) {
-            this.$router.push('/')
+        goToMain: function(event) {
+            this.$router.push("/");
         },
-        goToCompanyInfo: function (event) {
-            this.$router.push('/companyInfo')
+        goToCompanyInfo: function(event) {
+            this.$router.push("/companyInfo");
         },
-        goToService: function (evnet) {
-            this.$router.push('/service')
+        goToService: function(evnet) {
+            this.$router.push("/service");
         },
-        goToRecruit: function (event) {
-            this.$router.push('/recruit')
+        goToRecruit: function(event) {
+            this.$router.push("/recruit");
         },
-        goToBulletin(event) {
-            this.$router.push('/bulletin')
+        goToRegister: function(event) {
+            this.$router.push("/register");
         },
-        activeMenuHandler(){
-            this.activeMenuVisible=!this.activeMenuVisible;
-        },
+        activeMenuHandler() {
+            this.activeMenuVisible = !this.activeMenuVisible;
+        }
     }
 };
 </script>
