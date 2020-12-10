@@ -21,6 +21,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -85,6 +90,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -102,31 +108,37 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     adjustLocation: function adjustLocation() {
-      var length = this.email.length; // if (length === 0) {
-      //     this.leftEye.y = 55;
-      //     this.leftEye.x = 44;
-      //     this.rightEye.y = 55;
-      //     this.rightEye.x = 76;
-      // }
+      var length = this.email.length;
 
-      if (0 < length < 12) {
-        this.leftEye.y = 63 + this.email.length;
-        this.leftEye.x = 40 + this.email.length / 2;
-        this.rightEye.y = 63 + this.email.length;
-        this.rightEye.x = 72 + this.email.length / 2;
-      }
-
-      if (length > 12) {
-        this.leftEye.y = 63 + this.email.length / 2;
-        this.leftEye.x = 40 + this.email.length;
-        this.rightEye.y = 63 + this.email.length / 2;
-        this.rightEye.x = 72 + this.email.length;
+      if (length === 0) {
+        this.leftEye.x = 44;
+        this.rightEye.x = 76;
+        this.leftEye.y = 55;
+        this.rightEye.y = 55;
+      } else if (length < 20) {
+        this.leftEye.x = 34 + length / 2;
+        this.rightEye.x = 66 + length / 2;
+        this.leftEye.y = 60 + length / 2;
+        this.rightEye.y = 60 + length / 2;
+      } else if (19 < length && 34 >= length) {
+        console.log(length);
+        this.leftEye.x = 36 + length / 2;
+        this.rightEye.x = 68 + length / 2;
+        this.leftEye.y = 80 - length / 2;
+        this.rightEye.y = 80 - length / 2;
+      } else if (length > 34) {
+        this.leftEye.x = 53;
+        this.rightEye.x = 85;
+        this.leftEye.y = 63;
+        this.rightEye.y = 63;
       }
     },
     checkClicked: function checkClicked() {
       this.isClicked = true;
+      this.leftEye.x = 44;
       this.rightEye.x = 76;
-      this.leftEye.x = 76;
+      this.leftEye.y = 38;
+      this.rightEye.y = 38;
     }
   }
 });
@@ -146,6 +158,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+var INPUTS = ["이름", "이메일", "휴대폰 번호"]; // :v-for="input in INPUTS" :key="idx"
+
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
@@ -170,34 +190,33 @@ var render = function() {
       _c(
         "li",
         {
+          class: _vm.activeId === 1 ? "activeTab" : "",
           on: {
             click: function($event) {
               return _vm.clickTab(1)
             }
           }
         },
-        [_vm._v("로그인")]
+        [_vm._v("\n            로그인\n        ")]
       ),
       _vm._v(" "),
       _c(
         "li",
         {
+          class: _vm.activeId === 2 ? "activeTab" : "",
           on: {
             click: function($event) {
               return _vm.clickTab(2)
             }
           }
         },
-        [_vm._v("회원가입")]
+        [_vm._v("\n            회원가입\n        ")]
       )
     ]),
     _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "content" },
-      [_vm._v("{{this.activeId === 1 && "), _c("Login"), _vm._v("}}")],
-      1
-    )
+    _vm.activeId === 1
+      ? _c("div", { staticClass: "content" }, [_c("Login")], 1)
+      : _c("div", { staticClass: "content" }, [_c("Signup")], 1)
   ])
 }
 var staticRenderFns = []
@@ -289,6 +308,8 @@ var render = function() {
       on: { click: _vm.checkClicked }
     }),
     _vm._v(" "),
+    _c("span", { staticClass: "forgetPW" }, [_vm._v("비밀번호를 잊으셨나요?")]),
+    _vm._v(" "),
     _c("button", [_vm._v("로그인")])
   ])
 }
@@ -314,9 +335,26 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_vm._v("안녕하세요.")])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("form", { staticClass: "loginForm" }, [
+      _c("input", { attrs: { type: "text", placeholder: "이름" } }),
+      _vm._v(" "),
+      _c("input", { attrs: { type: "text", placeholder: "이메일" } }),
+      _vm._v(" "),
+      _c("input", { attrs: { type: "text", placeholder: "휴대폰 번호" } }),
+      _vm._v(" "),
+      _c("input", { attrs: { type: "password", placeholder: "비밀번호" } }),
+      _vm._v(" "),
+      _c("button", [_vm._v("회원가입")])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -327,14 +365,15 @@ render._withStripped = true
 /*!*******************************************************!*\
   !*** ./resources/js/components/register/Register.vue ***!
   \*******************************************************/
-/*! exports provided: default */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Register_vue_vue_type_template_id_846dcb18___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Register.vue?vue&type=template&id=846dcb18& */ "./resources/js/components/register/Register.vue?vue&type=template&id=846dcb18&");
 /* harmony import */ var _Register_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Register.vue?vue&type=script&lang=js& */ "./resources/js/components/register/Register.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Register_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Register_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -364,7 +403,7 @@ component.options.__file = "resources/js/components/register/Register.vue"
 /*!********************************************************************************!*\
   !*** ./resources/js/components/register/Register.vue?vue&type=script&lang=js& ***!
   \********************************************************************************/
-/*! exports provided: default */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

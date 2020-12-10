@@ -28,12 +28,14 @@
             @input="adjustLocation"
         />
         <input type="password" placeholder="Password" @click="checkClicked" />
+        <span class="forgetPW">비밀번호를 잊으셨나요?</span>
         <button>로그인</button>
     </form>
 </template>
 
 <script>
 export default {
+    props: ["propsData"],
     data() {
         return {
             email: "",
@@ -45,29 +47,41 @@ export default {
     methods: {
         adjustLocation() {
             const { length } = this.email;
-            // if (length === 0) {
-            //     this.leftEye.y = 55;
-            //     this.leftEye.x = 44;
-            //     this.rightEye.y = 55;
-            //     this.rightEye.x = 76;
-            // }
-            if (0 < length < 12) {
-                this.leftEye.y = 63 + this.email.length;
-                this.leftEye.x = 40 + this.email.length / 2;
-                this.rightEye.y = 63 + this.email.length;
-                this.rightEye.x = 72 + this.email.length / 2;
-            }
-            if (length > 12) {
-                this.leftEye.y = 63 + this.email.length / 2;
-                this.leftEye.x = 40 + this.email.length;
-                this.rightEye.y = 63 + this.email.length / 2;
-                this.rightEye.x = 72 + this.email.length;
+            if (length === 0) {
+                this.leftEye.x = 44;
+                this.rightEye.x = 76;
+                this.leftEye.y = 55;
+                this.rightEye.y = 55;
+            } else if (length < 20) {
+                this.leftEye.x = 34 + length / 2;
+                this.rightEye.x = 66 + length / 2;
+                this.leftEye.y = 60 + length / 2;
+                this.rightEye.y = 60 + length / 2;
+            } else if (19 < length && 34 >= length) {
+                console.log(length);
+                this.leftEye.x = 36 + length / 2;
+                this.rightEye.x = 68 + length / 2;
+                this.leftEye.y = 80 - length / 2;
+                this.rightEye.y = 80 - length / 2;
+            } else if (length > 34) {
+                this.leftEye.x = 53;
+                this.rightEye.x = 85;
+                this.leftEye.y = 63;
+                this.rightEye.y = 63;
             }
         },
         checkClicked() {
             this.isClicked = true;
+            this.leftEye.x = 44;
             this.rightEye.x = 76;
-            this.leftEye.x = 76;
+            this.leftEye.y = 38;
+            this.rightEye.y = 38;
+        },
+        outSideClicked() {
+            this.leftEye.x = 44;
+            this.rightEye.x = 76;
+            this.leftEye.y = 55;
+            this.rightEye.y = 55;
         }
     }
 };

@@ -12409,36 +12409,44 @@ a.text-dark:focus {
 }
 
 .registerWrapper {
-  width: 320px;
+  border: 1px solid red;
+}
+
+.registerWrapper .test {
+  width: 350px;
   margin: 50px auto;
   font-size: 30px;
   background-color: #ee3f35;
 }
 
-.registerWrapper .tabs {
+.registerWrapper .test .tabs {
   display: flex;
   background-color: #f0f3f5;
 }
 
-.registerWrapper .tabs > li {
+.registerWrapper .test .tabs > li {
   width: 100%;
   text-align: center;
-  padding: 20px;
-  font-size: 18px;
+  padding: 15px;
+  font-size: 16px;
   color: #888888;
   cursor: pointer;
 }
 
-.registerWrapper .tabs > li:hover {
-  background-color: white;
+.registerWrapper .test .tabs .activeTab {
+  background: #ee3f35;
   color: black;
   font-weight: bold;
 }
 
+.registerWrapper .test .content {
+  height: 571px;
+}
+
 .loginForm {
   width: 320px;
-  padding: 60px 25px 80px;
-  margin: 50px auto;
+  padding: 60px 25px;
+  margin: auto;
   background: #ee3f35;
   display: flex;
   flex-direction: column;
@@ -12454,9 +12462,10 @@ a.text-dark:focus {
 }
 
 .loginForm input {
+  width: 100%;
   font-size: 16px;
   padding: 10px 15px;
-  margin-top: 15px;
+  margin-top: 25px;
   border: none;
   border-radius: 5px;
   outline: none;
@@ -12468,6 +12477,7 @@ a.text-dark:focus {
   margin-top: 25px;
   border-radius: 5px;
   border: none;
+  font-size: 1rem;
   cursor: pointer;
 }
 
@@ -12478,5 +12488,15 @@ a.text-dark:focus {
 
 .loginForm button:focus {
   outline: none;
+}
+
+.loginForm .forgetPW {
+  margin-top: 5px;
+  padding-right: 5px;
+  font-size: 11px;
+  color: dimgrey;
+  font-weight: bold;
+  text-align: right;
+  cursor: pointer;
 }
 
