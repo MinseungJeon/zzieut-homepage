@@ -1,19 +1,13 @@
 <template>
-    <div>
-        {{title}}
-    </div>
+    <div>{{ title }}</div>
 </template>
 <script>
-    export default {
-        props: ['title'],
-        components: {
-        },
-        mounted() {
-        },
-        methods: {
-        }
-    }
+export default {
+    props: ["title"],
+    components: {},
+    mounted() {},
+    methods: {}
+};
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
